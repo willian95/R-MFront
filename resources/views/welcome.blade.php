@@ -128,5 +128,12 @@
                 </div>
             </div>
         </div>
+
+        <a href="{{ route('social.auth') }}">Facebook</a>
+
+        @if(\Auth::check())
+            {{ Auth::user()->name }}
+        @endif
+
     </body>
 </html>
