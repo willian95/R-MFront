@@ -37,6 +37,33 @@ class SocialAuthController extends Controller
             return $this->authAndRedirect($user); // Login y redirección
         }
     }
+
+    // Metodo encargado de la redireccion a Google
+    public function redirectToGoogleProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+    
+    // Metodo encargado de obtener la información del usuario
+    public function handleProviderGoogleCallback()
+    {
+        // Obtenemos los datos del usuario
+        $social_user = Socialite::driver('google')->user(); 
+        // Comprobamos si el usuario ya existe
+        if ($user = User::where('email', $social_user->email)->first()) { 
+            return $this->authAndRedirect($user); // Login y redirección
+        } else {  
+            // En caso de que no exista creamos un nuevo usuario con sus datos.
+            $user = User::create([
+                'name' => $social_user->name,
+                'email' => $social_user->email,
+                'password' => bcrypt(uniqid()),
+                'role_id' => 2
+            ]);
+            return $this->authAndRedirect($user); // Login y redirección
+        }
+    }
+
     // Login y redirección
     public function authAndRedirect($user)
     {

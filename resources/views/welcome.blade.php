@@ -129,7 +129,8 @@
             </div>
         </div>
 
-        <a href="{{ route('social.auth') }}">Facebook</a>
+        <a href="{{ route('social.auth.facebook') }}">Facebook</a>
+        <a href="{{ route('social.auth.google') }}">Google</a>
 
         @if(\Auth::check())
             {{ Auth::user()->name }}
