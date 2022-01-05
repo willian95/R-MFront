@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SocialAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('auth/facebook', [SocialAuthController::class, "redirectToFacebookProvider"])->name('social.auth.facebook');
+Route::get('auth/facebook/callback', [SocialAuthController::class, "handleProviderFacebookCallback"]);
+
+Route::get('auth/google', [SocialAuthController::class, "redirectToGoogleProvider"])->name('social.auth.google');
+Route::get('auth/google/callback', [SocialAuthController::class, "handleProviderGoogleCallback"]);
