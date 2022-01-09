@@ -550,6 +550,138 @@ width: 45px;
     justify-content: center;
 
 }
+.slider-servicio .slick-slide{
+    padding-right: 1rem;
+}
+.servicios-imgs img{
+    border-radius: 10px;
+    height: 100px!important;
+    object-fit: cover;
+    object-position: bottom;
+
+}
+.servicios-content h3{
+    font-weight: bold;
+}
+.sub{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.slider-servicio{
+    margin: 3rem 0;
+}
+button{
+    border: 0;
+    padding: 0.5rem 1.9rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.btn-reds{
+    background: #ed1d24;
+    padding: 0.5rem 1.9rem;
+}
+.btn-white{
+
+    background: #8b8b8b;
+}
+.slider-servicio button{
+
+    padding: 0.5rem 1.3rem!important;
+}
+.slider-servicio
+.slick-arrow {
+
+    color: #000!important;
+    font-size: 0rem;
+    background: transparent;
+}
+.slider-servicio .slick-prev {
+    left: -20px;
+}
+.slider-servicio .slick-arrow {
+    top: 35%;
+}
+.slider-servicio .slick-next {
+    right: -5px;
+}
+.servicios-imgs p{
+    font-weight: 600;
+    margin: 0.9rem 0;
+    text-align: center;
+
+}
+.slider-servicio .slick-prev:after,.slick-next:after{
+
+    font-size: 2rem;
+}
+.btns-conetnt{
+    padding: 0 2rem;
+}
+.more-info-service-1 {
+    visibility: hidden;
+
+    overflow: hidden;
+}
+
+.more-info-service-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 0;
+}
+.more-info-service-1 .nav-tabs{
+    display: block;
+    border: 0;
+}
+.is-active{
+    visibility: visible;
+    height: 62vh;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ed1d24;
+    background-color: #fff;
+    border-color: transparent;
+}
+.nav-tabs .nav-link {
+
+    color: black;
+}
+.nav-tabs .nav-link {
+    text-align: start;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    isolation: isolate;
+    background: #ed1d24;
+    color: #fff;
+}
+.slider-servicio-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.slider-servicio-img  img{
+width: 100%;
+height: 150px!important;
+}
+.conetnt-serivicios{
+ /*   height: 100vh;
+    overflow: hidden;*/
+}
+.obj-cover{
+    object-fit: cover;
+}
+.servicios-content-bg{
+    background: #8b8b8b1f;
+}
+.h-55{
+    height: 55vh;
+
+}
+.transform{
+    transform: translateY(-22rem);
+}
 /**mediasquery */
 @media only screen and (max-width: 600px) {
     .categories {

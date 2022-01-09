@@ -5,7 +5,7 @@
 <main>
 @include("partials.banner")
 @include("partials.ads")
-
+@include("partials.servicios")
 
 
 
