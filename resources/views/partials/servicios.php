@@ -110,7 +110,7 @@
                         <p>Aromaterapia</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/peluquería _ SPA Aromaterapia y masajes de relajación.jpg" alt="">
+                        <img src="assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg" alt="">
                         <p>Masajes</p>
                     </div>
                     <div class="servicios-imgs">
@@ -178,7 +178,7 @@
 
     <!-------------------------servicio 3---------------------------------->
     <div class="row conetnt-serivicios">
-        <div class="col-md-6 p-0 h-55 ">
+        <div class="col-md-6 p-0 h-70 ">
             <img class="obj-cover" src="assets/img/stock/Hoja inicio.jpg" alt="peluquería _ SPA Aromaterapia y masajes de relajación">
         </div>
         <div class="col-md-6 p-0  transform">

@@ -6,6 +6,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 img {
@@ -677,10 +678,32 @@ height: 150px!important;
 }
 .h-55{
     height: 55vh;
-
+}
+.h-70{
+    height: 70vh;
 }
 .transform{
     transform: translateY(-22rem);
+}
+.footer{
+    background-size: 100%;
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer::before{
+    display: block;
+    content: "";
+    background-image: url("../img/stock/vector.png");
+    position: absolute;
+    height: -webkit-fill-available;
+    width: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+
 }
 /**mediasquery */
 @media only screen and (max-width: 600px) {
