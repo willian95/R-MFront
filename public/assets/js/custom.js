@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    setTimeout(function () {
+      $(".loader").fadeOut(500);
+    }, 4000);
+  });
+
+
+$(document).ready(function () {
     $(".slick-categories").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -9,6 +16,7 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 300,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
