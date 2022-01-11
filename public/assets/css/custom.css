@@ -208,7 +208,8 @@ img {
 
 /**********************/
 .banner {
-    padding: 3rem 0;
+    padding-top: 1rem;
+    padding-bottom: 4rem
 }
 .banner::before {
     display: block;
@@ -880,7 +881,7 @@ textarea {
     height: 100%;
 }
 .menu_iso span{
-
+    font-weight: bold;
 }
 .menu_iso{
     display: flex;
@@ -892,6 +893,9 @@ textarea {
     background: #C4C4C4;
     padding: 0.5rem 2rem;
     border-radius: 10px;
+}
+.gray{
+    color: #a7a7a7;
 }
 /**mediasquery */
 @media only screen and (max-width: 600px) {

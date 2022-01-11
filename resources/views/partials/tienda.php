@@ -1,12 +1,15 @@
-<section class="tienda">
-    <div>
-        <span> Productos listos para comprar</span>
-        <h2 class="mt-0 titles mt-5 mb-5">
+<section class="tienda-home mt-5 pt-4">
+    <div class="text-center">
+        <span class="gray"  data-aos="fade-up"
+     data-aos-duration="1200"> Productos listos para comprar</span>
+        <h2 class="mt-0 titles  mb-5" data-aos="fade-up"
+     data-aos-duration="1300">
             Conoce nuestra nuevo E Pets Boutique
             Nuestros Servicios</h2>
     </div>
     <!-- Isotope menu -->
-    <div class=" container_menu_iso mb-4">
+    <div class=" container_menu_iso mb-4" data-aos="fade-up"
+     data-aos-duration="1000">
         <div class="row">
             <div class="col-sm-12">
                 <div class="menu_iso" id="custom-filter">
@@ -30,7 +33,8 @@
     </div>
 
     <!-- Isotope Gallery -->
-    <div class="container container_gallery_iso">
+    <div class="container container_gallery_iso" data-aos="fade-up"
+     data-aos-duration="1100">
         <div class="row iso-container">
 
             <!-- ----1---- -->

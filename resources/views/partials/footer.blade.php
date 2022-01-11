@@ -1,14 +1,17 @@
 <footer class="footer" style="background-image: url(assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg);">
 
     <div class="container contente-footer">
-        <h2 class="mt-0 titles m-0 pb-3">Contáctanos</h2>
-        <p class="pb-4">En el transcurso de una hora o
+        <h2 class="mt-0 titles m-0 pb-3" data-aos="fade-up"
+     data-aos-duration="1300">Contáctanos</h2>
+        <p class="pb-4" data-aos="fade-up"
+     data-aos-duration="1300">En el transcurso de una hora o
             antes estaremos en comunicación
             para resolver tu solicitud.
         </p>
 
-        <div>
-            <form>
+        <div data-aos="fade-up"
+     data-aos-duration="2000">
+            <form >
                 <div class="row">
                     <div class="col-md-6 text-start">
                         <label for="nombre" class="form-label">Nombre y apellido</label>

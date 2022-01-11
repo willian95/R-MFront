@@ -1,6 +1,6 @@
 <section class="banner">
     <div class="content">
-        <div class="typing-slider">
+        <div class="typing-slider" >
             <p>Familia R&M</p>
             <p>Familia R&M</p>
             <p>Familia R&M</p>
@@ -36,7 +36,6 @@
         </div>
     </a>
 
-
     <a href="" class="categories-item">
         <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
         <div class="name">
@@ -47,7 +46,6 @@
                 Colegio y Hotel para tu mascota!</p>
         </div>
     </a>
-
 
     <a href="" class="categories-item">
         <img class="icon" src="assets/img/icons/veterinarian.png" alt="">

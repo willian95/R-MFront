@@ -1,9 +1,11 @@
 <section class="ads container pt7">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up"
+     data-aos-duration="1000">
             <img src="assets/img/stock/Tiendavirtualalimentossecos.jpg" alt="Tienda virtual alimentos secos">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up"
+     data-aos-duration="1200">
             <img src="assets/img/stock/TiendavirtualPlacasidentificación.jpg" alt="">
         </div>
     </div>
@@ -11,7 +13,8 @@
 
 
 <!-------------------------------------------------------->
-<section class="container">
+<section class="container" data-aos="fade-up"
+     data-aos-duration="2000">
     <h2 class="mt-0 titles">Tu mascota, nuestra prioridad - no descansamos!</h2>
 
     <div class="map-content">
