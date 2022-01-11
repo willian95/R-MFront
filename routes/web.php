@@ -18,6 +18,12 @@ use App\Http\Controllers\SocialAuthController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/tienda', function () {
+    return view('tienda');
+});
+Route::get('/product', function () {
+    return view('product');
+});
 
 Route::get('auth/facebook', [SocialAuthController::class, "redirectToFacebookProvider"])->name('social.auth.facebook');
 Route::get('auth/facebook/callback', [SocialAuthController::class, "handleProviderFacebookCallback"]);

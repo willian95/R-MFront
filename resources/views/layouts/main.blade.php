@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/iso1.png')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
     <title>R&M</title>
   </head>
 
@@ -36,7 +38,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="{{ url('assets/js/custom.js') }}"></script>
 <script src="https://isotope.metafizzy.co/isotope.pkgd.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
+<script src="{{ url('assets/js/photoswipe.js') }}"></script>
 <script>
+
 
 </script>
   </body>

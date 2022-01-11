@@ -4,17 +4,10 @@
 
 <main>
 @include("partials.banner")
+@include("partials.categorias")
 @include("partials.ads")
 @include("partials.servicios")
 @include("partials.tienda")
-
-
-
-
-
-
-
-
 </main>
 
 @include("partials.footer")

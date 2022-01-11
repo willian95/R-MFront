@@ -39,7 +39,7 @@
 
             <!-- ----1---- -->
             <div class="col-xs-6 col-sm-3 cent isotope-item caninos">
-                <a href="">
+               <a href="product">
                     <div class="img_iso" style="  background-image: url(assets/img/stock/Tiendavirtualalimentossecos.jpg)">
                         <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
                     </div>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-xs-6 col-sm-3 cent isotope-item felinos">
-                <a href="">
+               <a href="product">
                     <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
 
                         <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="col-xs-6 col-sm-3 cent isotope-item felinos">
-            <a href="">
+           <a href="product">
             <div class="img_iso" style="  background-image: url(assets/img/stock/laboratorioClínico.jpg)">
                     <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
                 </div>
