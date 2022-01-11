@@ -54,7 +54,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     var customContainer = jQuery(".iso-container");
     customContainer.isotope({
-      filter: "*",
+      filter: ".caninos",
       transitionDuration: "2s",
       animationOptions: {
         duration: 7500,

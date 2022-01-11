@@ -179,7 +179,7 @@
     <!-------------------------servicio 3---------------------------------->
     <div class="row conetnt-serivicios">
         <div class="col-md-6 p-0 h-70 ">
-            <img class="obj-cover" src="assets/img/stock/Hoja inicio.jpg" alt="peluquería _ SPA Aromaterapia y masajes de relajación">
+            <img class="obj-cover" src="assets/img/stock/hojainicio.jpg" alt="peluquería _ SPA Aromaterapia y masajes de relajación">
         </div>
         <div class="col-md-6 p-0  transform">
             <div class="servicios-content p-5 ">
@@ -198,7 +198,7 @@
                         <p>Caminatas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Tienda virtual.jpg" alt="">
+                        <img src="assets/img/stock/tiendavirtual.jpg" alt="">
                         <p>Pilates</p>
                     </div>
                     <div class="servicios-imgs">
@@ -229,7 +229,7 @@
                         <p>Monitoreo 24/7</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Tienda virtual.jpg" alt="">
+                        <img src="assets/img/stock/tiendavirtual.jpg" alt="">
                         <p>Aromaterapi</p>
                     </div>
                     <div class="servicios-imgs">

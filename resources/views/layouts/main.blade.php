@@ -35,6 +35,7 @@
     </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="{{ url('assets/js/custom.js') }}"></script>
+<script src="https://isotope.metafizzy.co/isotope.pkgd.js"></script>
 <script>
 
 </script>
