@@ -210,6 +210,10 @@ img {
     height: 30px;
     filter: invert(1);
 }
+   .user1{
+        width: 30px;
+        height: 30px;
+    }
 .far {
     font-size: 1.5rem;
     color: #fff;
@@ -1007,7 +1011,7 @@ textarea {
 .img-product:hover .gallery-zoom{
     opacity: 1;
 }
-.
+
 .value-button {
   display: inline-block;
   border: 1px solid #ddd;
@@ -1108,7 +1112,7 @@ input[type=number]::-webkit-outer-spin-button {
 .rrs-face{
     background: #167ee6;
 }
-.style-modal-content h2{
+.style-modal h2{
     font-weight: bold;
     font-size: 1rem;
     margin: 1rem 0;
@@ -1200,6 +1204,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 23px;
         filter: invert(1);
     }
+
     .flex-m {
 
         margin-right: 0;

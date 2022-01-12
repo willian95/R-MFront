@@ -32,14 +32,14 @@
             </a>
         </div>
         <div class="header-item flex-m">
-            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><i class="far fa-user"></i></a>
+            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="assets/img/icons/user1.png" alt=""></a>
             <a href="" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="assets/img/icons/bag.png" alt=""></a>
         </div>
     </div>
 </header>
 
 <!-- Modal -->
-<div class="modal fade login" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade login style-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
