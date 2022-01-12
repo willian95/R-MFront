@@ -76,7 +76,8 @@
                     </form>
                 </div>
                 <div class="w-150 text-end w-100">
-                    <button class="btn-red">Agrgar al carrito</button>
+                    <button class="btn-red"><a class="txt-w" href="checkout">Agregar al carrito</a></button>
+
                 </div>
 
             </div>

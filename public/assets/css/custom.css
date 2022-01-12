@@ -1149,7 +1149,132 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 1.5rem 0;
     position: relative;
 }
+.product-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 130px 70px;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+.product-info img {
+    border-radius: 10px;
+}
+.title-product {
+    font-weight: 600;
+}
+.trash {
+    color: #121212;
+}
+.border-check {
+    background: #e5e5e5;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+.border-check h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 700;
+}
+.border-content {
+    padding: 0;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.txt-product-check {
+    font-weight: 600;
+    margin: 0;
+}
+.form-check {
+}
+.p-section {
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.resumen {
+    border: 1px solid #e5e5e5;
+    padding: 1rem;
+}
+.bg-total {
+    background: #e5e5e5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+}
+.bg-total span {
+    font-weight: bold;
+}
+.bg-total {
+    align-items: center;
+    padding: 0.6rem 1rem;
+}
+.bg-total p {
+    margin-bottom: 0;
+}
+.d-flexinfor {
+    display: flex;
 
+    align-items: center;
+}
+.entrega {
+    width: 50px;
+}
+.garantia {
+    width: 40px;
+}
+.d-flexinfor p {
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+.parent-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 15px;
+}
+.parent-blog .blog-item:nth-child(1){
+    grid-area: 1 / 3 / 2 / 4;
+
+}
+.parent-blog .blog-item:nth-child(1) h2,.parent-blog .blog-item:nth-child(2) h2{
+    font-size: 1.2rem;
+}
+.parent-blog .blog-item:nth-child(2){
+    grid-area: 2 / 3 / 3 / 4;
+    font-size: 1.2rem;
+}
+.parent-blog .blog-item:nth-child(3){
+    grid-area: 1 / 1 / 3 / 3;
+}
+.blog-item img{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+}
+.parent-blog i{
+    color: #000;
+    margin-right: 1rem;
+}
+.fecha-blog i {
+    color: #000;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+.post .titulos{
+    font-size: 1rem;
+}
+.post .fecha-blog span{
+    font-size: 1rem;
+}
 /**mediasquery */
 @media only screen and (max-width: 600px) {
     .categories {

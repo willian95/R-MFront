@@ -49,13 +49,13 @@ $(document).ready(function () {
         ],
     });
 
-    $(".see-more").on("click", function () {
+  /*  $(".see-more").on("click", function () {
         if (!$(".more-info-service-1").hasClass("is-active")) {
             $(".more-info-service-1").addClass("is-active");
         } else {
             $(".more-info-service-1").removeClass("is-active");
         }
-    });
+    });*/
 });
 
 /*************************filterhome**********************************/
