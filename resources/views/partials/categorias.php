@@ -1,6 +1,6 @@
 <!-------------------------------->
 <div class="categories container">
-    <a href="" class="categories-item">
+    <a href="#veterinaria" class="categories-item">
         <span class="parpadea text"><strong>Servicio 24/7</strong></span>
         <div class="icon-bg">
         <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
@@ -15,7 +15,7 @@
         </div>
     </a>
 
-    <a href="" class="categories-item">
+    <a href="#peluqueria" class="categories-item">
         <div class="icon-bg">
         <img class="icon" src="assets/img/icons/hairdryer.png" alt="">
         </div>
@@ -31,7 +31,7 @@
         </div>
     </a>
 
-    <a href="" class="categories-item">
+    <a href="#colegio" class="categories-item">
         <div class="icon-bg">
         <img class="icon" src="assets/img/icons/animal-shelter.png" alt="">
         </div>
@@ -61,7 +61,7 @@
         </div>
     </a>
 
-    <a href="" class="categories-item">
+    <a href="blog" class="categories-item">
         <span class="parpadea text"><strong>Nuevo articulo</strong></span>
 
         <div class="icon-bg">

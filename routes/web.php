@@ -25,6 +25,10 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
+
 Route::get('auth/facebook', [SocialAuthController::class, "redirectToFacebookProvider"])->name('social.auth.facebook');
 Route::get('auth/facebook/callback', [SocialAuthController::class, "handleProviderFacebookCallback"]);
 
