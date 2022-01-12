@@ -124,7 +124,8 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 300,
-        autoplay: true,
+       autoplay: true,
+      arrows:false,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [

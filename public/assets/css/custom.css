@@ -978,7 +978,7 @@ textarea {
 }
 .breadcrumbs{
     margin-top: 6rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
 }
 .breadcrumbs span{
     color: #7E7E7E;
@@ -1084,6 +1084,95 @@ input[type=number]::-webkit-outer-spin-button {
 .overview{
 
 }
+.slider-relacionados .slick-slide {
+
+    padding: 1rem;
+}
+.rss-login{
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+.rss-login img{
+    width: 23px;
+
+}
+.rss-login button{
+
+}
+.rrs-google{
+    background: #fff;
+    box-shadow: 0px 0px 8px #00000052;
+    color: #000;
+}
+.rrs-face{
+    background: #167ee6;
+}
+.style-modal-content h2{
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0;
+    margin-left: 1rem;
+}
+.style-modal .btn-close {
+    position: absolute;
+    right: 20px;
+}
+.style-modal .modal-dialog {
+    max-width: 700px;
+
+}
+.style-modal .modal-body {
+
+    padding: 0;
+}
+.bg-modal{
+    background-size: cover;
+
+}
+.txt-w{
+    color: #fff!important;
+}
+.form-login{
+    padding: 0 2rem;
+    text-align: center;
+    font-size: .9rem;
+}
+.line::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    background: #dbd3d3;
+    height: 1px;
+    top: 10px;
+    left: 10px;
+}
+.line::after{
+    position: absolute;
+    content: "";
+    width: 70px;
+    background: #dbd3d3;
+    height: 1px;
+    top: 10px;
+    right: 10px;
+}
+.account-txt{
+    width: 100%;
+    text-align: center;
+}
+.account-txt a{
+    font-size: .9rem;
+    color: #000000d1;
+    text-decoration: none;
+    font-weight: 400;
+}
+.line{
+    text-align: center;
+    font-size: .9rem;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
 /**mediasquery */
 @media only screen and (max-width: 600px) {
     .categories {
@@ -1173,4 +1262,3 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 }
-
