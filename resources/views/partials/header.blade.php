@@ -53,8 +53,8 @@
                             <h2>Iniciar sesión con:
                             </h2>
                             <div class="rss-login">
-                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button>
-                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="assets/img/icons/google.png" alt=""> Google</button>
+                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button></a>
+                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="assets/img/icons/google.png" alt=""> Google</button></a>
                             </div>
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">

@@ -43,7 +43,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 <script src="{{ url('assets/js/photoswipe.js') }}"></script>
 
-@stac("scripts")
+@stack("scripts")
   </body>
 
 </html>
