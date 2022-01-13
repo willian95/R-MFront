@@ -136,5 +136,22 @@
             {{ Auth::user()->name }}
         @endif
 
+        @php
+            $reference = uniqid();
+        @endphp
+
+        <form>
+        <script
+            src="https://checkout.wompi.co/widget.js"
+            data-render="button"
+            data-public-key="{{ env('WOMPI_PUBLIC_KEY') }}"
+            data-currency="COP"
+            data-amount-in-cents="4950000"
+            data-reference="{{ $reference }}"
+            data-signature:integrity="{{ hash ('sha256', $reference.'4950000'.'COP'.'prod_integrity_2XgeLEz79PHqhDtDFLM7HAs3ujxE8ri7');  }}"
+            >
+        </script>
+        </form>
+
     </body>
 </html>
