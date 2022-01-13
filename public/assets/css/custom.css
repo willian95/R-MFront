@@ -593,7 +593,7 @@ img {
 .sub {
     font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
 }
 .slider-servicio {
     margin: 3rem 0;
@@ -1118,6 +1118,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .bg-modal {
     background-size: cover;
     position: relative;
+}
+.pin{
+    margin-right: 0.5rem;
 }
 .txt-w {
     color: #fff !important;

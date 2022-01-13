@@ -19,6 +19,7 @@
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? Llamanos
                     ya, <br>contestamos en
                     menos de 35 segundos!</p>
+                    <p><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
                 <div class="slider-servicio container" data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="servicios-imgs">
@@ -107,6 +108,8 @@
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Servicio de L a D: 9
                     AM - 5 PM <br>
                     Festivos: 9 AM - 2 PM!</p>
+                    <p><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
+
 
                 <div class="slider-servicio-img container mb-2" data-aos="fade-up" data-aos-duration="1300">
                     <div class="servicios-imgs">
@@ -208,7 +211,7 @@
             <div class="servicios-content p-5 ">
                 <h3>Colegio Y Hotel para Perros
                 </h3>
-                <p class="sub">Unicamente en la Sede de
+                <p class="sub"><i class="fas fa-map-marker-alt pin"></i>Unicamente en la Sede de
                     la Calle 103 # 14A 10</p>
 
                 <div class="slider-servicio container mb-2">
@@ -242,7 +245,7 @@
                 <h3>Hotel para Gatos
 
                 </h3>
-                <p class="sub">Unicamente en la Sede de
+                <p class="sub"><i class="fas fa-map-marker-alt pin"></i> Unicamente en la Sede de
                     la Calle 103 # 14A 10</p>
 
                 <div class="slider-servicio container mb-2">
