@@ -1117,9 +1117,30 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .bg-modal {
     background-size: cover;
+    position: relative;
 }
 .txt-w {
     color: #fff !important;
+}
+.overlay-modal h3{
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+.overlay-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+.overlay-modal::before{
+    position: absolute;
+    content: "";
+    background: #00000059;
+    width: 100%;
+    height: 100%;
+    left: 0;
 }
 .form-login {
     padding: 0 2rem;

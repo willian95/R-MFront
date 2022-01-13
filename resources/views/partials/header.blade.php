@@ -137,7 +137,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-modal" style="background-image: url(assets/img/stock/hojainicio.jpg);"></div>
+                    <div class="col-md-6 bg-modal" style="background-image: url(assets/img/stock/tiendavirtual.jpg);">
+              <div class="overlay-modal">
+              <h3>
+                Haz parte de la familia <br>
+R&M
+                </h3>
+              </div>
+                </div>
 
                 </div>
             </div>
