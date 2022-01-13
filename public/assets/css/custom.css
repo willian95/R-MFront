@@ -676,8 +676,8 @@ button {
 .nav-tabs .nav-link:hover {
     border-color: #e9ecef #e9ecef #dee2e6;
     isolation: isolate;
-    background: #ed1d24;
-    color: #fff;
+    background: transparent;
+    color: #ed1d24;
 }
 .slider-servicio-img {
     display: grid;
@@ -1111,6 +1111,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .style-modal .modal-body {
     padding: 0;
+}
+.registro .modal-dialog {
+    max-width: 925px;
 }
 .bg-modal {
     background-size: cover;

@@ -51,6 +51,7 @@
                     <div class="col-md-6 pb-4 pt-4">
                         <div class="login-content">
                             <h2>Iniciar sesión con:
+
                             </h2>
                             <div class="rss-login">
                                 <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button></a>
@@ -74,7 +75,7 @@
                                 <button type="submit" class="btn btn-reds txt-w">Iniciar sesion</button>
                             </form>
                             <div class="account-txt mt-4">
-                                <a href="" class="">¿Aún no tienes cuenta? <br>
+                                <a data-bs-toggle="modal" data-bs-target=".registro" href="" class="">¿Aún no tienes cuenta? <br>
                                     ¡Registrate!</a>
                             </div>
                         </div>
@@ -92,7 +93,7 @@
 
 
 <!-- registro -->
-<div class="modal fade registro" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade registro  style-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -100,7 +101,7 @@
                 <div class="row">
                     <div class="col-md-6 pb-4 pt-4">
                         <div class="login-content">
-                            <h2>Iniciar sesión con:
+                            <h2>Registrate
                             </h2>
                             <div class="rss-login">
                                 <button class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button>
@@ -109,23 +110,30 @@
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">
                                 <div class="row">
-
-                                    <div class="col-md-12 text-start  mb-4">
+                                    <div class="col-md-6 text-start">
+                                        <label for="nombre" class="form-label">Nombre y apellido</label>
+                                        <input type="text" class="form-control" id="nombre" aria-describedby="">
+                                    </div>
+                                    <div class="col-md-6 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Email</label>
                                         <input type="email" placeholder="familia@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     </div>
-                                    <div class="col-md-12 text-start  mb-4">
+                                    <div class="col-md-6 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Contraseña</label>
-                                        <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-md-6 text-start  mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Confirmar Contraseña</label>
+                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     </div>
 
 
                                 </div>
-                                <button type="submit" class="btn btn-reds txt-w">Iniciar sesion</button>
+                                <button type="submit" class="btn btn-reds txt-w">Registrarme</button>
                             </form>
                             <div class="account-txt mt-4">
-                                <a href="" class="">¿Aún no tienes cuenta? <br>
-                                    ¡Registrate!</a>
+                                <a href="" class="">¿Ya tienes cuenta? <br>
+                                    Iniciar sesion</a>
                             </div>
                         </div>
                     </div>
