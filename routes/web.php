@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Product;
 use App\Http\Controllers\SocialAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,27 @@ use App\Http\Controllers\SocialAuthController;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/tienda', function () {
+    return view('tienda');
+});
+Route::get('/producto/{slug}', function ($slug) {
+
+    $product = Product::where("slug", $slug)->with("productFormats", "productSecondaryImages")->first();
+    
+    if(is_null($product)){
+        abort(404);
+    }
+
+    return view('product', ["product" => $product]);
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/checkout', function () {
+    return view('checkout');
 });
 
 Route::get('auth/facebook', [SocialAuthController::class, "redirectToFacebookProvider"])->name('social.auth.facebook');
