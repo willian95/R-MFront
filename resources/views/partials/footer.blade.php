@@ -39,3 +39,6 @@
 <div class="copy">
         <p>Copyright © 2022 . All rights reserved</p>
     </div>
+
+
+    <a href=""  class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>

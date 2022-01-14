@@ -667,6 +667,16 @@ button {
     color: #000;
 
 }
+.ws{
+    position: fixed;
+    bottom: 26px;
+    right: 16px;
+    z-index: 9;
+    filter: drop-shadow(2px 4px 6px #cccc);
+}
+.ws img{
+width: 50px;
+}
 .bg-infos{
     padding: 0 3rem;
 }
