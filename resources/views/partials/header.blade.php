@@ -72,7 +72,7 @@
 
 
                                 </div>
-                                <button type="submit" class="btn btn-reds txt-w">Iniciar sesion</button>
+                                <button type="submit" class="btn btn-reds txt-w">Iniciar sesión</button>
                             </form>
                             <div class="account-txt mt-4">
                                 <a data-bs-toggle="modal" data-bs-target=".registro" href="" class="">¿Aún no tienes cuenta? <br>
@@ -133,7 +133,7 @@
                             </form>
                             <div class="account-txt mt-4">
                                 <a href="" class="">¿Ya tienes cuenta? <br>
-                                    Iniciar sesion</a>
+                                    Iniciar sesión</a>
                             </div>
                         </div>
                     </div>

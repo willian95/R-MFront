@@ -49,13 +49,32 @@ $(document).ready(function () {
         ],
     });
 
-  /*  $(".see-more").on("click", function () {
+   $(".see-more").on("click", function () {
         if (!$(".more-info-service-1").hasClass("is-active")) {
             $(".more-info-service-1").addClass("is-active");
         } else {
             $(".more-info-service-1").removeClass("is-active");
         }
-    });*/
+    });
+
+    $(".see-more-2").on("click", function () {
+        if (!$(".more-info-service-2").hasClass("is-active")) {
+            $(".more-info-service-2").addClass("is-active");
+            $(".transform").addClass("no-transform");
+            $("#colegio").addClass("h-0");
+        } else {
+            $(".more-info-service-2").removeClass("is-active");
+            $(".transform").removeClass("no-transform");
+            $("#colegio").removeClass("h-0");
+        }
+    });
+    $(".see-more-3").on("click", function () {
+        if (!$(".more-info-service-3").hasClass("is-active")) {
+            $(".more-info-service-3").addClass("is-active");
+        } else {
+            $(".more-info-service-3").removeClass("is-active");
+        }
+    });
 });
 
 /*************************filterhome**********************************/
@@ -158,4 +177,6 @@ $(document).ready(function () {
         ],
     });
 
+
 });
+

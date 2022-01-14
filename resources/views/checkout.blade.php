@@ -65,7 +65,7 @@
                                 <input type="text" placeholder="Maria" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="col-md-6 text-start  mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                                <label for="exampleInputEmail1" class="form-label">Teléfono</label>
                                 <input type="text" placeholder="12345678" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="col-md-12 text-start  mb-4">

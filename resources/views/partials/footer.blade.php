@@ -18,8 +18,8 @@
                         <input type="text" class="form-control" id="nombre" aria-describedby="">
                     </div>
                     <div class="col-md-6 text-start">
-                        <label for="telefono" class="form-label">Telefono</label>
-                        <input type="text" class="form-control" id="telefono" aria-describedby="">
+                        <label for="Teléfono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="Teléfono" aria-describedby="">
                     </div>
                     <div class="col-md-12 text-start mt-4 mb-4">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
