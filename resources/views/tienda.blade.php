@@ -55,6 +55,8 @@
                 <div class="container container_gallery_iso" data-aos="fade-up" data-aos-duration="1100">
                     <div class="row iso-container">
 
+                    
+
                         <p v-if="products.length == 0 && loadingProducts == false">Nada para mostrar</p>
 
                         <!-- ----1---- -->
@@ -70,10 +72,29 @@
                             </a>
                         </div>
 
-
-
-
+                        
+                        
                     </div>
+                    {{--<div class="row w-100">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}</div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
+                                <ul class="pagination">
+                                    
+                                    <li class="paginate_button page-item active" v-for="(link, index) in links">
+                                        <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>--}}
+
+
+                    
                 </div>
             </div>
         </div>
@@ -100,6 +121,12 @@
                     choosenCategories:[],
                     loadingCategories:false,
                     loadingProducts:false,
+
+                    links:[],
+                    currentPage:"",
+                    totalPages:"",
+                    linkClass:"page-link",
+                    activeLinkClass:"page-link active-link bg-main",
                 }
             },
             methods: {
@@ -133,9 +160,9 @@
                     this.getProducts()
 
                 },
-                async getProducts(){
+                async getProducts(link = "{{ url('/products') }}"){
                     this.loadingProducts = true
-                    let response = await axios.get("{{ url('/products') }}", {
+                    let response = await axios.get(link, {
                         params:{
                             categories: this.choosenCategories,
                             animal: this.animalType
@@ -144,6 +171,10 @@
                     this.loadingProducts = false
 
                     this.products = response.data.data
+                    this.links = response.data.links
+                    this.currentPage = response.data.current_page
+                    this.totalPages = response.data.last_page
+
 
                 },
                 clearChoosenCategories(){
