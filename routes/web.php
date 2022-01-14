@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Product;
 use App\Http\Controllers\SocialAuthController;
-
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('/tienda', function () {
 });
 Route::get('/producto/{slug}', function ($slug) {
 
-    $product = Product::where("slug", $slug)->with("productFormats", "productSecondaryImages")->first();
+    $product = Product::where("slug", $slug)->with("productFormats", "productSecondaryImages", "category")->first();
     
     if(is_null($product)){
         abort(404);
@@ -47,3 +48,6 @@ Route::get('auth/facebook/callback', [SocialAuthController::class, "handleProvid
 
 Route::get('auth/google', [SocialAuthController::class, "redirectToGoogleProvider"])->name('social.auth.google');
 Route::get('auth/google/callback', [SocialAuthController::class, "handleProviderGoogleCallback"]);
+
+Route::get("categories/fetch-all/{animal}", [CategoryController::class, "fetchAll"]);
+Route::get("products", [ProductController::class, "fetch"]);

@@ -24,7 +24,7 @@
                     <div class="product-info">
                         <!---1---->
                         <div>
-                            <img src="assets/img/stock/TiendavirtualPlacasidentificación.jpg" alt="">
+                            <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
                         </div>
                         <!---2---->
                         <div>
@@ -105,7 +105,7 @@
                 </form>
 
                 <div class="d-flexinfor">
-                    <img class="entrega" src="assets/img/icons/entrega-rapida.png" alt="">
+                    <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
                     <p>Envió rápido! 1
                         día o antes!</p>
                 </div>
@@ -113,7 +113,7 @@
                 <hr>
 
                 <div class="d-flexinfor">
-                    <img class="garantia" src="assets/img/icons/certificado-de-garantia.png" alt="">
+                    <img class="garantia" src="{{ url('assets/img/icons/certificado-de-garantia.png') }}" alt="">
                     <p>1 Año de
                         garantia</p>
                 </div>

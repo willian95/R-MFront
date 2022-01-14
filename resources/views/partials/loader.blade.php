@@ -1,7 +1,7 @@
 <div class="loader">
 
     <div class="effect">
-        <img class="logo-loader  " src="assets/img/icons/logo.png" alt="" />
+        <img class="logo-loader  " src="{{ url('assets/img/icons/logo.png') }}" alt="" />
     </div>
     <svg id="svg-sprite">
         <symbol id="paw" viewBox="0 0 249 209.32">

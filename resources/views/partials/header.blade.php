@@ -25,15 +25,15 @@
                     </ul>
                 </div>
             </div>
-            <a href="" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img src="assets/img/icons/smartphone.png" alt=""></a>
+            <a href="" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img src="{{ url('assets/img/icons/smartphone.png') }}" alt=""></a>
         </div>
         <div class="header-item mt-0">
-            <a href="/"> <img class="logo" src="assets/img/icons/logo.png" alt="" />
+            <a href="/"> <img class="logo" src="{{ url('assets/img/icons/logo.png') }}" alt="" />
             </a>
         </div>
         <div class="header-item flex-m">
-            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="assets/img/icons/user1.png" alt=""></a>
-            <a href="" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="assets/img/icons/bag.png" alt=""></a>
+            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt=""></a>
+            <a href="" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt=""></a>
         </div>
     </div>
 </header>
@@ -54,8 +54,8 @@
 
                             </h2>
                             <div class="rss-login">
-                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button></a>
-                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="assets/img/icons/google.png" alt=""> Google</button></a>
+                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt=""> Facebook</button></a>
+                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt=""> Google</button></a>
                             </div>
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">
@@ -104,8 +104,8 @@
                             <h2>Registrate
                             </h2>
                             <div class="rss-login">
-                                <button class="rrs-face"> <img src="assets/img/icons/facebook.png" alt=""> Facebook</button>
-                                <button class="rrs-google"> <img src="assets/img/icons/google.png" alt=""> Google</button>
+                                <button class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt=""> Facebook</button>
+                                <button class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt=""> Google</button>
                             </div>
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">

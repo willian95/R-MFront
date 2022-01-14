@@ -3,7 +3,7 @@
     <a href="#veterinaria" class="categories-item">
         <span class="parpadea text"><strong>Servicio 24/7</strong></span>
         <div class="icon-bg">
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         </div>
 
         <div class="name">
@@ -17,7 +17,7 @@
 
     <a href="#peluqueria" class="categories-item">
         <div class="icon-bg">
-        <img class="icon" src="assets/img/icons/hairdryer.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/hairdryer.png') }}" alt="">
         </div>
 
         <div class="name">
@@ -33,7 +33,7 @@
 
     <a href="#colegio" class="categories-item">
         <div class="icon-bg">
-        <img class="icon" src="assets/img/icons/animal-shelter.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/animal-shelter.png') }}" alt="">
         </div>
 
         <div class="name">
@@ -47,7 +47,7 @@
 
     <a href="tienda" class="categories-item">
         <div class="icon-bg">
-        <img class="icon" src="assets/img/icons/petshop.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/petshop.png') }}" alt="">
         </div>
 
         <div class="name">
@@ -65,7 +65,7 @@
         <span class="parpadea text"><strong>Nuevo articulo</strong></span>
 
         <div class="icon-bg">
-        <img class="icon" src="assets/img/icons/blogger.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
         </div>
 
         <div class="name">
@@ -85,7 +85,7 @@
 <div class="slick-categories container">
     <a href="" class="categories-item">
         <span class="parpadea text"><strong>Servicio 24/7</strong></span>
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">
             <p>Veterinaria</p>
         </div>
@@ -95,7 +95,7 @@
     </a>
 
     <a href="" class="categories-item">
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">
             <p>Peluqueria & spa</p>
         </div>
@@ -109,7 +109,7 @@
 
 
     <a href="" class="categories-item">
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">
             <p>Colegio</p>
         </div>
@@ -121,7 +121,7 @@
 
 
     <a href="{{ url('/tienda') }}" class="categories-item">
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">
             <p>Tienda virtual</p>
         </div>
@@ -136,7 +136,7 @@
     <a href="" class="categories-item">
         <span class="parpadea text"><strong>Nuevo articulo</strong></span>
 
-        <img class="icon" src="assets/img/icons/veterinarian.png" alt="">
+        <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">
             <p>Blog</p>
         </div>

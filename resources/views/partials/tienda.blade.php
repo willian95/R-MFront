@@ -14,12 +14,12 @@
                         <a data-filter="*">All Projects</a>
                     </li>--->
                     <li>
-                        <a data-filter=".caninos"><img src="assets/img/icons/canino-icon.png" alt="">
+                        <a data-filter=".caninos"><img src="{{ url('assets/img/icons/canino-icon.png') }}" alt="">
                             <span>Caninos</span>
                         </a>
                     </li>
                     <li>
-                        <a data-filter=".felinos"><img src="assets/img/icons/felino-icon.png" alt="">
+                        <a data-filter=".felinos"><img src="{{ url('assets/img/icons/felino-icon.png') }}" alt="">
                             <span>Felinos</span>
                         </a>
                     </li>
