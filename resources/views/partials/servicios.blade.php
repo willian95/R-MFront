@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="bg-infos">
-            <div class="more-info-service-1 col-md-12 ">
+            <div class="more-info-service-1 col-md-12 mt-4 mb-4">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item mt-4" role="presentation">
                         <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#service1" type="button" role="tab" aria-controls="home" aria-selected="true">• Consultas y hospitalización 24 horas</button>
