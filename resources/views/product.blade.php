@@ -6,50 +6,36 @@
 
 <main>
     <div class="breadcrumbs">
-        <p><span><a href="/">Inicio </a>><a href="tienda"> Tienda</a> ></span> Producto</p>
+        <p><span><a href="{{ url('/') }}">Inicio </a>><a href="tienda"> Tienda</a> ></span> Producto</p>
     </div>
 
     <div class="row container-fluid">
         <div class="col-md-7">
             <div id="gallery-product" class="demo-gallery" data-pswp-uid="1">
                 <div class="container gallery-product">
-                    <a class="img-product" href="assets/img/stock/Tiendavirtualalimentossecos.jpg" data-size="1600x1068" data-med="assets/img/stock/Tiendavirtualalimentossecos.jpg" data-med-size="1024x683" data-author="RYM">
-                        <img src="assets/img/stock/Tiendavirtualalimentossecos.jpg" alt="">
-                        <!---- <figure>This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.</figure>--->
+                    
+                    <a class="img-product" href="{{ $product->image }}" data-size="1600x1067" data-med="{{ $product->image }}" data-med-size="1024x683" data-author="RYM">
+                        <img src="{{ $product->image }}" alt="">
                         <div class="gallery-zoom">
                             <p>+</p>
                         </div>
                     </a>
-
-
-                    <a class="img-product" href="assets/img/stock/TiendavirtualPlacasidentificación.jpg" data-size="1600x1067" data-med="assets/img/stock/TiendavirtualPlacasidentificación.jpg" data-med-size="1024x683" data-author="RYM">
-                        <img src="assets/img/stock/TiendavirtualPlacasidentificación.jpg" alt="">
-                        <div class="gallery-zoom">
-                            <p>+</p>
-                        </div>
-                    </a>
-
-                    <a class="img-product" href="assets/img/stock/hojainicio.jpg" data-size="1600x1067" data-med="assets/img/stock/hojainicio.jpg" data-med-size="1024x683" data-author="RYM">
-                        <img src="assets/img/stock/hojainicio.jpg" alt="">
-                        <div class="gallery-zoom">
-                            <p>+</p>
-                        </div>
-                    </a>
-
-                    <a class="img-product" href="assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg" data-size="1600x1600" data-med="assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg" data-med-size="1024x1024" data-author="RYM" class="demo-gallery__img--main">
-                        <img src="assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg" alt="">
-                        <div class="gallery-zoom">
-                            <p>+</p>
-                        </div>
-                    </a>
-
-
-                    <a class="img-product" href="assets/img/stock/laboratorioClínico.jpg" data-size="1600x1067" data-med="assets/img/stock/laboratorioClínico.jpg" data-med-size="1024x683" data-author="RYM">
-                        <img src="assets/img/stock/laboratorioClínico.jpg" alt="">
-                        <div class="gallery-zoom">
-                            <p>+</p>
-                        </div>
-                    </a>
+                    @foreach($product->productSecondaryImages as $secondaryImage)
+                        @if($secondaryImage->type == 'image')
+                            <a class="img-product" href="{{ $secondaryImage->image }}" data-size="1600x1067" data-med="{{ $secondaryImage->image }}" data-med-size="1024x683" data-author="RYM">
+                                <img src="{{ $secondaryImage->image }}" alt="">
+                                <div class="gallery-zoom">
+                                    <p>+</p>
+                                </div>
+                            </a>
+                        @else
+                            <video class="w-100" controls>
+                                <source src="{{ $secondaryImage->image }}" type="video/mp4">
+                                <source src="{{ $secondaryImage->image }}" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        @endif
+                    @endforeach
 
 
                 </div>
@@ -59,7 +45,7 @@
 
         <div class="col-md-5">
             <div class="content-flex">
-                <h2>Awesome Pet Product
+                <h2>{{ $product->name }}
                 </h2>
 
                 <div class="price">
@@ -84,10 +70,7 @@
             <hr>
             <div class="overview">
                 <h4>Overview</h4>
-                <p>• Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit <br>
-                    • Sed do eiusmod tempor incididunt <br>
-                    • Sed do eiusmod tempor incididunt</p>
+                {!! $product->description !!}
             </div>
 
         </div>
@@ -98,56 +81,32 @@
         <h2 class="mt-0 titles mt-5 mb-5">Más productos que pueden servirle a tu mascota</h2>
 
         <div class="slider-relacionados container">
-            <div class="">
-                <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
 
-                    <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
-                </div>
-                <div class="titulo-product">
-                    <h3>Nombre de producto</h3>
-                    <p>From: $ 100.000</p>
-                </div>
-            </div>
-            <div class="">
-                <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
+            @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q) use($product){
+                if($product->category->dog_category == 1){
+                    $q->where("dog_category", 1);
+                }
 
-                    <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
+                if($product->category->cat_category == 1){
+                    $q->orWhere("cat_category", 1);
+                }
+                
+            })->take(10)->get() as $dogProduct)
+                <div class="col-xs-6 col-sm-3 cent isotope-item caninos">
+                    <a href="{{ url('/producto/'.$dogProduct->slug) }}">
+                        <div class="img_iso" style="  background-image: url({{ $dogProduct->image }})">
+                            <div class="hover_iso" style="  background-image: url({{ $dogProduct->image_hover }})"></div>
+                        </div>
+                        <div class="titulo-product">
+                            <h3>{{ $dogProduct->name }}</h3>
+                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="titulo-product">
-                    <h3>Nombre de producto</h3>
-                    <p>From: $ 100.000</p>
-                </div>
-            </div>
-            <div class="">
-                <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
 
-                    <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
-                </div>
-                <div class="titulo-product">
-                    <h3>Nombre de producto</h3>
-                    <p>From: $ 100.000</p>
-                </div>
-            </div>
-            <div class="">
-                <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
+            @endforeach
 
-                    <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
-                </div>
-                <div class="titulo-product">
-                    <h3>Nombre de producto</h3>
-                    <p>From: $ 100.000</p>
-                </div>
-            </div>
-            <div class="">
-                <div class="img_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)">
 
-                    <div class="hover_iso" style="  background-image: url(assets/img/stock/TiendavirtualPlacasidentificación.jpg)"></div>
-                </div>
-                <div class="titulo-product">
-                    <h3>Nombre de producto</h3>
-                    <p>From: $ 100.000</p>
-                </div>
-            </div>
         </div>
 
     </section>

@@ -23,27 +23,27 @@
 
                 <div class="slider-servicio container" data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                         <p>Consultas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                         <p>Hospitalización</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                         <p>UCI</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Rayos X.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Rayos X.jpg') }}" alt="">
                         <p>Rayos X</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                         <p>Cirugías</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Laboratorio Clínico (5).jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Laboratorio Clínico (5).jpg') }}" alt="">
                         <p>Laboratorio</p>
                     </div>
                 </div>
@@ -83,19 +83,19 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                    <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service2" role="tabpanel" aria-labelledby="profile-tab">
-                    <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                    <img style="object-position: 0 -40rem;" src="assets/img/stock/Rayos X.jpg" alt="">
+                    <img style="object-position: 0 -40rem;" src="{{ url('assets/img/stock/Rayos X.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Ecografía.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Ecografía.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Endoscopio .jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -113,19 +113,19 @@
 
                 <div class="slider-servicio-img container mb-2" data-aos="fade-up" data-aos-duration="1300">
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Peluquería _ SPA corte de uñas.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Peluquería _ SPA corte de uñas.jpg') }}" alt="">
                         <p>Corte</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Peluquería _ SPA baño .jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Peluquería _ SPA baño .jpg') }}" alt="">
                         <p>Aromaterapia</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg') }}" alt="">
                         <p>Masajes</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Pelquería _ Spa limpieza oídos.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="">
                         <p>Reiki</p>
                     </div>
 
@@ -177,19 +177,19 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                    <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service2" role="tabpanel" aria-labelledby="profile-tab">
-                    <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                    <img style="object-position: 0 -40rem;" src="assets/img/stock/Rayos X.jpg" alt="">
+                    <img style="object-position: 0 -40rem;" src="{{ url('assets/img/stock/Rayos X.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Ecografía.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Ecografía.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Endoscopio .jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -216,19 +216,19 @@
 
                 <div class="slider-servicio container mb-2">
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Tienda Virtual Boutique.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
                         <p>Monitoreo 24/7</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                         <p>Caminatas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/tiendavirtual.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/tiendavirtual.jpg') }}" alt="">
                         <p>Pilates</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/TiendavirtualPlacasidentificación.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
                         <p>Caminatas</p>
                     </div>
 
@@ -251,15 +251,15 @@
                 <div class="slider-servicio container mb-2">
 
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                         <p>Monitoreo 24/7</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/tiendavirtual.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/tiendavirtual.jpg') }}" alt="">
                         <p>Aromaterapi</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="assets/img/stock/TiendavirtualPlacasidentificación.jpg" alt="">
+                        <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
                         <p>Gateras Independiente</p>
                     </div>
 
@@ -300,19 +300,19 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                    <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service2" role="tabpanel" aria-labelledby="profile-tab">
-                    <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                    <img style="object-position: 0 -40rem;" src="assets/img/stock/Rayos X.jpg" alt="">
+                    <img style="object-position: 0 -40rem;" src="{{ url('assets/img/stock/Rayos X.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Ecografía.jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Ecografía.jpg') }}" alt="">
                 </div>
                 <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
-                    <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                    <img src="{{ url('assets/img/stock/Endoscopio .jpg') }}" alt="">
                 </div>
             </div>
         </div>
