@@ -32,14 +32,18 @@
             </a>
         </div>
         <div class="header-item flex-m">
+            @if(\Auth::check())
+            <a class="m-3" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
+            @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt=""></a>
+            @endif
             <a href="" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt=""></a>
         </div>
     </div>
 </header>
 
 <!-- Modal -->
-<div class="modal fade login style-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade login style-modal" id="dev-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
@@ -63,16 +67,16 @@
 
                                     <div class="col-md-12 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                                        <input type="email" placeholder="familia@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="email" placeholder="familia@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email">
                                     </div>
                                     <div class="col-md-12 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Contraseña</label>
-                                        <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="password">
                                     </div>
 
 
                                 </div>
-                                <button type="submit" class="btn btn-reds txt-w">Iniciar sesión</button>
+                                <button type="button" class="btn btn-reds txt-w" @click="login()">Iniciar sesión</button>
                             </form>
                             <div class="account-txt mt-4">
                                 <a data-bs-toggle="modal" data-bs-target=".registro" href="" class="">¿Aún no tienes cuenta? <br>
@@ -93,7 +97,7 @@
 
 
 <!-- registro -->
-<div class="modal fade registro  style-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade registro  style-modal" id="dev-register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -112,24 +116,42 @@
                                 <div class="row">
                                     <div class="col-md-6 text-start">
                                         <label for="nombre" class="form-label">Nombre y apellido</label>
-                                        <input type="text" class="form-control" id="nombre" aria-describedby="">
+                                        <input type="text" class="form-control" id="nombre" aria-describedby="" v-model="name">
+                                        <small v-if="errors.hasOwnProperty('name')">@{{ errors['name'][0] }}</small>
                                     </div>
                                     <div class="col-md-6 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                                        <input type="email" placeholder="familia@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="email" placeholder="familia@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email">
+                                        <small v-if="errors.hasOwnProperty('email')">@{{ errors['email'][0] }}</small>
+                                    </div>
+                                    <div class="col-md-6 text-start  mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Teléfono</label>
+                                        <input type="email" placeholder="55567345" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="phone">
+                                        <small v-if="errors.hasOwnProperty('phone')">@{{ errors['phone'][0] }}</small>
+                                    </div>
+                                    <div class="col-md-6 text-start  mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Identificación</label>
+                                        <input type="email" placeholder="123456" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="identification">
+                                        <small v-if="errors.hasOwnProperty('identification')">@{{ errors['identification'][0] }}</small>
+                                    </div>
+                                    <div class="col-md-6 text-start  mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Dirección</label>
+                                        <input type="email" placeholder="alguna dirección" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="address">
+                                        <small v-if="errors.hasOwnProperty('address')">@{{ errors['address'][0] }}</small>
                                     </div>
                                     <div class="col-md-6 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Contraseña</label>
-                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="password">
+                                        <small v-if="errors.hasOwnProperty('password')">@{{ errors['password'][0] }}</small>
                                     </div>
                                     <div class="col-md-6 text-start  mb-4">
                                         <label for="exampleInputEmail1" class="form-label">Confirmar Contraseña</label>
-                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input placeholder="" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="password_confirmation">
                                     </div>
 
 
                                 </div>
-                                <button type="submit" class="btn btn-reds txt-w">Registrarme</button>
+                                <button type="button" class="btn btn-reds txt-w" @click="signup()">Registrarme</button>
                             </form>
                             <div class="account-txt mt-4">
                                 <a href="" class="">¿Ya tienes cuenta? <br>
@@ -152,3 +174,128 @@ R&M
         </div>
     </div>
 </div>
+
+
+@push("scripts")
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+        const register = new Vue({
+            el: '#dev-register',
+            data() {
+                return {
+                    name:"",
+                    email:"",
+                    phone:"",
+                    identification:"",
+                    address:"",
+                    password:"",
+                    password_confirmation:"",
+                    errors:[]
+                }
+            },
+            methods: {
+                
+                async signup(){
+                    
+                    this.errors = []
+
+                    try{
+
+                        let response = await axios.post("{{ url('/register') }}", {
+                            name: this.name,
+                            email: this.email,
+                            password: this.password,
+                            password_confirmation: this.password_confirmation,
+                            phone: this.phone,
+                            identification: this.identification,
+                            address: this.address
+                        })
+
+                        if (response.data.success == true) {
+                            swal({
+                                title: "Excelente!",
+                                text: response.data.msg,
+                                icon: "success"
+                            });
+                            this.name = ""
+                            this.email = ""
+                            this.password = ""
+                            this.password_confirmation = ""
+                            this.phone = ""
+                            this.identification = ""
+                            this.address = ""
+                        } else {
+                            swal({
+                                text: response.data.msg,
+                                icon: "error"
+                            })
+                        }
+                        
+                    }catch(err) {
+
+                        this.errors = err.response.data.errors
+
+                    }
+                },
+
+                
+
+            },
+            created() {
+
+            }
+        });
+    </script>
+
+    <script>
+
+        const login = new Vue({
+            el: '#dev-login',
+            data() {
+                return {
+                    email:"",
+                    password:"",
+                    errors:[]
+                }
+            },
+            methods: {
+                
+                async login(){
+                    
+                    this.errors = []
+
+                    try{
+
+                        let response = await axios.post("{{ url('/login') }}", {
+                            email: this.email,
+                            password: this.password,
+                        })
+
+                        if (response.data.success == true) {
+                            window.location.reload()
+                        } else {
+                            swal({
+                                text: response.data.msg,
+                                icon: "error"
+                            })
+                        }
+                        
+                    }catch(err) {
+
+                        this.errors = err.response.data.errors
+
+                    }
+                },
+
+                
+
+            },
+            created() {
+
+            }
+        });
+    </script>
+
+@endpush

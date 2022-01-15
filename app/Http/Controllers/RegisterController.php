@@ -25,6 +25,7 @@ class RegisterController extends Controller
             $user->address = $request->address;
             $user->identification = $request->identification;
             $user->register_code = $hash;
+            $user->role_id = 2;
             $user->save();
 
             $to_name = $user->name;
@@ -33,8 +34,8 @@ class RegisterController extends Controller
 
             \Mail::send("emails.register", $data, function($message) use ($to_name, $to_email) {
 
-                $message->to($to_email, $to_name)->subject("Bienvenido/a! Solo falta un paso para tu registro en Aromantica!");
-                $message->from("ventas@aromantica.co", env("MAIL_FROM_NAME"));
+                $message->to($to_email, $to_name)->subject("Bienvenido/a! Solo falta un paso para tu registro en R&MVet!");
+                $message->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"));
 
             });
 

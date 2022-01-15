@@ -6,6 +6,8 @@ use App\Models\Product;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +53,9 @@ Route::get('auth/google/callback', [SocialAuthController::class, "handleProvider
 
 Route::get("categories/fetch-all/{animal}", [CategoryController::class, "fetchAll"]);
 Route::get("products", [ProductController::class, "fetch"]);
+
+Route::post("register", [RegisterController::class, "register"]);
+Route::get("/email/check/{hash}", [RegisterController::class, "check"]);
+
+Route::post("/login", [LoginController::class, "login"]);
+Route::get("/logout", [LoginController::class, "logout"]);

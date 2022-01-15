@@ -9,7 +9,7 @@
         @include("partials.categorias")
     </div>
     <div class="breadcrumbs">
-        <p><span><a href="/">Inicio </a>><a href="tienda"> Tienda</a> ></span> Checkout</p>
+        <p><span><a href="{{ url('/') }}">Inicio </a>><a href="tienda"> Tienda</a> ></span> Checkout</p>
     </div>
 
     <section>
