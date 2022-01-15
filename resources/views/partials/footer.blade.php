@@ -11,26 +11,30 @@
 
         <div data-aos="fade-up"
      data-aos-duration="2000">
-            <form >
+            <form id="dev-contact">
                 <div class="row">
                     <div class="col-md-6 text-start">
                         <label for="nombre" class="form-label">Nombre y apellido</label>
-                        <input type="text" class="form-control" id="nombre" aria-describedby="">
+                        <input type="text" class="form-control" id="nombre" aria-describedby="" v-model="name">
+                        <small v-if="errors.hasOwnProperty('name')">@{{ errors['name'][0] }}</small>
                     </div>
                     <div class="col-md-6 text-start">
                         <label for="Teléfono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="Teléfono" aria-describedby="">
+                        <input type="text" class="form-control" id="Teléfono" aria-describedby="" v-model="phone">
+                        <small v-if="errors.hasOwnProperty('phone')">@{{ errors['phone'][0] }}</small>
                     </div>
                     <div class="col-md-12 text-start mt-4 mb-4">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email">
+                        <small v-if="errors.hasOwnProperty('email')">@{{ errors['email'][0] }}</small>
                     </div>
                     <div class="col-md-12 text-start">
                         <label for="exampleInputEmail1" class="form-label">Mensaje</label>
-                        <textarea name="" id="" cols="56" rows="5"></textarea>
+                        <textarea name="" id="" cols="56" rows="5" v-model="message"></textarea>
+                        <small v-if="errors.hasOwnProperty('message')">@{{ errors['message'][0] }}</small>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-reds mt-4">Enviar</button>
+                <button type="button" @click="sendMessage()" class="btn btn-reds mt-4">Enviar</button>
             </form>
         </div>
     </div>
@@ -42,3 +46,72 @@
 
 
     <a href=""  class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
+
+
+@push("scripts")
+
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+        const contact = new Vue({
+            el: '#dev-contact',
+            data() {
+                return {
+                    name:"",
+                    email:"",
+                    phone:"",
+                    message:"",
+                    errors:[]
+                }
+            },
+            methods: {
+                
+                async sendMessage(){
+                    
+                    this.errors = []
+
+                    try{
+
+                        let response = await axios.post("{{ url('/send-contact-message') }}", {
+                            name: this.name,
+                            email: this.email,
+                            phone: this.phone,
+                            text: this.message
+                        })
+
+                        if (response.data.success == true) {
+                            swal({
+                                title: "Excelente!",
+                                text: response.data.msg,
+                                icon: "success"
+                            });
+                            this.name = ""
+                            this.email = ""
+                            this.phone = ""
+                            this.message = ""
+                        } else {
+                            swal({
+                                text: response.data.msg,
+                                icon: "error"
+                            })
+                        }
+                        
+                    }catch(err) {
+
+                        this.errors = err.response.data.errors
+
+                    }
+                },
+
+                
+
+            },
+            created() {
+
+            }
+        });
+    </script>
+
+
+@endpush
