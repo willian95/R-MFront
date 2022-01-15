@@ -44,32 +44,57 @@
         </div>
 
         <div class="col-md-5">
-            <div class="content-flex">
-                <h2>{{ $product->name }}
-                </h2>
+            <div id="dev-product-detail">
+                <div class="content-flex">
+                    <h2>{{ $product->name }}
+                    </h2>
 
-                <div class="price">
-                    <p>$10.000</p>
-                </div>
-            </div>
-
-            <div class="content-flex">
-                <div class="">
-                    <form class="qanty">
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                        <input type="number" id="number" value="0" />
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
-                    </form>
-                </div>
-                <div class="w-150 text-end w-100">
-                    <button class="btn-red"><a class="txt-w" href="checkout">Agregar al carrito</a></button>
-
+                    <div class="price">
+                        <p>$ @{{ price }}</p>
+                    </div>
                 </div>
 
+                <div class="content-flex">
+                    
+                    <select class="form-control" @change="setSelectedProductFormat()" v-model="selectedProductFormat">
+                        <option :value="productFormat.id" v-for="productFormat in productFormats">@{{ productFormat.color.color }} - @{{ productFormat.size.size }}</option>
+                    </select>
+
+                    <div class="price">
+                        <p>stock: @{{ stock }}</p>
+                    </div>
+                </div>
+
+                <div class="content-flex">
+                    <div class="">
+                        <form class="qanty">
+                            <div class="value-button" id="decrease" @click="substractAmount()" value="Decrease Value">-</div>
+                            <input type="number" id="number" :value="amount" />
+                            <div class="value-button" id="increase" @click="addAmount()" value="Increase Value">+</div>
+                        </form>
+                        <small v-if="errors.hasOwnProperty('amount')">@{{ errors['amount'][0] }}</small>
+                    </div>
+                    <div class="w-150 text-end w-100">
+                        
+                        Total: $ @{{ price * amount  }}
+
+                    </div>
+
+                </div>
+
+                <div class="content-flex">
+                    
+                    <div class="w-150 text-end w-100">
+                        <button class="btn-red"><a class="txt-w" href="#!" @click="addToCart()">Agregar al carrito</a></button>
+
+                    </div>
+
+                </div>
+            
             </div>
             <hr>
             <div class="overview">
-                <h4>Overview</h4>
+                <h4>Descripción</h4>
                 {!! $product->description !!}
             </div>
 
@@ -110,21 +135,6 @@
         </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- Photoswipe 4.0 html code for javascript interface -->
@@ -201,3 +211,113 @@
 
 @include("partials.footer")
 @endsection
+
+@push("scripts")
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script>
+
+        const app = new Vue({
+            el: '#dev-product-detail',
+            data() {
+                return {
+                    productId:"{{ $product->id }}",
+                    amount:"",
+                    productFormats:[],
+                    selectedProductFormat:"",
+                    price:"",
+                    stock:0,
+                    errors:[]
+
+                }
+            },
+            methods: {
+
+                async getProductFormats(){
+                 
+                    const response = await axios.get("{{ url('/product/product-formats/'.$product->id) }}")
+                    this.productFormats = response.data
+                    this.selectedProductFormat = this.productFormats[0].id
+
+                    this.setSelectedProductFormat()
+                    
+                },
+                setSelectedProductFormat(){
+
+                    var _this = this
+                    const filtered = this.productFormats.filter(function(el) {
+                        return el.id === _this.selectedProductFormat;
+                    });
+                    this.amount = 0
+                    this.price = filtered[0].price
+                    this.stock = filtered[0].stock
+
+                },
+
+                addAmount(){
+
+                    if(this.amount + 1 <= this.stock){
+
+                        this.amount++
+
+                    }
+
+                },
+
+                substractAmount(){
+
+                    if(this.amount > 0){
+                        this.amount--
+                    }
+
+                },
+
+                async addToCart(){
+                    this.errors = []
+                    try{
+
+                        const order = window.localStorage.getItem("order")
+                        const response = await axios.post("{{ url('/cart') }}", {
+                            "product_format_id": this.selectedProductFormat,
+                            "amount": this.amount,
+                            "order": order
+                        })
+
+                        if(response.data.success == true){
+
+                            window.localStorage.setItem("order", response.data.order)
+                            swal({
+                                text:response.data.msg,
+                                icon:"success"
+                            })
+
+                            this.amount = 0
+
+                        }else{
+
+                            swal({
+                                text:response.data.msg,
+                                icon:"error"
+                            })
+
+                        }
+
+                    }catch(err){
+
+                        this.errors = err.response.data.errors
+
+                    }
+
+                }
+
+                
+
+            },
+            mounted() {
+
+                this.getProductFormats()
+
+            }
+        });
+    </script>
+
+@endpush

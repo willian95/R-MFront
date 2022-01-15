@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Size extends Model
 {
     use HasFactory;
+    protected $table= "sizes";
 
-    protected $table = "carts";
-
-    public function productFormat(){
-        return $this->belongsTo(ProductFormat::class);
+    public function productFormats(){
+        return $this->hasMany(ProductFormat::class);
     }
 
 }

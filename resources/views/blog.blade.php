@@ -17,38 +17,138 @@
             Más recientes</h2>
 
         <div class="parent-blog">
-            <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                <div class="mt-3">
-                    <h2>Titulo del articulo
-                    </h2>
-                    <div class="fecha-blog">
-                        <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                <div class="mt-3">
-                    <h2>Titulo del articulo
-                    </h2>
-                    <div class="fecha-blog">
-                        <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                    </div>
-                </div>
-            </div>
-            <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                <div class="pt-3 pb-3">
-                    <h2>Titulo del articulo
-                    </h2>
-                    <div class="fecha-blog">
-                        <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
-            </div>
+            @if(App\Models\Blog::orderBy("id", "desc")->skip(2)->first())
+                @php
+                    $blog = App\Models\Blog::orderBy("id", "desc")->skip(2)->first();
+                @endphp
+                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                    <img src="{{ $blog->image }}" alt="">
+                    <div class="mt-3">
+                        <h2>{{ $blog->title }}
+                        </h2>
+                        <div class="fecha-blog">
+                            <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                <div class=" blog-item" >
+                                <img src="{{ $blog->image }}" alt="">
+                                <div class="mt-3">
+                                    <h2>{{ $blog->title }}
+                                    </h2>
+                                    <div class="fecha-blog">
+                                        <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    </div>
+                                </div>
+
+                                {!! $blog->description !!}
+
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            @endif
+
+            @if(App\Models\Blog::orderBy("id", "desc")->skip(1)->first())
+                @php
+                    $blog = App\Models\Blog::orderBy("id", "desc")->skip(1)->first();
+                @endphp
+                <div class="blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                    <img src="{{ $blog->image }}" alt="">
+                    <div class="mt-3">
+                        <h2>{{ $blog->title }}
+                        </h2>
+                        <div class="fecha-blog">
+                            <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                <div class=" blog-item" >
+                                <img src="{{ $blog->image }}" alt="">
+                                <div class="mt-3">
+                                    <h2>{{ $blog->title }}
+                                    </h2>
+                                    <div class="fecha-blog">
+                                        <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    </div>
+                                </div>
+
+                                {!! $blog->description !!}
+
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            @endif
+
+            @if(App\Models\Blog::orderBy("id", "desc")->first())
+                @php
+                    $blog = App\Models\Blog::orderBy("id", "desc")->first();
+                @endphp
+                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                    <img src="{{ $blog->image }}" alt="">
+                    <div class="pt-3 pb-3">
+                        <h2>{{ $blog->title }}
+                        </h2>
+                        <div class="fecha-blog">
+                            <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                <div class=" blog-item" >
+                                <img src="{{ $blog->image }}" alt="">
+                                <div class="mt-3">
+                                    <h2>{{ $blog->title }}
+                                    </h2>
+                                    <div class="fecha-blog">
+                                        <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    </div>
+                                </div>
+
+                                {!! $blog->description !!}
+
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            @endif
+            
         </div>
 
     </section>
@@ -57,81 +157,57 @@
 
     <section class="post">
         <div class="row">
-            <div class="col-md-4">
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                    <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                    <div class="pt-3 pb-3">
-                        <h2 class="titulos">Titulo del articulo
-                        </h2>
-                        <div class="fecha-blog">
-                            <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
+            @php
+                $count = App\Models\Blog::count();
+                $skip = 3;
+                $limit = $count - $skip;
+            @endphp
+            @foreach(App\Models\Blog::orderBy('id', 'desc')->skip($skip)->take($limit)->get() as $blog)
+                <div class="col-md-4">
+                    <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                        <img src="{{ $blog->title }}" alt="">
+                        <div class="pt-3 pb-3">
+                            <h2 class="titulos">{{ $blog->title }}
+                            </h2>
+                            <div class="fecha-blog">
+                                <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                <div class=" blog-item" >
+                                <img src="{{ $blog->image }}" alt="">
+                                <div class="mt-3">
+                                    <h2>{{ $blog->title }}
+                                    </h2>
+                                    <div class="fecha-blog">
+                                        <span><i class="far fa-calendar-alt"></i>{{ $blog->created_at->format('d-m-Y') }}</span>
+                                    </div>
+                                </div>
+
+                                {!! $blog->description !!}
+
+                            </div>
+
+                            </div>
+
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                    <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                    <div class="pt-3 pb-3">
-                        <h2 class="titulos">Titulo del articulo
-                        </h2>
-                        <div class="fecha-blog">
-                            <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                    <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                    <div class="pt-3 pb-3">
-                        <h2 class="titulos">Titulo del articulo
-                        </h2>
-                        <div class="fecha-blog">
-                            <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
-                </div>
-            </div>
+            @endforeach
+            
         </div>
     </section>
 </main>
 
-
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-
-            <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                <div class=" blog-item" >
-                <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                <div class="mt-3">
-                    <h2>Titulo del articulo
-                    </h2>
-                    <div class="fecha-blog">
-                        <span><i class="far fa-calendar-alt"></i>04/01/2022</span>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
 @include("partials.footer")
 @endsection

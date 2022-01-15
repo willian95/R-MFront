@@ -15,30 +15,31 @@
     <section>
         <h2 class="mt-0 titles mt-5 mb-5">R&M Tienda Virtual</h2>
 
-        <div class="row">
+        <div class="row" id="dev-product-info">
             <div class="col-md-7">
                 <div class="border-content">
                     <div class="border-check">
                         <h3>Mi carrito</h3>
                     </div>
-                    <div class="product-info">
+                    <div class="product-info" v-for="product in products">
                         <!---1---->
                         <div>
-                            <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
+                            <img :src="product.product_format.product.image" alt="">
                         </div>
                         <!---2---->
                         <div>
-                            <p class="txt-product-check">Awesome product</p>
-                            <p>$ 100.000</p>
+                            <p class="txt-product-check">@{{ product.product_format.product.name }}</p>
+                            <p><small>@{{ product.product_format.color.color }} - @{{ product.product_format.size.size }}</small></p>
+                            <p>$ @{{ product.product_format.price }}</p>
                         </div>
                         <!---3---->
                         <div>
                             <div class="content-flex">
                                 <div class="">
                                     <form class="qanty">
-                                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                                        <input type="number" id="number" value="0" />
-                                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                        <div class="value-button" id="decrease" @click="substractAmount(product)" value="Decrease Value">-</div>
+                                        <input class="number" type="number" :id="'number'+product.id" :value="product.amount" />
+                                        <div class="value-button" id="increase" @click="addAmount(product)" value="Increase Value">+</div>
                                     </form>
                                 </div>
 
@@ -47,7 +48,7 @@
                         </div>
                         <!---4---->
                         <div class="text-center">
-                            <i class="far fa-trash-alt trash"></i>
+                            <i class="far fa-trash-alt trash" @click="askForDelete(product)"></i>
                         </div>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
                     <h3>Resumen</h3>
                     <div class="resumen-item">
                         <span>Subtotal</span>
-                        <p>$ 1,998.000</p>
+                        <p>$ @{{ total }}</p>
                     </div>
                     <div class="resumen-item">
                         <span>Envio</span>
@@ -92,17 +93,20 @@
                 </div>
                 <div class="resumen-item bg-total ">
                     <span>Total</span>
-                    <p>$ 2,003.000</p>
+                    <p>$ @{{ total + 5000 }}</p>
                 </div>
 
                 <!------------codigo------------->
+                @if(\Auth::check())
                 <form action="">
                     <div class="col-md-6 text-start  mb-4 mt-5">
                         <label for="exampleInputEmail1" class="form-label">Código de descuento?</label>
-                        <input type="text" placeholder="12345" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" placeholder="12345" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="coupon">
+                        <button type="button" class="btn btn-info" @click="codeVerify()">Verificar código</button>
                     </div>
 
                 </form>
+                @endif
 
                 <div class="d-flexinfor">
                     <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
@@ -122,14 +126,244 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
 </main>
 
 @include("partials.footer")
 @endsection
+
+
+@push("scripts")
+
+    <style>
+        .number{
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0px;
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+        }
+    </style>
+
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script>
+
+        const app = new Vue({
+            el: '#dev-product-info',
+            data() {
+                return {
+                    couponInfo:"",
+                    products:[],
+                    coupon:"",
+                    usedCoupons:[]
+                }
+            },
+            computed: {
+                total: function(){
+                    
+                    let innerTotal = 0;
+                    this.products.forEach(item => {
+                        innerTotal = innerTotal + (item.amount * item.product_format.price)
+                    })
+
+                    return innerTotal
+
+                }
+            },
+            methods: {
+                
+                async getCartProducts(){
+                    
+                    const order = window.localStorage.getItem("order")
+                    const response = await axios.get("{{ url('/cart') }}", {
+                        params:{
+                            "order_id": order
+                        }
+                    })
+
+                    this.products = response.data 
+                    
+                },
+                addAmount(product){
+
+                    if(product.amount + 1 <= product.product_format.stock){
+
+                        product.amount++
+                        this.updateCartItem(product)
+                    }
+
+                },
+
+                substractAmount(product){
+
+                    if(product.amount > 0){
+                        product.amount--
+                        this.updateCartItem(product)
+                    }
+
+                },
+                async updateCartItem(product){
+
+                    const response = await axios.put("{{ url('/cart') }}"+"/"+product.id, {
+                        "amount": product.amount
+                    })
+
+                },
+                askForDelete(product){
+
+                    swal({
+                        title: "¿Estás seguro de eliminar?",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                        
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            this.deleteCartItem(product)
+                        } 
+                    });
+
+                },
+
+                isUsedCoupons(code){
+
+                    if(this.usedCoupons.indexOf(code) > -1){
+                        return true
+                    }
+
+                    return false
+                },
+                async codeVerify(){
+
+                    if(this.isUsedCoupons(this.coupon)){
+
+                        swal({
+                            text:"Este cupón ya fue utilizado",
+                            icon: "warning"
+                        })
+
+                        return
+                    }
+
+                    const order = window.localStorage.getItem("order")
+                    const response = await axios.post("{{ url('/cart/code-verify') }}",{
+                        coupon: this.coupon
+                    })
+
+                    this.couponInfo = response.data.coupon
+                    const couponProductFormats = response.data.couponProductFormats
+
+                    var _this = this
+
+                    if(this.couponInfo.total_discount == "producto"){
+               
+                        if(this.couponInfo.all_products == 1){
+                            
+                            this.products.forEach(item => {
+
+                                if(_this.couponInfo.discount_type == "neto"){
+
+                                    item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                    this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                                }else{
+
+                                    const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                    item.product_format.price = item.product_format.price - discount
+                                    this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                                }
+
+                            })
+
+                            return 
+
+                            }else{
+
+                            this.products.forEach(item => {
+                                
+                                couponProductFormats.forEach(couponProduct =>{
+                                    
+                                    if(item.product_format.id == couponProduct.product_format_id){
+                                        
+                                        if(_this.couponInfo.discount_type == "neto"){
+
+                                            item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                            this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                                        }else{
+
+                                            const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                            item.product_format.price = item.product_format.price - discount
+                                            this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                                        }
+
+                                    }
+
+                                })
+
+                            })
+
+                            return
+
+                        }
+
+
+                    }else{
+
+                        this.products.forEach(item => {
+
+                            if(_this.couponInfo.discount_type == "neto"){
+
+                                item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                            }else{
+
+                                const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                item.product_format.price = item.product_format.price - discount
+                                this.usedCoupons.push(_this.couponInfo.coupon_code)
+
+                            }
+
+                        })
+
+                        return 
+
+                    }
+
+                },  
+                async deleteCartItem(product){
+
+                    const response = await axios.delete("{{ url('/cart') }}"+"/"+product.id)    
+                    if(response.data.success == true){
+
+                        swal({
+                            text:response.data.msg,
+                            icon:"success"
+                        })
+
+                        this.getCartProducts()
+
+                    }else{
+
+                        swal({
+                            text:response.data.msg,
+                            icon:"error"
+                        })
+
+                    }
+                }
+
+            },
+            created() {
+
+                this.getCartProducts()
+
+            }
+        });
+    </script>
+
+@endpush

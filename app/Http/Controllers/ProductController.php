@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\ProductFormat;
 
 class ProductController extends Controller
 {
@@ -31,6 +32,12 @@ class ProductController extends Controller
 
         return response()->json($products);
 
+    }
+
+    function productFormats($id){
+
+        $producFormats = ProductFormat::where("product_id", $id)->with("size", "color")->get();
+        return response()->json($producFormats);
     }
 
 }

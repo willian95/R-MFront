@@ -37,7 +37,7 @@
             @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt=""></a>
             @endif
-            <a href="" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt=""></a>
+            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt=""></a>
         </div>
     </div>
 </header>
