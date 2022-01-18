@@ -15,8 +15,8 @@
         </div>
         <div class="col-md-6">
             <div class="servicios-content">
-                <h3 data-aos="fade-up" data-aos-duration="1200">Clinica 24 Horas</h3>
-                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? Llamanos
+                <h3 data-aos="fade-up" data-aos-duration="1200">﻿Clínica 24 Horas</h3>
+                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? ﻿Llámanos
                     ya, <br>contestamos en
                     menos de 35 segundos!</p>
                 <p><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
@@ -77,9 +77,7 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service6" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
-                    </li>
+
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
@@ -202,7 +200,7 @@
 
     </div>
     <!-------------------------servicio 3---------------------------------->
-    <div id="colegio" class="row conetnt-serivicios " data-aos="fade-up" data-aos-duration="1200">
+    <div id="colegio" class="row conetnt-serivicios ">
         <div class="col-md-6 p-0 h-70 ">
             @if(App\Models\ImageService::first()->type3 == "image")
             <img class="obj-cover" src="{{ App\Models\ImageService::first()->image3 }}" alt="peluquería _ SPA Aromaterapia y masajes de relajación">
@@ -218,7 +216,7 @@
             <div class="servicios-content p-5 ">
                 <h3>Colegio Y Hotel para Perros
                 </h3>
-                <p class="sub"><i class="fas fa-map-marker-alt pin"></i>Unicamente en la Sede de
+                <p class="sub"><i class="fas fa-map-marker-alt pin"></i>Únicamente en la Sede de
                     la Calle 103 # 14A 10</p>
 
                 <div class="slider-servicio container mb-2">
@@ -252,7 +250,7 @@
                 <h3>Hotel para Gatos
 
                 </h3>
-                <p class="sub"><i class="fas fa-map-marker-alt pin"></i> Unicamente en la Sede de
+                <p class="sub"><i class="fas fa-map-marker-alt pin"></i> Únicamente en la Sede de
                     la Calle 103 # 14A 10</p>
 
                 <div class="slider-servicio container mb-2">
@@ -343,7 +341,7 @@
                         <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
                     </div>
                     <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                        <img style="object-position: 0 -40rem;" src="assets/img/stock/Rayos X.jpg" alt="">
+                        <img style="" src="assets/img/stock/Rayos X.jpg" alt="">
                     </div>
                     <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
                         <img src="assets/img/stock/Ecografía.jpg" alt="">

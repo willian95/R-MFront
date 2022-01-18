@@ -19,6 +19,7 @@ img {
 .main-header {
     display: flex;
     justify-content: space-between;
+        align-items: center;
 }
 .header-two header::before {
     display: block;
@@ -33,8 +34,8 @@ img {
     z-index: -1;
 }
 .menu-trigger {
-    position: absolute;
-    top: 3%;
+    position: fixed;
+    top: 3rem;
     width: 50px;
     height: auto;
     cursor: pointer;
@@ -43,6 +44,13 @@ img {
     justify-content: center;
     z-index: 10;
     left: 7%;
+}
+.copy-nav{
+    font-size: .9rem;
+    text-align: center;
+}
+.menu ul{
+    padding-top: 2rem;
 }
 .menu-trigger:hover {
     border-right: none;
@@ -67,7 +75,7 @@ img {
     opacity: 1;
 }
 .menu-trigger > p {
-    color: #aaa;
+    color: transparent;
     transform: translateY(60px) rotate(-90deg);
     margin-top: 30px;
     font-weight: bold;
@@ -95,10 +103,13 @@ img {
     background: #fff;
     transition: all 0.4s ease;
 }
-
+.name-nav{
+    color: #fff;
+    text-decoration: none;
+}
 .menu {
     position: absolute;
-    top: -2rem;
+    top: -3rem;
     /* left: 0;*/
     background: #222;
     /* height: 100%; */
@@ -149,7 +160,9 @@ img {
 }
 .menu > ul > li > p {
     transform: translateY(calc(100% + 10px));
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+
 }
 .logo {
     width: 110px;
@@ -1352,6 +1365,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .post .fecha-blog span{
     font-size: 1rem;
+}
+.redes-nav{
+
+}
+.redes-nav a{
+    margin-right: 1rem;
+}
+.redes-nav i{
+    color: #fff;
+    font-size: 1.5rem;
 }
 /**mediasquery */
 @media only screen and (max-width: 600px) {
