@@ -76,6 +76,13 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service6" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Laboratorio clínico: Contamos con nuestro
+
+propio laboratorio liderado por un
+especialista en el área en donde procesamos
+nuestras muestras y la de nuestros aliados!</button>
+                    </li>
 
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -92,6 +99,12 @@
                         <img src="assets/img/stock/Ecografía.jpg" alt="">
                     </div>
                     <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
+                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                    </div>
+                    <div class="tab-pane fade" id="service6" role="tabpanel" aria-labelledby="contact-tab">
+                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                    </div>
+                    <div class="tab-pane fade" id="service7" role="tabpanel" aria-labelledby="contact-tab">
                         <img src="assets/img/stock/Endoscopio .jpg" alt="">
                     </div>
                 </div>
