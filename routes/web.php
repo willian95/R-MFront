@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,11 @@ Route::get("/email/check/{hash}", [RegisterController::class, "check"]);
 
 Route::post("/login", [LoginController::class, "login"]);
 Route::get("/logout", [LoginController::class, "logout"]);
+
+Route::get("/product/product-formats/{product_id}", [ProductController::class, "productFormats"]);
+
+Route::post("/cart", [CartController::class, "addToCart"]);
+Route::post("/cart/code-verify", [CartController::class, "verifyCode"]);
+Route::put("/cart/{cart_id}", [CartController::class, "updateCart"]);
+Route::delete("/cart/{cart_id}", [CartController::class, "deleteCart"]);
+Route::get("/cart", [CartController::class, "getCart"]);
