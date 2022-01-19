@@ -8,19 +8,30 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <p>Lorem ipsum</p>
+                           <a href="#veterinaria"> <p>Veterinaria</p></a>
                         </li>
                         <li>
-                            <p>Lorem ipsum</p>
+                          <a href="#peluqueria">  <p>Peluqueria & Spa</p></a>
                         </li>
                         <li>
-                            <p>Lorem ipsum</p>
+                            <a href="#colegio"><p>Colegio</p></a>
                         </li>
                         <li>
-                            <p>Lorem ipsum</p>
+                            <a href="tienda"><p>Tienda Virtual</p></a>
                         </li>
                         <li>
-                            <p>Lorem ipsum</p>
+                            <a href="blog"><p>Blog</p></a>
+                        </li>
+
+                        <li class="mt-3 mb-4 redes-nav">
+                            <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                        <li>
+                            <p class="copy-nav">Copyright © 2022 . All rights reserved
+
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +44,7 @@
         </div>
         <div class="header-item flex-m">
             @if(\Auth::check())
-            <a class="m-3" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
+            <a class="m-3 name-nav" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
             @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt=""></a>
             @endif
@@ -97,7 +108,7 @@
 
 
 <!-- registro -->
-<div class="modal fade registro  style-modal" id="dev-register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+<div class="modal fade registro  style-modal" id="dev-register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -160,13 +171,13 @@
                         </div>
                     </div>
                     <div class="col-md-6 bg-modal" style="background-image: url(assets/img/stock/tiendavirtual.jpg);">
-              <div class="overlay-modal">
-              <h3>
-                Haz parte de la familia <br>
-R&M
-                </h3>
-              </div>
-                </div>
+                        <div class="overlay-modal">
+                            <h3>
+                                Haz parte de la familia <br>
+                                R&M
+                            </h3>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -177,125 +188,123 @@ R&M
 
 
 @push("scripts")
-    <script src="{{ asset('/js/app.js') }}"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
+<script src="{{ asset('/js/app.js') }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    const register = new Vue({
+        el: '#dev-register',
+        data() {
+            return {
+                name: "",
+                email: "",
+                phone: "",
+                identification: "",
+                address: "",
+                password: "",
+                password_confirmation: "",
+                errors: []
+            }
+        },
+        methods: {
 
-        const register = new Vue({
-            el: '#dev-register',
-            data() {
-                return {
-                    name:"",
-                    email:"",
-                    phone:"",
-                    identification:"",
-                    address:"",
-                    password:"",
-                    password_confirmation:"",
-                    errors:[]
+            async signup() {
+
+                this.errors = []
+
+                try {
+
+                    let response = await axios.post("{{ url('/register') }}", {
+                        name: this.name,
+                        email: this.email,
+                        password: this.password,
+                        password_confirmation: this.password_confirmation,
+                        phone: this.phone,
+                        identification: this.identification,
+                        address: this.address
+                    })
+
+                    if (response.data.success == true) {
+                        swal({
+                            title: "Excelente!",
+                            text: response.data.msg,
+                            icon: "success"
+                        });
+                        this.name = ""
+                        this.email = ""
+                        this.password = ""
+                        this.password_confirmation = ""
+                        this.phone = ""
+                        this.identification = ""
+                        this.address = ""
+                    } else {
+                        swal({
+                            text: response.data.msg,
+                            icon: "error"
+                        })
+                    }
+
+                } catch (err) {
+
+                    this.errors = err.response.data.errors
+
                 }
             },
-            methods: {
-                
-                async signup(){
-                    
-                    this.errors = []
 
-                    try{
 
-                        let response = await axios.post("{{ url('/register') }}", {
-                            name: this.name,
-                            email: this.email,
-                            password: this.password,
-                            password_confirmation: this.password_confirmation,
-                            phone: this.phone,
-                            identification: this.identification,
-                            address: this.address
-                        })
 
-                        if (response.data.success == true) {
-                            swal({
-                                title: "Excelente!",
-                                text: response.data.msg,
-                                icon: "success"
-                            });
-                            this.name = ""
-                            this.email = ""
-                            this.password = ""
-                            this.password_confirmation = ""
-                            this.phone = ""
-                            this.identification = ""
-                            this.address = ""
-                        } else {
-                            swal({
-                                text: response.data.msg,
-                                icon: "error"
-                            })
-                        }
-                        
-                    }catch(err) {
+        },
+        created() {
 
-                        this.errors = err.response.data.errors
+        }
+    });
+</script>
 
-                    }
-                },
-
-                
-
-            },
-            created() {
-
+<script>
+    const login = new Vue({
+        el: '#dev-login',
+        data() {
+            return {
+                email: "",
+                password: "",
+                errors: []
             }
-        });
-    </script>
+        },
+        methods: {
 
-    <script>
+            async login() {
 
-        const login = new Vue({
-            el: '#dev-login',
-            data() {
-                return {
-                    email:"",
-                    password:"",
-                    errors:[]
+                this.errors = []
+
+                try {
+
+                    let response = await axios.post("{{ url('/login') }}", {
+                        email: this.email,
+                        password: this.password,
+                    })
+
+                    if (response.data.success == true) {
+                        window.location.reload()
+                    } else {
+                        swal({
+                            text: response.data.msg,
+                            icon: "error"
+                        })
+                    }
+
+                } catch (err) {
+
+                    this.errors = err.response.data.errors
+
                 }
             },
-            methods: {
-                
-                async login(){
-                    
-                    this.errors = []
 
-                    try{
 
-                        let response = await axios.post("{{ url('/login') }}", {
-                            email: this.email,
-                            password: this.password,
-                        })
 
-                        if (response.data.success == true) {
-                            window.location.reload()
-                        } else {
-                            swal({
-                                text: response.data.msg,
-                                icon: "error"
-                            })
-                        }
-                        
-                    }catch(err) {
+        },
+        created() {
 
-                        this.errors = err.response.data.errors
-
-                    }
-                },
-
-                
-
-            },
-            created() {
-
-            }
-        });
-    </script>
+        }
+    });
+</script>
 
 @endpush

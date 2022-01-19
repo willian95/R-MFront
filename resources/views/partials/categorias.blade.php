@@ -21,7 +21,7 @@
         </div>
 
         <div class="name">
-            <p>Peluqueria & spa</p>
+            <p>Peluquería & Spa</p>
         </div>
         <div class="subtitl">
             <p>Conoce todos los servicios que
@@ -51,18 +51,18 @@
         </div>
 
         <div class="name">
-            <p>Tienda virtual</p>
+            <p>Tienda Virtual</p>
         </div>
         <div class="subtitl">
             <p>Conoce todos los productos para tu
                 mascota! Desde comida/alimento,
                 productos veterinarios como
-                accesorios y juegos.</p>
+                accesorios y  juegos!</p>
         </div>
     </a>
 
     <a href="blog" class="categories-item">
-        <span class="parpadea text"><strong>Nuevo articulo</strong></span>
+        <span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>
 
         <div class="icon-bg">
         <img class="icon" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
@@ -134,7 +134,7 @@
     </a>
 
     <a href="" class="categories-item">
-        <span class="parpadea text"><strong>Nuevo articulo</strong></span>
+        <span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>
 
         <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
         <div class="name">

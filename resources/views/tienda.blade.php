@@ -37,7 +37,8 @@
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
                             <div class="options">
-                                <p>Categorias</p>
+                                <p>Categorías
+</p>
                                 <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
                                     <label class="form-check-label" :for="'category'+category.id">
@@ -55,7 +56,7 @@
                 <div class="container container_gallery_iso" data-aos="fade-up" data-aos-duration="1100">
                     <div class="row iso-container">
 
-                    
+
 
                         <p v-if="products.length == 0 && loadingProducts == false">Nada para mostrar</p>
 
@@ -72,8 +73,8 @@
                             </a>
                         </div>
 
-                        
-                        
+
+
                     </div>
                     {{--<div class="row w-100">
                         <div class="col-sm-12 col-md-5">
@@ -82,19 +83,19 @@
                         <div class="col-sm-12 col-md-7">
                             <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
                                 <ul class="pagination">
-                                    
+
                                     <li class="paginate_button page-item active" v-for="(link, index) in links">
                                         <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
                                     </li>
-                                    
-                                    
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>--}}
 
 
-                    
+
                 </div>
             </div>
         </div>
@@ -130,13 +131,13 @@
                 }
             },
             methods: {
-                
+
                 toggleAnimalType(animal){
-                   
+
                     this.animalType = animal
                     this.clearChoosenCategories()
                     this.getCategories()
-                    
+
                 },
                 async getCategories(){
                     this.loadingCategories = true
@@ -195,7 +196,7 @@
                         .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
                     ) // use . as a separator
                 }
-                
+
 
             },
             created() {
