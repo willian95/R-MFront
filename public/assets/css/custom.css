@@ -44,7 +44,7 @@ img {
 }
 .menu-trigger {
     position: absolute;
-    top: 3rem;
+    top: 3.7rem;
     width: 50px;
     height: auto;
     cursor: pointer;
@@ -135,7 +135,8 @@ img {
     padding: 50px 100px 50px 50px;
     will-change: transform;
     /* transform: translateX(10px); */
-    height: 100vh;
+    height: 108vh;
+    padding-top: 8rem;
 }
 .menu > ul:hover > li:not(:hover) {
     color: rgba(249, 249, 237, 0.5);
@@ -227,8 +228,8 @@ img {
     background-color: #fff;
 }
 .phone img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     filter: invert(1);
 }
 .user {
@@ -887,6 +888,21 @@ textarea {
     list-style: none;
 
     cursor: pointer;
+}
+.h-63{
+    height: 63vh;
+}
+.redes-nav-logo{
+    margin-left: 4rem;
+}
+.redes-nav-logo a{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.center-rrss{
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {

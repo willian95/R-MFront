@@ -14,7 +14,7 @@
             @endif
         </div>
         <div class="col-md-6">
-            <div class="servicios-content pt-0 p-3 " >
+            <div class="servicios-content pt-0 p-3 ">
                 <h3 data-aos="fade-up" data-aos-duration="1200">﻿Clínica 24 Horas</h3>
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? ﻿Llámanos
                     ya! contestamos en menos de 35 segundos!</p>
@@ -22,27 +22,27 @@
 
                 <div class="slider-servicio container mb-4 " data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
+                        <img src="{{ url('assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg') }}" alt="Imagen de mascota en consulta">
                         <p>Consultas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
+                        <img src="{{ url('assets/img/servicio/Hospitalizació.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
                         <p>Hospitalización</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
+                        <img src="{{ url('assets/img/servicio/uci.jpg') }}" alt="imagen laboratorio de UCI">
                         <p>UCI</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Rayos X.jpg') }}" alt="">
+                        <img src="{{ url('assets/img/servicio/RayosXI.jpg') }}" alt="Imagen de Laboratorio de rayos x">
                         <p>Rayos X</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
+                        <img src="{{ url('assets/img/servicio/CirugíaQuirofano.jpg') }}" alt="Imagen de  Cirugía Quirofano">
                         <p>Cirugías</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Laboratorio Clínico (5).jpg') }}" alt="">
+                        <img src="{{ url('assets/img/servicio/LaboratorioClínico1.jpg') }}" alt="Imagen de laboratorio clinico">
                         <p>Laboratorio</p>
                     </div>
                 </div>
@@ -79,33 +79,33 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Laboratorio clínico: Contamos con nuestro
 
-propio laboratorio liderado por un
-especialista en el área en donde procesamos
-nuestras muestras y la de nuestros aliados!</button>
+                            propio laboratorio liderado por un
+                            especialista en el área en donde procesamos
+                            nuestras muestras y la de nuestros aliados!</button>
                     </li>
 
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                        <img src="assets/img/stock/Hospitalizaciónhospitalizaciónycuidadosintensivos.jpg" alt="Imagen de Hospitalización hospitalización y cuidadosintensivos">
                     </div>
                     <div class="tab-pane fade" id="service2" role="tabpanel" aria-labelledby="profile-tab">
-                        <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="Imagen de Hospitalización y cuidados intensivos">
                     </div>
                     <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Rayos X.jpg" alt="">
+                        <img src="assets/img/stock/Digitalización (2) (1).jpg" alt="Immagen de digitalizacion">
                     </div>
                     <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Ecografía.jpg" alt="">
+                        <img src="assets/img/stock/Ecografía.jpg" alt="Imagen de ecografia">
                     </div>
                     <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                        <img src="assets/img/stock/Endoscopio .jpg" alt="Imagen de endoscopio">
                     </div>
                     <div class="tab-pane fade" id="service6" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                        <img src="assets/img/servicio/CirugíaQuirofano.jpg" alt="Imagen de quirofano">
                     </div>
                     <div class="tab-pane fade" id="service7" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
+                        <img src="assets/img/stock/Laboratorio Clínico (4).jpg" alt="Imagen de Laboratorio Clínico">
                     </div>
                 </div>
             </div>
@@ -125,16 +125,16 @@ nuestras muestras y la de nuestros aliados!</button>
 
                 <div class="slider-servicio-img container mb-2 p-0" data-aos="fade-up" data-aos-duration="1300">
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Peluquería _ SPA corte de uñas.jpg') }}" alt="">
-                        <p>Corte</p>
+                        <img src="{{ url('assets/img/stock/Peluquería _ SPA corte de uñas.jpg') }}" alt="Imagen de corte de uñas en mascotas">
+                        <p>Corte y limado de uñas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Peluquería _ SPA baño .jpg') }}" alt="">
-                        <p>Aromaterapia</p>
+                        <img src="{{ url('assets/img/stock/Peluquería _ SPA Hidromaajeadora.jpg') }}" alt="Imagen de Hidromaajeadora">
+                        <p>Baño especial</p>
                     </div>
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg') }}" alt="">
-                        <p>Masajes</p>
+                        <p>Aromaterapia</p>
                     </div>
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="">
@@ -145,66 +145,21 @@ nuestras muestras y la de nuestros aliados!</button>
                 <div class="btns-conetnt">
 
                     <button class="btn-reds">Reservar ya</button>
-                   <!--- <button class="btn-white see-more-2">Ver más</button>--->
+                    <!--- <button class="btn-white see-more-2">Ver más</button>--->
                 </div>
             </div>
         </div>
-        <div class="col-md-6 p-0 h-55 ">
-        @if(App\Models\ImageService::first()->type2 == "image")
-            <img class="obj-cover" src="{{ App\Models\ImageService::first()->image2 }}" alt="">
+        <div class="col-md-6 p-0 center-ser flex-column">
+            @if(App\Models\ImageService::first()->type2 == "image")
+            <img class="obj-cover h-63" src="{{ App\Models\ImageService::first()->image2 }}" alt="">
             @else
             <video class="w-100" controls>
                 <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/mp4">
                 <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/ogg">
                 Your browser does not support the video tag.
             </video>
-            @endif    <div class="bg-infos p-0">
-                <div class="more-info-service-2 col-md-12 p-0">
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                            <img class="img-service2" src="assets/img/stock/Peluquería _ SPA corte de uñas.jpg" alt="">
-                        </div>
-                    </div>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item mt-4" role="presentation">
+            @endif
 
-                            <p class="p-l2"> • Corte y limado de uñas <br>
-                                • Enjuague bucal<br>
-                                • Limpieza de oídos<br>
-                                • Toallas desechables por mascota<br>
-                                • Agua con control de temperatura<br>
-                                • Shampoo especialmente elaborado para
-                                mascotas<br>
-                                • Corte característico por raza<br>
-                                • Aromaterapia<br>
-                                • Musicoterapia<br>
-                                • Masajes de relajación<br>
-                                • Reiki<br>
-                                • Hidratación pulpejos</p><br>
-                        </li>
-                        <li class="nav-item" role="presentation">
-
-                        </li>
-                        <!---  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service3" type="button" role="tab" aria-controls="contact" aria-selected="false">• Rayos X y digitalizador</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service4" type="button" role="tab" aria-controls="contact" aria-selected="false">• Ecografías</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service5" type="button" role="tab" aria-controls="contact" aria-selected="false">• Endoscopias y colonoscopia</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service6" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
-                </li>--->
-                    </ul>
-
-                </div>
-            </div>
             <div class="info-serv row center-ser p-4">
                 <div class="col-md-6">
                     <ul>
@@ -245,7 +200,7 @@ nuestras muestras y la de nuestros aliados!</button>
             </video>
             @endif
         </div>
-        <div class="col-md-6 p-0  ">
+        <div class="col-md-6 p-0  bg-grays">
             <div class="servicios-content p-5 pb-0 bg-grays">
                 <h3>Colegio Y Hotel para Perros
                 </h3>
@@ -254,20 +209,20 @@ nuestras muestras y la de nuestros aliados!</button>
 
                 <div class="slider-servicio container mb-2">
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Tienda Virtual Boutique.jpg') }}" alt="">
-                        <p>Monitoreo 24/7</p>
+                        <img src="{{ url('assets/img/servicio/Colegio   hotel 2.jpg') }}" alt="Imagen de Colegio  para perros">
+
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
-                        <p>Caminatas</p>
+                        <img src="{{ url('assets/img/servicio/Colegio   Hotel.jpg') }}" alt="Imagen de Colegio  para perros">
+
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/tiendavirtual.jpg') }}" alt="">
-                        <p>Pilates</p>
+                        <img src="{{ url('assets/img/servicio/Colegio (1).jpg') }}" alt="Imagen de Colegio  para perros">
+
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
-                        <p>Caminatas</p>
+                        <img src="{{ url('assets/img/servicio/Colegio.jpg') }}" alt="Imagen de Colegio  para perros">
+
                     </div>
 
                 </div>
@@ -275,7 +230,7 @@ nuestras muestras y la de nuestros aliados!</button>
             </div>
 
             <!--------------service ct----------->
-            <div class="servicios-content p-5 pt-0 ">
+            <div class="servicios-content p-5 pt-0 bg-grays">
                 <h3>Hotel para Gatos
 
                 </h3>
@@ -283,16 +238,20 @@ nuestras muestras y la de nuestros aliados!</button>
                 <div class="slider-servicio container mb-2">
 
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Hospitalización y cuidados intensivos (1).jpg') }}" alt="">
-                        <p>Monitoreo 24/7</p>
+                        <img src="{{ url('assets/img/servicio/hotel gatos 5.jpg') }}" alt="Imagen de hotel gatos">
+
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/tiendavirtual.jpg') }}" alt="">
-                        <p>Aromaterapi</p>
+                        <img src="{{ url('assets/img/servicio/Hotel gatos 2.jpg') }}" alt="Imagen de hotel gatos">
+
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/TiendavirtualPlacasidentificación.jpg') }}" alt="">
-                        <p>Gateras Independiente</p>
+                        <img src="{{ url('assets/img/servicio/Hotel Gatos.jpg') }}" alt="Imagen de hotel gatos">
+
+                    </div>
+                    <div class="servicios-imgs">
+                        <img src="{{ url('assets/img/servicio/Hotel gatos 3.jpg') }}" alt="Imagen de hotel gatos">
+
                     </div>
 
                 </div>
@@ -306,76 +265,69 @@ nuestras muestras y la de nuestros aliados!</button>
         <div class="bg-infos">
             <div class="more-info-service-3 col-md-12">
 
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs p-5 pt-2" id="myTab" role="tablist">
                     <h4>Colegio Y Hotel para Perros
                     </h4>
-                    <li class="nav-item mt-4" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#service1" type="button" role="tab" aria-controls="home" aria-selected="true">• Monitoreo las 24 horas mediante cámaras para
+                    <li class="nav-item mt-4 mb-3" role="presentation">
+                   • Monitoreo las 24 horas mediante cámaras para
                             que observes en tiempo real lo que tu mascota
-                            está haciendo</button>
+                            está haciendo
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#service2" type="button" role="tab" aria-controls="profile" aria-selected="false">• Caminatas en el parque</button>
+                    <li class="nav-item mb-3" role="presentation">
+                      • Caminatas en el parque
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service3" type="button" role="tab" aria-controls="contact" aria-selected="false">• Volvemos al origen de la manada, tu mascota
+                    <li class="nav-item mb-3" role="presentation">
+                      • Volvemos al origen de la manada, tu mascota
                             compartirá con otros perros para trabajar en
-                            la socialización</button>
+                            la socialización
                     </li>
 
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service4" type="button" role="tab" aria-controls="contact" aria-selected="false">• Supervisión médica las 24 horas</button>
+                    <li class="nav-item mb-3" role="presentation">
+                       • Supervisión médica las 24 horas
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service5" type="button" role="tab" aria-controls="contact" aria-selected="false">• Entrenamiento de comandos básicos y
-                            obediencia</button>
+                    <li class="nav-item mb-3" role="presentation">
+                     • Entrenamiento de comandos básicos y
+                            obediencia
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service6" type="button" role="tab" aria-controls="contact" aria-selected="false">• Además, tendremos sesiones de reiki,
-                            aromaterapia, musicoterapia y pilates!</button>
+                    <li class="nav-item mb-3" role="presentation">
+                   • Además, tendremos sesiones de reiki,
+                            aromaterapia, musicoterapia y pilates!
                     </li>
 
 
                     <!------------------------------------->
-                    <h4 class="pb-2 pt-5">Hotel para Gatos
+                    <h4 class="pb-2 pt-5 mt-5">Hotel para Gatos
                     </h4>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Monitoreo las 24 horas mediante cámaras para
+                    <li class="nav-item mb-3" role="presentation">
+                     • Monitoreo las 24 horas mediante cámaras para
                             que observes en tiempo real lo que tu mascota
-                            está haciendo</button>
+                            está haciendo
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service8" type="button" role="tab" aria-controls="contact" aria-selected="false">• Gateras individuales de piso a techo con más
-                            de 12 juegos de interacción en cada unao</button>
+                    <li class="nav-item mb-3" role="presentation">
+                      • Gateras individuales de piso a techo con más
+                            de 12 juegos de interacción en cada unao
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service9" type="button" role="tab" aria-controls="contact" aria-selected="false">• Supervisión médica las 24 horas
-                        </button>
+                    <li class="nav-item mb-3" role="presentation">
+                   • Supervisión médica las 24 horas
+
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service01" type="button" role="tab" aria-controls="contact" aria-selected="false">• Utilización de aromaterapia y uso de
+                    <li class="nav-item mb-3" role="presentation">
+                      • Utilización de aromaterapia y uso de
                             feromonas para que tus gatos estén lo más
                             tranquilos posibles!
 
-                        </button>
+
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
-                        <img src="assets/img/stock/Hospitalización y cuidados intensivos (1).jpg" alt="">
+                        <img src="assets/img/servicio/Hotel.jpg" alt="">
                     </div>
-                    <div class="tab-pane fade" id="service2" role="tabpanel" aria-labelledby="profile-tab">
-                        <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
+
+                    <div class="tab-pane fade show active mt-4" id="" role="tabpanel" aria-labelledby="home-tab">
+                        <img src="assets/img/servicio/Trotadora.jpg" alt="">
                     </div>
-                    <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                        <img style="" src="assets/img/stock/Rayos X.jpg" alt="">
-                    </div>
-                    <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Ecografía.jpg" alt="">
-                    </div>
-                    <div class="tab-pane fade" id="service5" role="tabpanel" aria-labelledby="contact-tab">
-                        <img src="assets/img/stock/Endoscopio .jpg" alt="">
-                    </div>
+
                 </div>
             </div>
         </div>

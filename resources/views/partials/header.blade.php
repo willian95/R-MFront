@@ -1,26 +1,36 @@
 @include("partials.loader")
 <header>
     <div class="main-header">
-        <div class="header-item">sdddfedfed
+        <div class="header-item"><span style="color: transparent;">Menu</span>
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
                 <div class="menu">
                     <ul>
                         <li>
-                           <a href="#veterinaria"> <p>Veterinaria</p></a>
+                            <a href="#veterinaria">
+                                <p>Veterinaria</p>
+                            </a>
                         </li>
                         <li>
-                          <a href="#peluqueria">  <p>Peluqueria & Spa</p></a>
+                            <a href="#peluqueria">
+                                <p>Peluqueria & Spa</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="#colegio"><p>Colegio</p></a>
+                            <a href="#colegio">
+                                <p>Colegio</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="tienda"><p>Tienda Virtual</p></a>
+                            <a href="tienda">
+                                <p>Tienda Virtual</p>
+                            </a>
                         </li>
                         <li>
-                            <a href="blog"><p>Blog</p></a>
+                            <a href="blog">
+                                <p>Blog</p>
+                            </a>
                         </li>
 
                         <li class="mt-3 mb-4 redes-nav">
@@ -36,20 +46,28 @@
                     </ul>
                 </div>
             </div>
-            <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img src="{{ url('assets/img/icons/smartphone.png') }}" alt=""></a>
+        <div class="center-rrss">
+        <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smartphone.png') }}" alt="Icono de telefono"> </a>
+            <div class="redes-nav-logo">
+                <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
+        </div>
         </div>
         <div class="header-item mt-0">
-            <a href="/"> <img class="logo" src="{{ url('assets/img/icons/logo.png') }}" alt="" />
+
+            <a href="/"> <img class="logo" src="{{ url('assets/img/icons/logo.png') }}" alt="Logo de R&M" />
             </a>
         </div>
         <div class="header-item flex-m">
-            <a href="" class="name-nav">Trabaja con nosotros</a>
+            <a href="#contacto" class="name-nav">Trabaja con nosotros</a>
             @if(\Auth::check())
             <a class="m-3 name-nav" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
             @else
-            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt=""></a>
+            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt="icono de usuario"></a>
             @endif
-            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt=""></a>
+            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt="icono de carrito"></a>
         </div>
     </div>
 </header>
@@ -70,8 +88,8 @@
 
                             </h2>
                             <div class="rss-login">
-                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt=""> Facebook</button></a>
-                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt=""> Google</button></a>
+                                <a href="{{ route('social.auth.facebook') }}" class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt="icono de facebook"> Facebook</button></a>
+                                <a href="{{ route('social.auth.google') }}" class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt="icono de google"> Google</button></a>
                             </div>
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">
@@ -120,8 +138,8 @@
                             <h2>Registrate
                             </h2>
                             <div class="rss-login">
-                                <button class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt=""> Facebook</button>
-                                <button class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt=""> Google</button>
+                                <button class="rrs-face"> <img src="{{ url('assets/img/icons/facebook.png') }}" alt="icono facebook"> Facebook</button>
+                                <button class="rrs-google"> <img src="{{ url('assets/img/icons/google.png') }}" alt="icono google"> Google</button>
                             </div>
                             <p class="line">Continuar con mi email</p>
                             <form class="form-login">

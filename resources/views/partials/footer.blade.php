@@ -1,4 +1,4 @@
-<footer class="footer" style="background-image: url(assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg);">
+<footer id="contacto" class="footer" style="background-image: url(assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg);">
 
     <div class="container contente-footer">
         <h2 class="mt-0 titles m-0 pb-3" data-aos="fade-up" data-aos-duration="1300">Contáctanos</h2>
