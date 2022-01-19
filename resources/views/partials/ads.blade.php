@@ -2,7 +2,7 @@
     <div class="row">
 
         @foreach(App\Models\Banner::inRandomOrder()->take(2)->get() as $banner)
-            
+
             @if($banner->type == 'image')
                 <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ $banner->image }}" alt="Tienda virtual alimentos secos">
@@ -19,7 +19,7 @@
 
         @endforeach
 
-    
+
     </div>
 </section>
 
@@ -27,11 +27,11 @@
 <!-------------------------------------------------------->
 <section class="container" data-aos="fade-up"
      data-aos-duration="2000">
-    <h2 class="mt-0 titles">Tu mascota, nuestra prioridad - no descansamos!</h2>
-
+    <h2 class="mt-0 titles">Nuestra prioridad es la salud y bienestar de las mascotas. <br> ¡Somos clínica 24 horas!</h2>
     <div class="map-content">
         <div class="adrres-one">
             <img class="icon-drees" src="assets/img/icons/google-maps.png" alt="">
+            <img class="icon-drees" src="assets/img/icons/waze.png" alt="">
             <p>Carrera 7 # 140 - 71
                 C.C. Belmira Plaza</p>
         </div>
@@ -39,11 +39,11 @@
             <P>Servicio de Veterinaria Y Urgencias
                 24/7 + Festivos!</P>
         </div>
-        <div class="adrres-three">
-            <p>Calle 103 # 14A - 10</p>
+        <div class=" adrres-three ">
+
             <img class="icon-drees" src="assets/img/icons/waze.png" alt="">
             <img class="icon-drees" src="assets/img/icons/google-maps.png" alt="">
-
+            <p>Calle 103 # 14A - 10</p>
         </div>
     </div>
 </section>

@@ -36,13 +36,14 @@
                     </ul>
                 </div>
             </div>
-            <a href="" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img src="{{ url('assets/img/icons/smartphone.png') }}" alt=""></a>
+            <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img src="{{ url('assets/img/icons/smartphone.png') }}" alt=""></a>
         </div>
         <div class="header-item mt-0">
             <a href="/"> <img class="logo" src="{{ url('assets/img/icons/logo.png') }}" alt="" />
             </a>
         </div>
         <div class="header-item flex-m">
+            <a href="" class="name-nav">Trabaja con nosotros</a>
             @if(\Auth::check())
             <a class="m-3 name-nav" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
             @else

@@ -1,9 +1,8 @@
 <section class="tienda-home mt-5 pt-4">
     <div class="text-center">
-        <span class="gray" data-aos="fade-up" data-aos-duration="1200"> Productos listos para comprar</span>
+     <!----   <span class="gray" data-aos="fade-up" data-aos-duration="1200"> Productos listos para comprar</span>--->
         <h2 class="mt-0 titles  mb-5" data-aos="fade-up" data-aos-duration="1300">
-            Conoce nuestra nuevo E Pets Boutique
-            Nuestros Servicios</h2>
+        Conoce nuestra tienda virtual. <br> ¡Ahora puedes comprar con nosotros en línea!</h2>
     </div>
     <!-- Isotope menu -->
     <div class=" container_menu_iso mb-4" data-aos="fade-up" data-aos-duration="1000">

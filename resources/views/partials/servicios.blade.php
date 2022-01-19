@@ -4,9 +4,9 @@
     <div id="veterinaria" class="row">
         <div class="col-md-6 p-0">
             @if(App\Models\ImageService::first()->type1 == "image")
-            <img class="obj-cover" src="{{ App\Models\ImageService::first()->image1 }}" alt="">
+            <img class="obj-cover h-60" src="{{ App\Models\ImageService::first()->image1 }}" alt="">
             @else
-            <video class="w-100" controls>
+            <video class="w-100 h-60" autoplay loop>
                 <source src="{{ App\Models\ImageService::first()->image1 }}" type="video/mp4">
                 <source src="{{ App\Models\ImageService::first()->image1 }}" type="video/ogg">
                 Your browser does not support the video tag.
@@ -14,14 +14,13 @@
             @endif
         </div>
         <div class="col-md-6">
-            <div class="servicios-content">
+            <div class="servicios-content pt-0 p-3 " >
                 <h3 data-aos="fade-up" data-aos-duration="1200">﻿Clínica 24 Horas</h3>
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? ﻿Llámanos
-                    ya, <br>contestamos en
-                    menos de 35 segundos!</p>
-                <p><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
+                    ya! contestamos en menos de 35 segundos!</p>
+                <p class="fw-300"><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
-                <div class="slider-servicio container" data-aos="fade-up-left" data-aos-duration="1300">
+                <div class="slider-servicio container mb-4 " data-aos="fade-up-left" data-aos-duration="1300">
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg') }}" alt="">
                         <p>Consultas</p>
@@ -55,8 +54,8 @@
             </div>
         </div>
         <div class="bg-infos">
-            <div class="more-info-service-1 col-md-12 mt-4 mb-4">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <div class="more-info-service-1 col-md-12 ">
+                <ul class="nav nav-tabs center-tbas" id="myTab" role="tablist">
                     <li class="nav-item mt-4" role="presentation">
                         <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#service1" type="button" role="tab" aria-controls="home" aria-selected="true">• Consultas y hospitalización 24 horas</button>
                     </li>
@@ -87,7 +86,7 @@
                         <img src="assets/img/stock/Hospitalizaciónycuidadosintensivos.jpg" alt="">
                     </div>
                     <div class="tab-pane fade" id="service3" role="tabpanel" aria-labelledby="contact-tab">
-                        <img style="object-position: 0 -40rem;" src="assets/img/stock/Rayos X.jpg" alt="">
+                        <img src="assets/img/stock/Rayos X.jpg" alt="">
                     </div>
                     <div class="tab-pane fade" id="service4" role="tabpanel" aria-labelledby="contact-tab">
                         <img src="assets/img/stock/Ecografía.jpg" alt="">
@@ -108,10 +107,10 @@
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Servicio de L a D: 9
                     AM - 5 PM <br>
                     Festivos: 9 AM - 2 PM!</p>
-                <p><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
+                <p class="fw-300"><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
 
-                <div class="slider-servicio-img container mb-2" data-aos="fade-up" data-aos-duration="1300">
+                <div class="slider-servicio-img container mb-2 p-0" data-aos="fade-up" data-aos-duration="1300">
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/stock/Peluquería _ SPA corte de uñas.jpg') }}" alt="">
                         <p>Corte</p>
@@ -133,12 +132,20 @@
                 <div class="btns-conetnt">
 
                     <button class="btn-reds">Reservar ya</button>
-                    <button class="btn-white see-more-2">Ver más</button>
+                   <!--- <button class="btn-white see-more-2">Ver más</button>--->
                 </div>
             </div>
         </div>
         <div class="col-md-6 p-0 h-55 ">
-            <div class="bg-infos p-0">
+        @if(App\Models\ImageService::first()->type2 == "image")
+            <img class="obj-cover" src="{{ App\Models\ImageService::first()->image2 }}" alt="">
+            @else
+            <video class="w-100" controls>
+                <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/mp4">
+                <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            @endif    <div class="bg-infos p-0">
                 <div class="more-info-service-2 col-md-12 p-0">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="service1" role="tabpanel" aria-labelledby="home-tab">
@@ -185,23 +192,36 @@
 
                 </div>
             </div>
+            <div class="info-serv row center-ser p-4">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Corte y limado de uñas</li>
+                        <li>Enjuague bucal</li>
+                        <li>Limpieza de oídos</li>
+                        <li>Toallas desechables por mascota</li>
+                        <li>Agua con control de temperatura</li>
+                        <li>Shampoo especialmente elaborado para mascotas</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Corte característico por raza</li>
+                        <li>Aromaterapia</li>
+                        <li>Musicoterapia</li>
+                        <li>Masajes de relajación</li>
+                        <li>Reiki</li>
+                        <li>Hidratación pulpejos</li>
+                    </ul>
+                </div>
+            </div>
 
 
-            @if(App\Models\ImageService::first()->type2 == "image")
-            <img class="obj-cover" src="{{ App\Models\ImageService::first()->image2 }}" alt="">
-            @else
-            <video class="w-100" controls>
-                <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/mp4">
-                <source src="{{ App\Models\ImageService::first()->image2 }}" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-            @endif
         </div>
 
     </div>
     <!-------------------------servicio 3---------------------------------->
     <div id="colegio" class="row conetnt-serivicios ">
-        <div class="col-md-6 p-0 h-70 ">
+        <div class="col-md-6 p-0 ">
             @if(App\Models\ImageService::first()->type3 == "image")
             <img class="obj-cover" src="{{ App\Models\ImageService::first()->image3 }}" alt="peluquería _ SPA Aromaterapia y masajes de relajación">
             @else
@@ -212,7 +232,7 @@
             </video>
             @endif
         </div>
-        <div class="col-md-6 p-0  transform h-70">
+        <div class="col-md-6 p-0  ">
             <div class="servicios-content p-5 ">
                 <h3>Colegio Y Hotel para Perros
                 </h3>

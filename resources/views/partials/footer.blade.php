@@ -1,16 +1,11 @@
 <footer class="footer" style="background-image: url(assets/img/stock/peluquería_SPAAromaterapiaymasajesderelajación.jpg);">
 
     <div class="container contente-footer">
-        <h2 class="mt-0 titles m-0 pb-3" data-aos="fade-up"
-     data-aos-duration="1300">Contáctanos</h2>
-        <p class="pb-4" data-aos="fade-up"
-     data-aos-duration="1300">En el transcurso de una hora o
-            antes estaremos en comunicación
-            para resolver tu solicitud.
+        <h2 class="mt-0 titles m-0 pb-3" data-aos="fade-up" data-aos-duration="1300">Contáctanos</h2>
+        <p class="pb-4" data-aos="fade-up" data-aos-duration="1300">Tu opinión es muy importante para nosotros escríbenos y te responderemos cuanto antes.
         </p>
 
-        <div data-aos="fade-up"
-     data-aos-duration="2000">
+        <div data-aos="fade-up" data-aos-duration="2000">
             <form id="dev-contact">
                 <div class="row">
                     <div class="col-md-6 text-start">
@@ -41,77 +36,103 @@
 
 </footer>
 <div class="copy">
-        <p>Copyright © 2022 . All rights reserved</p>
+    <p>Copyright © 2022 . All rights reserved</p>
+</div>
+
+
+<a href="" class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
+
+
+
+<!-- Modal -->
+<div class="modal fade pwa-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h3 class="text-center mb-4">Hola! Sabes que es R&M Vet PWA?</h3>
+                <p class="text-center mb-4">Sabias que puedes añadir un atajo de nuestra tienda a tu
+                    celular? Es fácil! Ingresa en tu navegador Safari o Chrome a,
+                    haz tap en el icono de compartir y selecciona la opción de
+                    añadir a mi escritorio! Y listo!</p>
+
+                 <div class="text-center">
+                 <img class="img-pwa" src="http://imgfz.com/i/kgFbf9V.png" alt="">
+                 </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido
+</button>
+
+            </div>
+        </div>
     </div>
-
-
-    <a href=""  class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
-
-
+</div>
 @push("scripts")
 
-    <script src="{{ asset('/js/app.js') }}"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
+<script src="{{ asset('/js/app.js') }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    const contact = new Vue({
+        el: '#dev-contact',
+        data() {
+            return {
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+                errors: []
+            }
+        },
+        methods: {
 
-        const contact = new Vue({
-            el: '#dev-contact',
-            data() {
-                return {
-                    name:"",
-                    email:"",
-                    phone:"",
-                    message:"",
-                    errors:[]
+            async sendMessage() {
+
+                this.errors = []
+
+                try {
+
+                    let response = await axios.post("{{ url('/send-contact-message') }}", {
+                        name: this.name,
+                        email: this.email,
+                        phone: this.phone,
+                        text: this.message
+                    })
+
+                    if (response.data.success == true) {
+                        swal({
+                            title: "Excelente!",
+                            text: response.data.msg,
+                            icon: "success"
+                        });
+                        this.name = ""
+                        this.email = ""
+                        this.phone = ""
+                        this.message = ""
+                    } else {
+                        swal({
+                            text: response.data.msg,
+                            icon: "error"
+                        })
+                    }
+
+                } catch (err) {
+
+                    this.errors = err.response.data.errors
+
                 }
             },
-            methods: {
-                
-                async sendMessage(){
-                    
-                    this.errors = []
 
-                    try{
 
-                        let response = await axios.post("{{ url('/send-contact-message') }}", {
-                            name: this.name,
-                            email: this.email,
-                            phone: this.phone,
-                            text: this.message
-                        })
 
-                        if (response.data.success == true) {
-                            swal({
-                                title: "Excelente!",
-                                text: response.data.msg,
-                                icon: "success"
-                            });
-                            this.name = ""
-                            this.email = ""
-                            this.phone = ""
-                            this.message = ""
-                        } else {
-                            swal({
-                                text: response.data.msg,
-                                icon: "error"
-                            })
-                        }
-                        
-                    }catch(err) {
+        },
+        created() {
 
-                        this.errors = err.response.data.errors
-
-                    }
-                },
-
-                
-
-            },
-            created() {
-
-            }
-        });
-    </script>
+        }
+    });
+</script>
 
 
 @endpush
