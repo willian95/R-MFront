@@ -233,7 +233,7 @@
             @endif
         </div>
         <div class="col-md-6 p-0  ">
-            <div class="servicios-content p-5 ">
+            <div class="servicios-content p-5 pb-0 bg-grays">
                 <h3>Colegio Y Hotel para Perros
                 </h3>
                 <p class="sub"><i class="fas fa-map-marker-alt pin"></i>Únicamente en la Sede de
@@ -258,20 +258,14 @@
                     </div>
 
                 </div>
-                <div class="btns-conetnt">
 
-                    <button class="btn-reds">Generar cita</button>
-                    <button class="btn-white see-more-3">Ver más</button>
-                </div>
             </div>
 
             <!--------------service ct----------->
-            <div class="servicios-content p-5 ">
+            <div class="servicios-content p-5 pt-0 ">
                 <h3>Hotel para Gatos
 
                 </h3>
-                <p class="sub"><i class="fas fa-map-marker-alt pin"></i> Únicamente en la Sede de
-                    la Calle 103 # 14A 10</p>
 
                 <div class="slider-servicio container mb-2">
 

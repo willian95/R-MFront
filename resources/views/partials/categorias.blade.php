@@ -58,7 +58,7 @@
         <span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>
 
         <div class="icon-bg">
-        <img class="icon" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
+        <img class="icon p-1" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
         </div>
 
         <div class="name">

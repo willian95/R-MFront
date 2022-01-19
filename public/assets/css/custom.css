@@ -738,6 +738,8 @@ button {
     height: 62vh;
     height: auto;
     padding: 1rem;
+    margin-bottom: 1.5rem!important;
+    margin-top: 1.5rem;
 }
 .center-tbas{
     display: flex;
@@ -890,6 +892,8 @@ textarea {
 @media screen and (max-width: 600px) {
     .container_menu_iso .menu_iso li {
     }
+}
+.bg-grays{background: #f1f1f1;
 }
 
 .container_menu_iso .menu_iso li a {
