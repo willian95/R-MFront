@@ -9,7 +9,7 @@
         </div>
         @else
         <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
-            <video class="w-100" controls>
+            <video class="w-100" autoplay loop muted>
                 <source src="{{ $banner->image }}" type="video/mp4">
                 <source src="{{ $banner->image }}" type="video/ogg">
                 Your browser does not support the video tag.

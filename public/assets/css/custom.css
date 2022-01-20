@@ -1485,7 +1485,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ads video {
     border-radius: 10px;
-    height: 37vh;
+    height: 36vh;
     object-fit: cover;
 }
 .img-about{
