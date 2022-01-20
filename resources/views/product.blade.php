@@ -235,7 +235,6 @@
                 async getProductFormats(){
 
                     const response = await axios.get("{{ url('/product/product-formats/'.$product->id) }}")
-                    console.log('prueba' , response)
                     this.productFormats = response.data
                     this.selectedProductFormat = this.productFormats[0].id
 
