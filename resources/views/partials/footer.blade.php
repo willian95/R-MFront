@@ -36,7 +36,7 @@
 
 </footer>
 <div class="copy">
-    <p>Copyright © 2022 . All rights reserved</p>
+    <p>MaryMar LTDA & CIA - Copyright © 2022 . Todos los derechos reservados</p>
 </div>
 
 
@@ -53,10 +53,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <h3 class="text-center mb-4">Hola! Sabes que es R&M Vet PWA?</h3>
-                <p class="text-center mb-4">Sabias que puedes añadir un atajo de nuestra tienda a tu
-                    celular? Es fácil! Ingresa en tu navegador Safari o Chrome a,
-                    haz tap en el icono de compartir y selecciona la opción de
-                    añadir a mi escritorio! Y listo!</p>
+                <p class="text-center mb-4">Sabias que puedes añadir un atajo de nuestra tienda a tu celular? Es fácil! Ingresa en tu navegador Safari en iPhone y Chrome en Android, haz tap en el icono de compartir y selecciona la opción de añadir a mi escritorio! Y listo</p>
 
                  <div class="text-center">
                  <img class="img-pwa" src="http://imgfz.com/i/kgFbf9V.png" alt="">
