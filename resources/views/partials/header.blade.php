@@ -1,12 +1,17 @@
 @include("partials.loader")
 <header>
     <div class="main-header">
-        <div class="header-item"><span class="nav-xs" style="color: transparent;">Menu</span>
+        <div class="header-item">
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
                 <div class="menu">
                     <ul>
+                    <li>
+                            <a href="acerca">
+                                <p>Acerca</p>
+                            </a>
+                        </li>
                         <li>
                             <a href="#veterinaria">
                                 <p>Veterinaria</p>
