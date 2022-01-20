@@ -195,8 +195,8 @@
                 },
 
                 substractAmount(product){
-
-                    if(product.amount > 0){
+                    
+                    if(product.amount > 1){
                         product.amount--
                         this.updateCartItem(product)
                     }
