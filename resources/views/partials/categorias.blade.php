@@ -1,5 +1,5 @@
 <!-------------------------------->
-<div class="categories container">
+<div class="categories container-fluid">
     <a href="#veterinaria" class="categories-item">
         <span class="parpadea text"><strong>Servicio 24/7</strong></span>
         <div class="icon-bg">
@@ -10,8 +10,8 @@
             <p>Veterinaria</p>
         </div>
         <div class="subtitl">
-            <p>Conoce a nuestro staff experto en veterinaria para tu mascota! Consultas, laboratorio, operaciones y otros servicios!</p>
-            <span>Ver más</span>
+            <p>Conoce nuestro grupo de médicos que trabajará con amor y profesionalismo por la salud de tu mascota. Consultas, servicio 24 horas, Rx, laboratorio, ecografía y ¡mucho más!</p>
+
         </div>
     </a>
 
@@ -24,10 +24,7 @@
             <p>Peluquería & Spa</p>
         </div>
         <div class="subtitl">
-            <p>Conoce todos los servicios que
-                ofrece R&M Vet Spa! Peluquería,
-                limpieza profunda de orejas como
-                otros!</p>
+            <p>¿Sabías que nuestra peluquería y SPA tiene servicios de reiki, aromaterapia, musicoterapia, hidromasajes y masajes de relajación? ¡Anímate a conocerla y pregunta por nuestros planes de SPA!</p>
         </div>
     </a>
 
@@ -40,8 +37,7 @@
             <p>Colegio</p>
         </div>
         <div class="subtitl">
-            <p>Conoce todos los servicios de
-                Colegio y Hotel para tu mascota!</p>
+            <p>Ahora con nosotros puedes monitorear todo lo que hace tu mascota mediante cámaras las 24 horas del día. Sorpréndete viéndolo hacer pilates, adiestramiento básico, trotadora, entre muchas más actividades.</p>
         </div>
     </a>
 
@@ -54,10 +50,7 @@
             <p>Tienda Virtual</p>
         </div>
         <div class="subtitl">
-            <p>Conoce todos los productos para tu
-                mascota! Desde comida/alimento,
-                productos veterinarios como
-                accesorios y  juegos!</p>
+            <p>Ya puedes comprar en línea todos los productos y servicios que tu mascota necesita. Aquí encontrarás comida, snacks, juguetes, premios, camas y mucho más.</p>
         </div>
     </a>
 
@@ -65,7 +58,7 @@
         <span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>
 
         <div class="icon-bg">
-        <img class="icon" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
+        <img class="icon p-1" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
         </div>
 
         <div class="name">

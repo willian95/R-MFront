@@ -14,6 +14,7 @@ $(document).ready(function () {
     });
     $(".slider-servicio").slick({
         dots: false,
+        arrows:false,
         infinite: true,
         speed: 300,
         autoplay: true,

@@ -13,7 +13,7 @@
         <div class="col-md-7">
             <div id="gallery-product" class="demo-gallery" data-pswp-uid="1">
                 <div class="container gallery-product">
-                    
+
                     <a class="img-product" href="{{ $product->image }}" data-size="1600x1067" data-med="{{ $product->image }}" data-med-size="1024x683" data-author="RYM">
                         <img src="{{ $product->image }}" alt="">
                         <div class="gallery-zoom">
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="content-flex">
-                    
+
                     <select class="form-control" @change="setSelectedProductFormat()" v-model="selectedProductFormat">
                         <option :value="productFormat.id" v-for="productFormat in productFormats">@{{ productFormat.color.color }} - @{{ productFormat.size.size }}</option>
                     </select>
@@ -75,7 +75,7 @@
                         <small v-if="errors.hasOwnProperty('amount')">@{{ errors['amount'][0] }}</small>
                     </div>
                     <div class="w-150 text-end w-100">
-                        
+
                         Total: $ @{{ price * amount  }}
 
                     </div>
@@ -83,14 +83,14 @@
                 </div>
 
                 <div class="content-flex">
-                    
+
                     <div class="w-150 text-end w-100">
                         <button class="btn-red"><a class="txt-w" href="#!" @click="addToCart()">Agregar al carrito</a></button>
 
                     </div>
 
                 </div>
-            
+
             </div>
             <hr>
             <div class="overview">
@@ -115,7 +115,7 @@
                 if($product->category->cat_category == 1){
                     $q->orWhere("cat_category", 1);
                 }
-                
+
             })->take(10)->get() as $dogProduct)
                 <div class="col-xs-6 col-sm-3 cent isotope-item caninos">
                     <a href="{{ url('/producto/'.$dogProduct->slug) }}">
@@ -233,13 +233,15 @@
             methods: {
 
                 async getProductFormats(){
-                 
+
                     const response = await axios.get("{{ url('/product/product-formats/'.$product->id) }}")
+                    console.log('prueba' , response)
                     this.productFormats = response.data
                     this.selectedProductFormat = this.productFormats[0].id
 
                     this.setSelectedProductFormat()
-                    
+
+
                 },
                 setSelectedProductFormat(){
 
@@ -310,7 +312,7 @@
 
                 }
 
-                
+
 
             },
             mounted() {
