@@ -220,3 +220,14 @@ $(document).ready(function () {
 
 });
 
+$(function (){
+    $(window).scroll(function(){
+       if ($('.main-header').scrollTop() > 200) {
+        $('.main-header').addClass("fix-navbar");
+       } else {
+        $('.main-header').removeClass("fix-navbar");
+       }
+
+
+    });
+  });
