@@ -221,7 +221,7 @@
             data() {
                 return {
                     productId:"{{ $product->id }}",
-                    amount:"",
+                    amount:0,
                     productFormats:[],
                     selectedProductFormat:"",
                     price:"",
@@ -247,9 +247,10 @@
                     const filtered = this.productFormats.filter(function(el) {
                         return el.id === _this.selectedProductFormat;
                     });
-                    this.amount = 0
+                    
                     this.price = filtered[0].price
                     this.stock = filtered[0].stock
+                    this.amount = this.stock > 0 ? 1 : 0
 
                 },
 
@@ -265,7 +266,7 @@
 
                 substractAmount(){
 
-                    if(this.amount > 0){
+                    if(this.amount > 1){
                         this.amount--
                     }
 
@@ -290,7 +291,7 @@
                                 icon:"success"
                             })
 
-                            this.amount = 0
+                            this.amount = 1
 
                         }else{
 
