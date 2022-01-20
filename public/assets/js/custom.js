@@ -11,6 +11,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        dots: false,
+        arrows:false,
     });
     $(".slider-servicio").slick({
         dots: false,

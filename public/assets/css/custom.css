@@ -15,8 +15,10 @@ img {
 }
 @font-face {
     font-family: "Hobo";
-    src: url("../font/Hobo/hobo0.eot") format("eot"), url("../font/Hobo/hobo0.woff") format("woff"),
-        url("../font/Hobo/hobo0.ttf") format("truetype"), url("../font/Hobo/hobo0.svg") format("svg");
+    src: url("../font/Hobo/hobo0.eot") format("eot"),
+        url("../font/Hobo/hobo0.woff") format("woff"),
+        url("../font/Hobo/hobo0.ttf") format("truetype"),
+        url("../font/Hobo/hobo0.svg") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -739,10 +741,10 @@ button {
     height: 62vh;
     height: auto;
     padding: 1rem;
-    margin-bottom: 1.5rem!important;
+    margin-bottom: 1.5rem !important;
     margin-top: 1.5rem;
 }
-.center-tbas{
+.center-tbas {
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -889,18 +891,18 @@ textarea {
 
     cursor: pointer;
 }
-.h-63{
+.h-63 {
     height: 63vh;
 }
-.redes-nav-logo{
+.redes-nav-logo {
     margin-left: 4rem;
 }
-.redes-nav-logo a{
+.redes-nav-logo a {
     color: #fff;
     font-size: 1.5rem;
     margin-right: 1rem;
 }
-.center-rrss{
+.center-rrss {
     display: flex;
     align-items: center;
 }
@@ -909,7 +911,8 @@ textarea {
     .container_menu_iso .menu_iso li {
     }
 }
-.bg-grays{background: #f1f1f1;
+.bg-grays {
+    background: #f1f1f1;
 }
 
 .container_menu_iso .menu_iso li a {
@@ -1461,16 +1464,38 @@ input[type="number"]::-webkit-outer-spin-button {
 .pwa-modal .modal-dialog {
     max-width: 800px;
 }
-.img-pwa{
+.img-pwa {
     width: 350px;
 }
-.name-nav:hover{
+.name-nav:hover {
     color: #ed1c24;
 }
 
-.bg-infos .tab-content img{
+.bg-infos .tab-content img {
     height: 390px;
     object-fit: cover;
+}
+.ads video {
+    border-radius: 10px;
+    height: 37vh;
+    object-fit: cover;
+}
+.img-about{
+    border-radius: 10px;
+    height: 70vh;
+    object-fit: cover;
+}
+.about p{
+    font-size: 1.3rem;
+    padding: 3rem 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.team img{
+    height: 50vh!important;
+}
+#dev-contact .btn{
+    color:#fff!important;
 }
 /**mediasquery */
 @media only screen and (max-width: 600px) {
@@ -1552,5 +1577,29 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .banner-shapes {
         width: 70%;
+    }
+    .nav-xs {
+        display: none;
+    }
+    textarea {
+        width: 100%;
+    }
+    .menu_iso img {
+        width: 75px;
+    }
+    .menu_iso {
+        gap: 0rem;
+    }
+    .subtitl p {
+        color: black;
+    }
+    .ws {
+        right: 0;
+    }
+    .bars {
+        top: -2rem;
+    }
+    .titles {
+        font-size: 1rem;
     }
 }

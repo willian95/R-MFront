@@ -31,7 +31,7 @@ Route::get('/tienda', function () {
 Route::get('/producto/{slug}', function ($slug) {
 
     $product = Product::where("slug", $slug)->with("productFormats", "productSecondaryImages", "category")->first();
-    
+
     if(is_null($product)){
         abort(404);
     }
@@ -41,6 +41,10 @@ Route::get('/producto/{slug}', function ($slug) {
 
 Route::get('/blog', function () {
     return view('blog');
+});
+
+Route::get('/acerca', function () {
+    return view('acerca');
 });
 
 Route::get('/checkout', function () {
