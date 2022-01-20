@@ -805,7 +805,7 @@ button {
     height: 155px !important;
 }
 .opf{
-    object-position: center
+    object-position: center!important;
 
 }
 .conetnt-serivicios {
