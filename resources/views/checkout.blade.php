@@ -36,11 +36,11 @@
                         <div>
                             <div class="content-flex">
                                 <div class="">
-                                    <form class="qanty">
+                                    <div class="qanty">
                                         <div class="value-button" id="decrease" @click="substractAmount(product)" value="Decrease Value">-</div>
                                         <input class="number" type="number" :id="'number'+product.id" :value="product.amount" />
                                         <div class="value-button" id="increase" @click="addAmount(product)" value="Increase Value">+</div>
-                                    </form>
+                                    </div>
                                 </div>
 
 
@@ -59,7 +59,7 @@
                         </h3>
                     </div>
                     <!------>
-                    <form class="form-check pb-5">
+                    <div class="form-check pb-5">
                         <div class="row p-section">
                             <div class="col-md-6 text-start  mb-4">
                                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
@@ -74,8 +74,20 @@
                                 <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-reds txt-w">Pagar</button>
-                    </form>
+
+                        <form action="https://checkout.wompi.co/p/" method="GET" id="checkoutForm">
+                            <!-- OBLIGATORIOS -->
+                            <input type="hidden" name="public-key" value="{{ env('WOMPI_PUBLIC_KEY') }}" />
+                            <input type="hidden" name="currency" value="COP" />
+                            <input type="hidden" name="amount-in-cents" :value="total * 100" />
+                            <input type="hidden" name="reference" :value="reference" />
+                            <!-- OPCIONALES -->
+                            <input type="hidden" name="signature:integrity" :value="integritySignature"/>
+                            <button type="button" class="btn btn-reds txt-w" @click="checkout()">Pagar</button>
+                        </form>
+
+                        <!--<button type="submit" class="btn btn-reds txt-w">Pagar</button>-->
+                    </div>
                 </div>
             </div>
             <div class="col-md-5">
@@ -87,25 +99,25 @@
                     </div>
                     <div class="resumen-item">
                         <span>Envio</span>
-                        <p>$ 5.000</p>
+                        <p>$ @{{ shippingPrice }}</p>
                     </div>
 
                 </div>
                 <div class="resumen-item bg-total ">
                     <span>Total</span>
-                    <p>$ @{{ total + 5000 }}</p>
+                    <p>$ @{{ total }}</p>
                 </div>
 
                 <!------------codigo------------->
                 @if(\Auth::check())
-                <form action="">
+                <div action="">
                     <div class="col-md-6 text-start  mb-4 mt-5">
                         <label for="exampleInputEmail1" class="form-label">Código de descuento?</label>
                         <input type="text" placeholder="12345" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="coupon">
                         <button type="button" class="btn btn-info" @click="codeVerify()">Verificar código</button>
                     </div>
 
-                </form>
+                </div>
                 @endif
 
                 <div class="d-flexinfor">
@@ -155,7 +167,10 @@
                     couponInfo:"",
                     products:[],
                     coupon:"",
-                    usedCoupons:[]
+                    usedCoupons:[],
+                    shippingPrice:5000,
+                    integritySignature:"",
+                    reference:""
                 }
             },
             computed: {
@@ -166,7 +181,7 @@
                         innerTotal = innerTotal + (item.amount * item.product_format.price)
                     })
 
-                    return innerTotal
+                    return innerTotal + this.shippingPrice
 
                 }
             },
@@ -355,6 +370,24 @@
                         })
 
                     }
+                },
+                async checkout(){
+
+                    await this.integritySigning()
+                    const form = document.getElementById('checkoutForm')
+                    form.submit()
+
+                },
+                async integritySigning(){
+
+                    const response = await axios.post("{{ url('/checkout/signing') }}", {
+                        "total": this.total,
+                        "currency": "COP"
+                    })
+
+                    this.reference = response.data.reference
+                    this.integritySignature = response.data.signature
+
                 }
 
             },

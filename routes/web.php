@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,6 @@ Route::post("/cart/code-verify", [CartController::class, "verifyCode"]);
 Route::put("/cart/{cart_id}", [CartController::class, "updateCart"]);
 Route::delete("/cart/{cart_id}", [CartController::class, "deleteCart"]);
 Route::get("/cart", [CartController::class, "getCart"]);
+
+Route::post('/checkout/signing', [CheckoutController::class, "signing"]);
+Route::post('/checkout/webhook', [CheckoutController::class, "signing"]);
