@@ -5,7 +5,7 @@
 </div>
 
 <main>
-    <div class="mt-9">
+    <div class="mt-9 top-fix">
         @include("partials.categorias")
     </div>
     <!--------------------------------tienda---------------------------------------->

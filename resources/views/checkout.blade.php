@@ -71,6 +71,10 @@
                                 <input type="text" placeholder="12345678" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="col-md-12 text-start  mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Dpto/Ciudad</label>
+                                <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-md-12 text-start  mb-4">
                                 <label for="exampleInputEmail1" class="form-label">Dirección</label>
                                 <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
@@ -115,7 +119,7 @@
                     <div class="col-md-6 text-start  mb-4 mt-5">
                         <label for="exampleInputEmail1" class="form-label">Código de descuento?</label>
                         <input type="text" placeholder="12345" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="coupon">
-                        <button type="button" class="btn btn-info" @click="codeVerify()">Verificar código</button>
+                        <button type="button" class="btn btn-red-2 mt-3 mb-4" @click="codeVerify()">Verificar código</button>
                     </div>
 
                 </div>

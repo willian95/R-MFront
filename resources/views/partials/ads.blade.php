@@ -1,14 +1,14 @@
 <section class="ads container pt7">
-    <div class="row">
+    <div class="slider-adss">
 
-        @foreach(App\Models\Banner::inRandomOrder()->take(2)->get() as $banner)
+        @foreach(App\Models\Banner::inRandomOrder()->get() as $banner)
 
         @if($banner->type == 'image')
-        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+        <div class="" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ $banner->image }}" alt="Tienda virtual alimentos secos">
         </div>
         @else
-        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+        <div class="" data-aos="fade-up" data-aos-duration="1000">
             <video class="w-100" autoplay loop muted>
                 <source src="{{ $banner->image }}" type="video/mp4">
                 <source src="{{ $banner->image }}" type="video/ogg">

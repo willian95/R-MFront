@@ -42,7 +42,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 <script src="{{ url('assets/js/photoswipe.js') }}"></script>
+<script>
 
+    $(function (){
+        $(window).scroll(function(){
+           if ($('.main-header').scrollTop() > 200) {
+            $('.main-header').addClass("fix-navbar");
+           } else {
+            $('.main-header').removeClass("fix-navbar");
+           }
+
+
+        });
+      });
+</script>
 @stack("scripts")
   </body>
 
