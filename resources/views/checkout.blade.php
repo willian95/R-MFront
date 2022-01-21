@@ -4,11 +4,12 @@
     @include("partials.header")
 </div>
 
-<main class="container">
+<main class="">
     <div class="mt-9">
         @include("partials.categorias")
     </div>
-    <div class="breadcrumbs">
+ <div class="container">
+ <div class="breadcrumbs">
         <p><span><a href="{{ url('/') }}">Inicio </a>><a href="tienda"> Tienda</a> ></span> Checkout</p>
     </div>
 
@@ -138,6 +139,7 @@
             </div>
         </div>
     </section>
+ </div>
 </main>
 
 @include("partials.footer")
@@ -175,7 +177,7 @@
             },
             computed: {
                 total: function(){
-                    
+
                     let innerTotal = 0;
                     this.products.forEach(item => {
                         innerTotal = innerTotal + (item.amount * item.product_format.price)
@@ -186,9 +188,9 @@
                 }
             },
             methods: {
-                
+
                 async getCartProducts(){
-                    
+
                     const order = window.localStorage.getItem("order")
                     const response = await axios.get("{{ url('/cart') }}", {
                         params:{
@@ -196,8 +198,8 @@
                         }
                     })
 
-                    this.products = response.data 
-                    
+                    this.products = response.data
+
                 },
                 addAmount(product){
 
@@ -210,7 +212,7 @@
                 },
 
                 substractAmount(product){
-                    
+
                     if(product.amount > 1){
                         product.amount--
                         this.updateCartItem(product)
@@ -231,12 +233,12 @@
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
-                        
+
                     })
                     .then((willDelete) => {
                         if (willDelete) {
                             this.deleteCartItem(product)
-                        } 
+                        }
                     });
 
                 },
@@ -272,9 +274,9 @@
                     var _this = this
 
                     if(this.couponInfo.total_discount == "producto"){
-               
+
                         if(this.couponInfo.all_products == 1){
-                            
+
                             this.products.forEach(item => {
 
                                 if(_this.couponInfo.discount_type == "neto"){
@@ -284,7 +286,7 @@
 
                                 }else{
 
-                                    const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                    const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100)
                                     item.product_format.price = item.product_format.price - discount
                                     this.usedCoupons.push(_this.couponInfo.coupon_code)
 
@@ -292,16 +294,16 @@
 
                             })
 
-                            return 
+                            return
 
                             }else{
 
                             this.products.forEach(item => {
-                                
+
                                 couponProductFormats.forEach(couponProduct =>{
-                                    
+
                                     if(item.product_format.id == couponProduct.product_format_id){
-                                        
+
                                         if(_this.couponInfo.discount_type == "neto"){
 
                                             item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
@@ -309,7 +311,7 @@
 
                                         }else{
 
-                                            const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                            const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100)
                                             item.product_format.price = item.product_format.price - discount
                                             this.usedCoupons.push(_this.couponInfo.coupon_code)
 
@@ -337,7 +339,7 @@
 
                             }else{
 
-                                const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100) 
+                                const discount  = item.product_format.price * (this.couponInfo.discount_amount / 100)
                                 item.product_format.price = item.product_format.price - discount
                                 this.usedCoupons.push(_this.couponInfo.coupon_code)
 
@@ -345,14 +347,14 @@
 
                         })
 
-                        return 
+                        return
 
                     }
 
-                },  
+                },
                 async deleteCartItem(product){
 
-                    const response = await axios.delete("{{ url('/cart') }}"+"/"+product.id)    
+                    const response = await axios.delete("{{ url('/cart') }}"+"/"+product.id)
                     if(response.data.success == true){
 
                         swal({

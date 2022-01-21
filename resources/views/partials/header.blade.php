@@ -1,12 +1,17 @@
 @include("partials.loader")
 <header>
     <div class="main-header">
-        <div class="header-item"><span style="color: transparent;">Menu</span>
+        <div class="header-item">
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
                 <div class="menu">
                     <ul>
+                    <li>
+                            <a href="acerca">
+                                <p>Acerca</p>
+                            </a>
+                        </li>
                         <li>
                             <a href="#veterinaria">
                                 <p>Veterinaria</p>
@@ -46,7 +51,7 @@
                     </ul>
                 </div>
             </div>
-        <div class="center-rrss">
+        <div class="center-rrss nav-xs">
         <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smartphone.png') }}" alt="Icono de telefono"> </a>
             <div class="redes-nav-logo">
                 <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -61,7 +66,7 @@
             </a>
         </div>
         <div class="header-item flex-m">
-            <a href="#contacto" class="name-nav">Trabaja con nosotros</a>
+            <a href="#contacto" class="name-nav nav-xs">Trabaja con nosotros</a>
             @if(\Auth::check())
             <a class="m-3 name-nav" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
             @else

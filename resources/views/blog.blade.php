@@ -4,11 +4,12 @@
     @include("partials.header")
 </div>
 
-<main class="container">
+<main class="">
     <div class="mt-9">
         @include("partials.categorias")
     </div>
-    <div class="breadcrumbs">
+<div class="container">
+<div class="breadcrumbs">
         <p><span><a href="/">Inicio </a>></span> Blog</p>
     </div>
 
@@ -148,7 +149,7 @@
                     </div>
                 </div>
             @endif
-            
+
         </div>
 
     </section>
@@ -204,9 +205,10 @@
                     </div>
                 </div>
             @endforeach
-            
+
         </div>
     </section>
+</div>
 </main>
 
 @include("partials.footer")

@@ -129,7 +129,7 @@
                         <p>Corte y limado de uñas</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Peluquería _ SPA Hidromaajeadora.jpg') }}" alt="Imagen de Hidromaajeadora">
+                        <img class="opf" src="{{ url('assets/img/stock/Peluquería _ SPA Hidromaajeadora.jpg') }}" alt="Imagen de Hidromaajeadora">
                         <p>Baño especial</p>
                     </div>
                     <div class="servicios-imgs">
@@ -137,7 +137,7 @@
                         <p>Aromaterapia</p>
                     </div>
                     <div class="servicios-imgs">
-                        <img src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="">
+                        <img class="opf" src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="">
                         <p>Reiki</p>
                     </div>
 
