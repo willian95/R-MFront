@@ -68,7 +68,8 @@
         <div class="header-item flex-m">
             <a href="#contacto" class="name-nav nav-xs">Trabaja con nosotros</a>
             @if(\Auth::check())
-            <a class="m-3 name-nav" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
+            <a class="m-3 name-nav nav-xs" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
+            <img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt="icono de usuario">
             @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt="icono de usuario"></a>
             @endif

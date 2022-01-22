@@ -12,7 +12,8 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 2000,
         dots: false,
-        arrows:false,
+        arrows:false
+
     });
     $(".slider-servicio").slick({
         dots: false,
@@ -42,13 +43,11 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+
         ],
     });
     $(".slider-adss").slick({
