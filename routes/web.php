@@ -78,4 +78,5 @@ Route::delete("/cart/{cart_id}", [CartController::class, "deleteCart"]);
 Route::get("/cart", [CartController::class, "getCart"]);
 
 Route::post('/checkout/signing', [CheckoutController::class, "signing"]);
-Route::post('/checkout/webhook', [CheckoutController::class, "signing"]);
+Route::post('/checkout/webhook', [CheckoutController::class, "webhook"]);
+Route::post('/checkout/store', [CheckoutController::class, "store"]);

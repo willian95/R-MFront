@@ -63,20 +63,29 @@
                     <div class="form-check pb-5">
                         <div class="row p-section">
                             <div class="col-md-6 text-start  mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                                <input type="text" placeholder="Maria" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" placeholder="Maria" class="form-control" id="name" aria-describedby="emailHelp" v-model="name">
+                                <small class="text-danger" v-if="errors.hasOwnProperty('name')">@{{ errors['name'][0] }}</small>
                             </div>
                             <div class="col-md-6 text-start  mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Teléfono</label>
-                                <input type="text" placeholder="12345678" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="text" placeholder="12345678" class="form-control" id="phone" aria-describedby="emailHelp" v-model="phone">
+                                <small class="text-danger" v-if="errors.hasOwnProperty('phone')">@{{ errors['phone'][0] }}</small>
                             </div>
                             <div class="col-md-12 text-start  mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Dpto/Ciudad</label>
-                                <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="email" class="form-label">Email</label>
+                                <input placeholder="" type="email" class="form-control" id="email" aria-describedby="emailHelp" v-model="email">
+                                <small class="text-danger" v-if="errors.hasOwnProperty('email')">@{{ errors['email'][0] }}</small>
                             </div>
                             <div class="col-md-12 text-start  mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Dirección</label>
-                                <input placeholder="" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="city" class="form-label">Dpto/Ciudad</label>
+                                <input placeholder="" type="email" class="form-control" id="city" aria-describedby="emailHelp" v-model="city">
+                                <small class="text-danger" v-if="errors.hasOwnProperty('city')">@{{ errors['city'][0] }}</small>
+                            </div>
+                            <div class="col-md-12 text-start  mb-4">
+                                <label for="address" class="form-label">Dirección</label>
+                                <input placeholder="" type="email" class="form-control" id="address" aria-describedby="emailHelp" v-model="address">
+                                <small class="text-danger" v-if="errors.hasOwnProperty('address')">@{{ errors['address'][0] }}</small>
                             </div>
                         </div>
 
@@ -86,9 +95,10 @@
                             <input type="hidden" name="currency" value="COP" />
                             <input type="hidden" name="amount-in-cents" :value="total * 100" />
                             <input type="hidden" name="reference" :value="reference" />
+                            <input type="hidden" name="redirect-url" value="{{ url('/') }}" />
                             <!-- OPCIONALES -->
                             <input type="hidden" name="signature:integrity" :value="integritySignature"/>
-                            <button type="button" class="btn btn-reds txt-w" @click="checkout()">Pagar</button>
+                            <button type="button" class="btn btn-reds txt-w" @click="checkout()" v-if="products.length > 0">Pagar</button>
                         </form>
 
                         <!--<button type="submit" class="btn btn-reds txt-w">Pagar</button>-->
@@ -100,7 +110,7 @@
                     <h3>Resumen</h3>
                     <div class="resumen-item">
                         <span>Subtotal</span>
-                        <p>$ @{{ total }}</p>
+                        <p>$ @{{ total - shippingPrice }}</p>
                     </div>
                     <div class="resumen-item">
                         <span>Envio</span>
@@ -176,7 +186,13 @@
                     usedCoupons:[],
                     shippingPrice:5000,
                     integritySignature:"",
-                    reference:""
+                    reference:"",
+                    name:"",
+                    address:"",
+                    email:"",
+                    phone:"",
+                    city:"",
+                    errors:[]
                 }
             },
             computed: {
@@ -271,6 +287,15 @@
                     const response = await axios.post("{{ url('/cart/code-verify') }}",{
                         coupon: this.coupon
                     })
+
+                    if(response.data.success == false){
+                        swal({
+                            text:response.data.msg,
+                            icon: "warning"
+                        })
+
+                        return
+                    }
 
                     this.couponInfo = response.data.coupon
                     const couponProductFormats = response.data.couponProductFormats
@@ -380,8 +405,12 @@
                 async checkout(){
 
                     await this.integritySigning()
-                    const form = document.getElementById('checkoutForm')
-                    form.submit()
+
+                    if(await this.addPayment()){
+                        const form = document.getElementById('checkoutForm')
+                        form.submit()
+                    }
+                    
 
                 },
                 async integritySigning(){
@@ -393,6 +422,33 @@
 
                     this.reference = response.data.reference
                     this.integritySignature = response.data.signature
+
+                },
+                async addPayment(){
+
+                    try{
+
+                        const response = await axios.post("{{ url('/checkout/store') }}", {
+                            "order_id": window.localStorage.getItem("order"),
+                            "wompi_reference": this.reference,
+                            "name": this.name,
+                            "phone": this.phone,
+                            "address":this.address,
+                            "city": this.city,
+                            "email": this.email,
+                            "products": this.products,
+                            "usedCoupons": this.usedCoupons
+                        })
+
+                        return true
+
+                    }catch (err) {
+
+                        this.errors = err.response.data.errors
+                        return false
+                    }
+
+                    
 
                 }
 
