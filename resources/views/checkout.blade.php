@@ -82,6 +82,7 @@
                             <input type="hidden" name="currency" value="COP" />
                             <input type="hidden" name="amount-in-cents" :value="total * 100" />
                             <input type="hidden" name="reference" :value="reference" />
+                            <input type="hidden" name="redirect-url" value="{{ url('/') }}" />
                             <!-- OPCIONALES -->
                             <input type="hidden" name="signature:integrity" :value="integritySignature"/>
                             <button type="button" class="btn btn-reds txt-w" @click="checkout()">Pagar</button>
@@ -389,6 +390,18 @@
 
                     this.reference = response.data.reference
                     this.integritySignature = response.data.signature
+
+                },
+                async addPayment(){
+
+                    const response = await axios.post("{{ url('/checkout/store') }}", {
+                        "order_id": window.localStorage.getItem("order"),
+                        "wompi_reference": this.reference,
+                        "name": this.name,
+                        "phone": this.phone,
+                        "address":this.address,
+                    })
+
 
                 }
 
