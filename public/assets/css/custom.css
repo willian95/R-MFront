@@ -1789,11 +1789,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .slick-slide {
         margin: 0rem;
     }
-    body,
-    html,
-    main {
-        overflow-x: hidden;
-    }
+
     .menu {
         text-align: start;
     }
@@ -1851,5 +1847,11 @@ input[type="number"]::-webkit-outer-spin-button {
     .blog-item img {
 
         object-fit: cover;
+    }
+
+
+
+    .servicios{
+        overflow-x: hidden;
     }
 }
