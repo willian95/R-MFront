@@ -4,14 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Cart extends Model
+class ProductPurchase extends Model
 {
     use HasFactory;
-    use SoftDeletes;
-
-    protected $table = "carts";
+    protected $table = "product_purchases";
 
     public function productFormat(){
         return $this->belongsTo(ProductFormat::class);

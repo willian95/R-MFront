@@ -138,8 +138,8 @@ class CartController extends Controller
         
         if($coupon->all_users == 0){
 
-            $couponUser = CouponUser::where("coupon_id", $coupon->id)->where("user_id", Auth::user()->id)->first();
-            if(is_null($coupon)){
+            $couponUser = CouponUser::where("coupon_id", $coupon->id)->where("user_id", Auth::user()->id)->where("is_used", false)->first();
+            if(is_null($couponUser)){
                 return response()->json([
                     "success" => false,
                     "msg" => "Cupón no es válido"

@@ -26,7 +26,9 @@ class CheckoutStoreRequest extends FormRequest
         return [
             "name" => "required",
             "address" => "required",
-            "phone" => "required"
+            "phone" => "required",
+            "city" => "required",
+            "email" => "required|email"
         ];
     }
 }
