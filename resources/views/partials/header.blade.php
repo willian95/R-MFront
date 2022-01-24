@@ -52,7 +52,7 @@
                 </div>
             </div>
         <div class="center-rrss nav-xs">
-        <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smartphone.png') }}" alt="Icono de telefono"> </a>
+        <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smartphone.png') }}" alt="Icono de telefono">Instala la App </a>
             <div class="redes-nav-logo">
                 <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>

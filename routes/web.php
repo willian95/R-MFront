@@ -47,7 +47,9 @@ Route::get('/blog', function () {
 Route::get('/acerca', function () {
     return view('acerca');
 });
-
+Route::get('/perfil', function () {
+    return view('perfil');
+});
 Route::get('/checkout', function () {
     return view('checkout');
 });

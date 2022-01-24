@@ -137,17 +137,12 @@
 
                 <div class="d-flexinfor">
                     <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
-                    <p>Envió rápido! 1
-                        día o antes!</p>
+                    <p>Envió rápido! 1 día o antes! Si es Bogota - Fuera de Bogota, tendrá un recargo de envío. br
+                    <br>
+                    Cobertura: </p>
                 </div>
 
-                <hr>
 
-                <div class="d-flexinfor">
-                    <img class="garantia" src="{{ url('assets/img/icons/certificado-de-garantia.png') }}" alt="">
-                    <p>1 Año de
-                        garantia</p>
-                </div>
 
 
             </div>
@@ -410,7 +405,7 @@
                         const form = document.getElementById('checkoutForm')
                         form.submit()
                     }
-                    
+
 
                 },
                 async integritySigning(){
@@ -448,7 +443,7 @@
                         return false
                     }
 
-                    
+
 
                 }
 

@@ -369,7 +369,7 @@ img {
     position: relative;
     display: inline;
     font-size: 0;
-    text-transform: uppercase;
+
     letter-spacing: 0;
     animation: slide 15s step-start infinite;
     color: #ed1c24;
@@ -935,7 +935,7 @@ textarea {
     cursor: pointer;
 }
 .h-63 {
-    height: 63vh;
+    height: 67.5vh;
 }
 .redes-nav-logo {
     margin-left: 4rem;
@@ -1616,6 +1616,35 @@ input[type="number"]::-webkit-outer-spin-button {
 .btn-red:hover a {
     color: #e9232a !important;
 }
+.main-perfil .nav-link {
+    text-align: start;
+    /* FONT-WEIGHT: BOLD; */
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+}
+.main-perfil .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #1b1a1a2e;
+    font-weight: bold;
+        color: #1b1a1a;
+}
+.icon-perfil{
+    width: 30px;
+    height: 30px;
+}
+.phone{
+    color: #fff;
+    text-decoration: none;
+}
+.phone:hover{
+    color: #e9232a !important;
+
+}
+.main-perfil .nav-tabs {
+    border-bottom: 1px solid #dee2e605;
+    text-align: center;
+    justify-content: center;
+}
 /**mediasquery */
 @media only screen and (max-width: 600px) {
     .categories {
@@ -1711,7 +1740,7 @@ input[type="number"]::-webkit-outer-spin-button {
         color: black;
     }
     .ws {
-        right: 0;
+        right: 20px;
     }
     .bars {
 
@@ -1752,7 +1781,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .servicios-imgs p {
         font-size: 0.9rem;
     }
-    .servicios-content .h-63 {
+    .conetnt-serivicios .h-63 {
         height: 40vh;
     }
     .container_menu_iso .menu_iso li a {
@@ -1816,10 +1845,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .bg-infos .tab-content img {
         height: 170px;
     }
-    .header-two header::before {
-        height: 95px;
-        background: #1b1a1a;
-    }
+
     .mt-9 {
         margin-top: 3rem;
     }
@@ -1852,7 +1878,11 @@ input[type="number"]::-webkit-outer-spin-button {
         overflow-x: hidden;
     }
     .ajax-loader {
-        top: 61%;
-        left: 70%;
+        top: 61%!important;
+        left: 70%!important;
+    }
+    .header-two{
+        background: #1b1a1a;
+
     }
 }

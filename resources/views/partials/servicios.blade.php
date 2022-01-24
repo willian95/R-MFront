@@ -16,8 +16,7 @@
         <div class="col-md-6">
             <div class="servicios-content pt-0 p-3 ">
                 <h3 data-aos="fade-up" data-aos-duration="1200">﻿Clínica 24 Horas</h3>
-                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia? ﻿Llámanos
-                    ya! contestamos en menos de 35 segundos!</p>
+                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Urgencia 24 horas! Llámanos ya! contestamos en menos de 35 segundos!</p>
                 <p class="fw-300"><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
                 <div class="slider-servicio container mb-4 " data-aos="fade-up-left" data-aos-duration="1300">
@@ -48,7 +47,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds">Generar cita</button>
+                    <button class="btn-reds">﻿Generar cita/Llamar</button>
                     <button class="btn-white see-more">Ver más</button>
                 </div>
             </div>
@@ -117,9 +116,8 @@
         <div class="col-md-6 p-0">
             <div class="servicios-content p-5 servicios-content-bg">
                 <h3 data-aos="fade-up" data-aos-duration="1200">Peluquería & Spa</h3>
-                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Servicio de L a D: 9
-                    AM - 5 PM <br>
-                    Festivos: 9 AM - 2 PM!</p>
+                <p class="sub" data-aos="fade-up" data-aos-duration="1300">Servicios de L a D: 9 AM - 5 PM <br>
+                Abrimos Domingos & Festivos</p>
                 <p class="fw-300"><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
 
@@ -257,7 +255,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds">Generar cita</button>
+                    <button class="btn-reds">﻿Generar cita/Llamar</button>
                     <button class="btn-white see-more-3">Ver más</button>
                 </div>
             </div>
