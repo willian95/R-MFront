@@ -26,7 +26,7 @@
 
 <!-------------------------------------------------------->
 <section class="container" data-aos="fade-up" data-aos-duration="2000">
-    <h2 class="mt-0 titles">Nuestra prioridad es la salud y bienestar de las mascotas. <br> ¡Somos clínica 24 horas!</h2>
+    <h2 class="mt-0 titles titles-map">Nuestra prioridad es la salud y bienestar de las mascotas. <br> ¡Somos clínica 24 horas!</h2>
     <div class="map-content">
         <div class="adrres-one">
             <div>
