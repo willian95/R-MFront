@@ -5,9 +5,7 @@
 </div>
 
 <main class="">
-    <div class="mt-9">
-        @include("partials.categorias")
-    </div>
+
  <div class="container">
  <div class="breadcrumbs">
         <p><span><a href="{{ url('/') }}">Inicio </a>><a href="tienda"> Tienda</a> ></span> Checkout</p>
