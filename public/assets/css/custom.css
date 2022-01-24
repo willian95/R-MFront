@@ -13,12 +13,13 @@ img {
     height: 100%;
     width: 100%;
 }
+
 @font-face {
-    font-family: "Hobo";
-    src: url("../font/Hobo/hobo0.eot") format("eot"),
-        url("../font/Hobo/hobo0.woff") format("woff"),
-        url("../font/Hobo/hobo0.ttf") format("truetype"),
-        url("../font/Hobo/hobo0.svg") format("svg");
+    font-family: 'Hobo';
+    src:url('../font/Hobo.ttf.woff') format('woff'),
+        url('../font/Hobo.ttf.svg#Hobo') format('svg'),
+        url('../font/Hobo.ttf.eot'),
+        url('../font/Hobo.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,9 +28,11 @@ img {
     margin-top: 9rem;
 }
 .main-header {
-    display: flex;
-    justify-content: space-around;
+     /*display: flex;
+    justify-content: space-evenly; */
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 /*
 .main-header::before{
@@ -84,7 +87,7 @@ img {
 }
 .menu-trigger {
     position: absolute;
-    top: 3.2rem;
+    top: 3rem;
     width: 50px;
     height: auto;
     cursor: pointer;
@@ -92,7 +95,7 @@ img {
     align-items: center;
     justify-content: center;
     z-index: 10;
-    left: 7%;
+    left: 5%;
 }
 .copy-nav {
     font-size: 0.9rem !important;
@@ -161,8 +164,8 @@ img {
 .name-nav {
     color: #fff;
     text-decoration: none;
+    margin-right: 1.5rem;
 }
-
 .menu {
     position: fixed;
     top: -3rem;
@@ -268,9 +271,8 @@ img {
     background-color: #fff;
 }
 .phone img {
-    width: 32px;
-    height: 32px;
     filter: invert(1);
+    width: initial;
 }
 .user {
     width: 35px;
@@ -287,14 +289,14 @@ img {
     margin-left: 10rem;
 }
 .bag {
-    width: 30px;
-    height: 30px;
+  /*  width: 30px;
+    height: 30px;*/
     filter: invert(1);
 }
 .user1 {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+ cursor: pointer;
+ filter: invert(1);
+ width: initial;
 }
 .far {
     font-size: 1.5rem;
@@ -304,7 +306,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 4rem;
+
 }
 
 /**********************/
@@ -369,7 +371,7 @@ img {
     position: relative;
     display: inline;
     font-size: 0;
-
+text-transform: uppercase;
     letter-spacing: 0;
     animation: slide 15s step-start infinite;
     color: #ed1c24;
@@ -386,6 +388,7 @@ img {
     border-left: 3px solid #fff;
     background-color: #1b1a1a;
     animation: typing 5s infinite, cursor 1s infinite;
+    text-transform: uppercase;
 }
 
 .typing-slider p:nth-child(1) {
@@ -938,12 +941,15 @@ textarea {
     height: 67.5vh;
 }
 .redes-nav-logo {
-    margin-left: 4rem;
+    margin-left: 2rem;
+}
+.menuz{
+    color: transparent;
 }
 .redes-nav-logo a {
     color: #fff;
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 .center-rrss {
     display: flex;
@@ -1531,7 +1537,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .ads video {
     border-radius: 10px;
-    height: 40vh;
+    height: 265px;
     object-fit: cover;
 }
 .img-about {
@@ -1645,8 +1651,20 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     justify-content: center;
 }
+.main-header a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.redes-nav-logo i {
+    font-size: 1.8rem;
+}
 /**mediasquery */
 @media only screen and (max-width: 600px) {
+    .user1 {
+
+    display: block!important;
+}
     .categories {
         display: none;
     }

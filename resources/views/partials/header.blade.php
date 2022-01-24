@@ -1,13 +1,14 @@
 @include("partials.loader")
 <header>
     <div class="main-header">
-        <div class="header-item">
+        <div class="header-item justify-content-between">
+            <div class="menuz">Menu</div>
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
                 <div class="menu">
                     <ul>
-                    <li>
+                        <li>
                             <a href="acerca">
                                 <p>Acerca</p>
                             </a>
@@ -51,14 +52,14 @@
                     </ul>
                 </div>
             </div>
-        <div class="center-rrss nav-xs">
-        <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone ml10 none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smartphone.png') }}" alt="Icono de telefono">Instala la App </a>
-            <div class="redes-nav-logo">
-                <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <div class="center-rrss nav-xs">
+                <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone none-xs" data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/mobile-phone.png') }}" alt="Icono de telefono">Instala la App </a>
+                <div class="redes-nav-logo">
+                    <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
 
+                </div>
             </div>
-        </div>
         </div>
         <div class="header-item mt-0">
 
@@ -69,11 +70,11 @@
             <a href="#contacto" class="name-nav nav-xs">Trabaja con nosotros</a>
             @if(\Auth::check())
             <a class="m-3 name-nav nav-xs" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
-            <img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt="icono de usuario">
+            <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">
             @else
-            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/user1.png') }}" alt="icono de usuario"></a>
+            <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario"></a>
             @endif
-            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag.png') }}" alt="icono de carrito"></a>
+            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag-menu.png') }}" alt="icono de carrito"></a>
         </div>
     </div>
 </header>

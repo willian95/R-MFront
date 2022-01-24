@@ -133,11 +133,13 @@
                 </div>
                 @endif
 
-                <div class="d-flexinfor">
+                <div class="d-flexinfor mt-5">
                     <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
-                    <p>Envió rápido! 1 día o antes! Si es Bogota - Fuera de Bogota, tendrá un recargo de envío. br
+                    <p>Envió rápido! 1 día o antes! Si es Bogota
                     <br>
-                    Cobertura: </p>
+                    Fuera de Bogota, tendrá un recargo de envío*
+                    <br>
+                   <!---Cobertura:--> </p>
                 </div>
 
 
