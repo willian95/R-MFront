@@ -114,14 +114,14 @@
     <!-------------------------servicio 2---------------------------------->
     <div id="peluqueria" class="row conetnt-serivicios">
         <div class="col-md-6 p-0">
-            <div class="servicios-content p-5 servicios-content-bg">
+            <div class="servicios-content p-5 pt-3 servicios-content-bg">
                 <h3 data-aos="fade-up" data-aos-duration="1200">Peluquería & Spa</h3>
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">Servicios de L a D: 9 AM - 5 PM <br>
                 Abrimos Domingos & Festivos</p>
                 <p class="fw-300"><i class="fas fa-map-marker-alt pin"></i>Carrera 7 # 140 - 71 C.C. Belmira Plaza</p>
 
 
-                <div class="slider-servicio-img container mb-2 p-0" data-aos="fade-up" data-aos-duration="1300">
+                <div class="slider-servicio-img container mb-5 p-0" data-aos="fade-up" data-aos-duration="1300">
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/stock/Peluquería _ SPA corte de uñas.jpg') }}" alt="Imagen de corte de uñas en mascotas">
                         <p>Corte y limado de uñas</p>
@@ -233,7 +233,7 @@
 
                 </h3>
 
-                <div class="slider-servicio container mb-2">
+                <div class="slider-servicio container mb-4">
 
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/servicio/hotel gatos 5.jpg') }}" alt="Imagen de hotel gatos">
@@ -255,7 +255,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds">﻿Generar cita/Llamar</button>
+                    <button class="btn-reds"> Reservar ya </button>
                     <button class="btn-white see-more-3">Ver más</button>
                 </div>
             </div>

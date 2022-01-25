@@ -86,7 +86,7 @@
 
                         </form>
                         <div class="text-center">
-                            <button type=" button" class="btn btn-reds txt-w" >Actualizar</button>
+                            <button type=" button" class="btn btn-reds txt-w">Actualizar</button>
                         </div>
                     </div>
 
@@ -94,7 +94,40 @@
                 </div>
 
 
-                <div class="tab-pane fade" id="comprass" role="tabpanel" aria-labelledby="compras-tab">..compras.</div>
+                <div class="tab-pane fade" id="comprass" role="tabpanel" aria-labelledby="compras-tab">
+
+                    <table class="table table-borderless mt-5">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Orden 1</th>
+                                <td>04/12/2021</td>
+                                <td>Producto</td>
+                                <td>$10.000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Orden 2</th>
+                                <td>04/12/2021</td>
+                                <td>Producto</td>
+                                <td>$10.000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Orden 3</th>
+                                <td>04/12/2021</td>
+                                <td>Producto</td>
+                                <td>$10.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
 
             </div>
         </section>

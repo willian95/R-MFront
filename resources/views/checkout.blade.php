@@ -111,7 +111,7 @@
                         <p>$ @{{ total - shippingPrice }}</p>
                     </div>
                     <div class="resumen-item">
-                        <span>Envio</span>
+                        <span>Envío </span>
                         <p>$ @{{ shippingPrice }}</p>
                     </div>
 
@@ -135,7 +135,7 @@
 
                 <div class="d-flexinfor mt-5">
                     <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
-                    <p>Envió rápido! 1 día o antes! Si es Bogota
+                    <p>Envió rápido! 1 día o antes! Si es Bogota.
                     <br>
                     Fuera de Bogota, tendrá un recargo de envío*
                     <br>
