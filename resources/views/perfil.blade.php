@@ -100,9 +100,9 @@
                         <thead>
                             <tr>
                                 <th scope="col"></th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Total</th>
+                                <th scope="col"><i class="far fa-calendar-alt ml-3"></i>Fecha</th>
+                                <th scope="col"><i class="fas fa-shopping-bag ml-3"></i>Producto</th>
+                                <th scope="col">$ Total</th>
                             </tr>
                         </thead>
                         <tbody>
