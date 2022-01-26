@@ -70,14 +70,14 @@
             @if(\Auth::check())
             <div class="dropdown">
                 <a class="btn dropdown-toggle m-3 name-nav " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="nav-xs">{{ \Auth::user()->name }}</span>
-
+                  <!--  <span class="nav-xs">{{ \Auth::user()->name }}</span>--->
+<!----<img class="user2" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">-->
                     <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="perfil">Perfil</a></li>
-                    <li><a class="dropdown-item" href="perfil">Compras</a></li>
+
                     <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
 
                 </ul>
