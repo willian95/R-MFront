@@ -62,15 +62,28 @@
             </div>
         </div>
         <div class="header-item mt-0">
-
             <a href="/"> <img class="logo" src="{{ url('assets/img/icons/logo.png') }}" alt="Logo de R&M" />
             </a>
         </div>
         <div class="header-item flex-m">
             <a href="#contacto" class="name-nav nav-xs">Trabaja con nosotros</a>
             @if(\Auth::check())
-            <a class="m-3 name-nav nav-xs" data-aos="fade-up" data-aos-duration="1200">{{ \Auth::user()->name }}</a>
-            <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle m-3 name-nav " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="nav-xs">{{ \Auth::user()->name }}</span>
+
+                    <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="perfil">Perfil</a></li>
+                    <li><a class="dropdown-item" href="perfil">Compras</a></li>
+                    <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+
+                </ul>
+            </div>
+
+
             @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario"></a>
             @endif
