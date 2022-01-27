@@ -29,7 +29,7 @@
                         <div>
                             <p class="txt-product-check">@{{ product.product_format.product.name }}</p>
                             <p><small>@{{ product.product_format.color.color }} - @{{ product.product_format.size.size }}</small></p>
-                            <p>$ @{{ product.product_format.price }}</p>
+                            <p>$ @{{ currencyFormatDE(product.product_format.price) }}</p>
                         </div>
                         <!---3---->
                         <div>
@@ -108,17 +108,17 @@
                     <h3>Resumen</h3>
                     <div class="resumen-item">
                         <span>Subtotal</span>
-                        <p>$ @{{ total - shippingPrice }}</p>
+                        <p>$ @{{ currencyFormatDE(total - shippingPrice) }}</p>
                     </div>
                     <div class="resumen-item">
                         <span>Envío </span>
-                        <p>$ @{{ shippingPrice }}</p>
+                        <p>$ @{{ currencyFormatDE(shippingPrice) }}</p>
                     </div>
 
                 </div>
                 <div class="resumen-item bg-total ">
                     <span>Total</span>
-                    <p>$ @{{ total }}</p>
+                    <p>$ @{{ currencyFormatDE(total) }}</p>
 
 
 
@@ -138,7 +138,7 @@
 
                 <div class="d-flexinfor mt-5">
                     <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
-                    <p>Envió rápido! 1 día o antes! Si es Bogota.
+                    <p>Envío rápido! 1 día o antes! Si es Bogota.
                     <br>
                     Fuera de Bogota, tendrá un recargo de envío*
                     <br>
@@ -446,8 +446,14 @@
                         return false
                     }
 
-
-
+                },
+                currencyFormatDE(num) {
+                    return (
+                        num
+                        .toFixed(0) // always two decimal digits
+                        .replace('.', ',') // replace decimal point character with ,
+                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                    ) // use . as a separator
                 }
 
             },
