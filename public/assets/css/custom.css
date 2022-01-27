@@ -15,11 +15,11 @@ img {
 }
 
 @font-face {
-    font-family: 'Hobo';
-    src:url('../font/Hobo.ttf.woff') format('woff'),
-        url('../font/Hobo.ttf.svg#Hobo') format('svg'),
-        url('../font/Hobo.ttf.eot'),
-        url('../font/Hobo.ttf.eot?#iefix') format('embedded-opentype');
+    font-family: "Hobo";
+    src: url("../font/Hobo.ttf.woff") format("woff"),
+        url("../font/Hobo.ttf.svg#Hobo") format("svg"),
+        url("../font/Hobo.ttf.eot"),
+        url("../font/Hobo.ttf.eot?#iefix") format("embedded-opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +28,7 @@ img {
     margin-top: 9rem;
 }
 .main-header {
-     /*display: flex;
+    /*display: flex;
     justify-content: space-evenly; */
     align-items: center;
     display: grid;
@@ -289,15 +289,22 @@ img {
     margin-left: 10rem;
 }
 .bag {
-  /*  width: 30px;
+    /*  width: 30px;
     height: 30px;*/
     filter: invert(1);
     width: initial;
 }
 .user1 {
- cursor: pointer;
- filter: invert(1);
- width: initial;
+    cursor: pointer;
+    filter: invert(1);
+    width: initial;
+
+}
+.user2 {
+    cursor: pointer;
+    filter: invert(1);
+    width: initial;
+
 }
 .far {
     font-size: 1.5rem;
@@ -307,7 +314,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 /**********************/
@@ -372,7 +378,7 @@ img {
     position: relative;
     display: inline;
     font-size: 0;
-text-transform: uppercase;
+    text-transform: uppercase;
     letter-spacing: 0;
     animation: slide 15s step-start infinite;
     color: #ed1c24;
@@ -944,7 +950,7 @@ textarea {
 .redes-nav-logo {
     margin-left: 2rem;
 }
-.menuz{
+.menuz {
     color: transparent;
 }
 .redes-nav-logo a {
@@ -1055,6 +1061,7 @@ textarea {
     opacity: 0;
     border-radius: 10px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .img_iso:hover .hover_iso {
     opacity: 1;
@@ -1109,7 +1116,7 @@ textarea {
     box-sizing: border-box;
     box-shadow: 0px 4px 19px rgb(0 0 0 / 10%);
     border-radius: 10px;
-    height: 70vh;
+    height:  auto;
     overflow: hidden;
     padding: 2rem;
     margin: 2rem 0;
@@ -1628,31 +1635,49 @@ input[type="number"]::-webkit-outer-spin-button {
     /* FONT-WEIGHT: BOLD; */
     border-radius: 10px;
     font-size: 1.1rem;
-
 }
-.main-perfil .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.form-perfil .form-group {
+    position: relative;
+}
+.form-perfil i {
+    position: absolute;
+    color: #9f9d9d;
+    top: 52%;
+    left: 11px;
+}
+.form-perfil input {
+    padding: 8px 37px;
+}
+.form-perfil label {
+    display: inline-block;
+    font-weight: 500;
+}
+.main-perfil .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
     background-color: #1b1a1a2e;
     font-weight: bold;
-        color: #1b1a1a;
+    color: #1b1a1a;
 }
-.icon-perfil{
+.weight {
+    font-weight: bold;
+}
+.icon-perfil {
     width: 30px;
     height: 30px;
 }
-.phone{
+.phone {
     color: #fff;
     text-decoration: none;
 }
-.phone:hover{
+.phone:hover {
     color: #e9232a !important;
-
 }
 .main-perfil .nav-tabs {
     border-bottom: 1px solid #dee2e605;
     text-align: center;
     justify-content: center;
 }
-.main-header a{
+.main-header a {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -1660,17 +1685,20 @@ input[type="number"]::-webkit-outer-spin-button {
 .redes-nav-logo i {
     font-size: 1.8rem;
 }
-.table i{
+.table i {
     color: #1b1a1a;
     font-size: 1.1rem;
     margin-right: 1rem;
 }
+.pswp img {
+    max-width: none;
+    object-fit: contain;
+}
 /**mediasquery */
 @media only screen and (max-width: 600px) {
     .user1 {
-
-    display: block!important;
-}
+        display: block !important;
+    }
     .categories {
         display: none;
     }
@@ -1768,7 +1796,6 @@ input[type="number"]::-webkit-outer-spin-button {
         right: 20px;
     }
     .bars {
-
     }
     .titles {
         font-size: 1.5rem;
@@ -1853,7 +1880,6 @@ input[type="number"]::-webkit-outer-spin-button {
         left: 5rem;
     }
     .header-fix .menu-trigger {
-
     }
     .contente-footer {
         padding-top: 5rem;
@@ -1889,34 +1915,31 @@ input[type="number"]::-webkit-outer-spin-button {
         grid-area: auto;
     }
     .parent-blog {
-
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-column-gap: 1rem;
-     grid-row-gap: 15px;
+        grid-row-gap: 15px;
     }
     .blog-item img {
-
         object-fit: cover;
     }
-    .servicios{
+    .servicios {
         overflow-x: hidden;
     }
     .ajax-loader {
-        top: 61%!important;
-        left: 70%!important;
+        top: 61% !important;
+        left: 70% !important;
     }
-    .header-two{
+    .header-two {
         background: #1b1a1a;
-
     }
-   .header-item  .m-3 {
-        margin: 0.4rem!important;
+    .header-item .m-3 {
+        margin: 0.4rem !important;
     }
     .menu-trigger {
         top: 1.9rem;
     }
-    .titles-map{
+    .titles-map {
         font-size: 1.2rem;
         padding-top: 2rem;
     }
@@ -1996,7 +2019,6 @@ input[type="number"]::-webkit-outer-spin-button {
         right: 20px;
     }
     .bars {
-
     }
     .titles {
         font-size: 1.5rem;
@@ -2083,16 +2105,15 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .logo {
         width: 75px;
-
     }
-    .phone{
+    .phone {
         display: none;
     }
     .redes-nav-logo i {
         font-size: 1.5rem;
     }
     .main-header a {
-        font-size: .9rem;
+        font-size: 0.9rem;
         font-weight: 500;
         text-transform: uppercase;
     }
@@ -2113,30 +2134,26 @@ input[type="number"]::-webkit-outer-spin-button {
     .none-xs {
         display: none;
     }
-    section{
+    section {
         overflow-x: hidden;
     }
     .subtitl p {
-
         color: #1b1a1a;
     }
-    .slick-categories .slick-slide{
-        margin: 1.5rem!important;
+    .slick-categories .slick-slide {
+        margin: 1.5rem !important;
     }
     .adrres-two p {
         max-width: 100%;
     }
     .map-content p {
-
         font-size: 1rem;
     }
     .servicios .h-60 {
         height: 80vh;
     }
-    .header-two{
+    .header-two {
         background: #1b1a1a;
-    padding-bottom: 1rem;
+        padding-bottom: 1rem;
     }
 }
-
-

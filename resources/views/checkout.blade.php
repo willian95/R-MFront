@@ -119,6 +119,9 @@
                 <div class="resumen-item bg-total ">
                     <span>Total</span>
                     <p>$ @{{ total }}</p>
+
+
+
                 </div>
 
                 <!------------codigo------------->

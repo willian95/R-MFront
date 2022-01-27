@@ -11,7 +11,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,3 +81,4 @@ Route::get("/cart", [CartController::class, "getCart"]);
 Route::post('/checkout/signing', [CheckoutController::class, "signing"]);
 Route::post('/checkout/webhook', [CheckoutController::class, "webhook"]);
 Route::post('/checkout/store', [CheckoutController::class, "store"]);
+
