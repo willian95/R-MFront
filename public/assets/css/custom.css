@@ -47,6 +47,7 @@ img {
     background-size: 100%;
     z-index: -1;
 }*/
+/*
 .header-two header::before {
     display: block;
     content: "";
@@ -58,6 +59,9 @@ img {
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: -1;
+}*/
+.header-two header {
+    background: #1b1a1a;
 }
 .header-fix {
     position: fixed;
@@ -72,8 +76,8 @@ img {
     /* height: 23vh; */
     background-position: 0px -50px;
     z-index: 9;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    /*  border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;*/
 }
 .header-fix .logo {
     width: 70px;
@@ -298,13 +302,11 @@ img {
     cursor: pointer;
     filter: invert(1);
     width: initial;
-
 }
 .user2 {
     cursor: pointer;
     filter: invert(1);
     width: initial;
-
 }
 .far {
     font-size: 1.5rem;
@@ -1116,7 +1118,7 @@ textarea {
     box-sizing: border-box;
     box-shadow: 0px 4px 19px rgb(0 0 0 / 10%);
     border-radius: 10px;
-    height:  auto;
+    height: auto;
     overflow: hidden;
     padding: 2rem;
     margin: 2rem 0;
@@ -1636,6 +1638,15 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 10px;
     font-size: 1.1rem;
 }
+.main-perfil {
+    margin-top: 4.5rem;
+}
+.main-perfil .page-link {
+    cursor: pointer;
+    background: transparent !important;
+    color: #ed1c24 !important;
+    border: 1px solid #ed1c24 !important;
+}
 .form-perfil .form-group {
     position: relative;
 }
@@ -1695,7 +1706,13 @@ input[type="number"]::-webkit-outer-spin-button {
     object-fit: contain;
 }
 /**mediasquery */
-@media only screen and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 767px) {
+    .slick-categories .slick-slide {
+        padding: 1rem;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
     .user1 {
         display: block !important;
     }
@@ -1945,7 +1962,13 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    .job-txt {
+        display: none;
+    }
+    .name-nav {
+        margin-right: 0;
+    }
     .flex-m {
         margin-right: 0;
     }
@@ -2155,5 +2178,65 @@ input[type="number"]::-webkit-outer-spin-button {
     .header-two {
         background: #1b1a1a;
         padding-bottom: 1rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-header a {
+        font-size: 0.7rem;
+        margin: 0 !important;
+    }
+    .redes-nav-logo i {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 76px;
+    }
+    .titles {
+        font-size: 1.5rem;
+    }
+    .map-content {
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    }
+    .btns-conetnt button {
+        width: auto;
+    }
+    .h-60 {
+        height: 65vh;
+    }
+    .info-serv {
+        padding: 0 !important;
+    }
+    .contente-footer {
+        padding-top: 10rem;
+    }
+
+    .categories {
+        display: none;
+    }
+    .slick-categories {
+        display: block !important;
+    }
+    .categories-item .subtitl {
+        opacity: 1;
+        height: auto;
+    }
+    .slick-categories .slick-slide {
+        padding: 1rem;
+    }
+    .categories-item .subtitl {
+        opacity: 1;
+        height: auto;
+    }
+    section {
+        overflow-x: hidden;
+    }
+    .subtitl p {
+        color: #1b1a1a;
+    }
+    .icon-bg{
+        left: 40%;
+    }
+    .categories-item{
+        margin-top: 4rem;
     }
 }

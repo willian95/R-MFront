@@ -4,11 +4,7 @@
     <section class="container p-50" id="dev-area">
         <div class="car" v-cloak>
             <div class="card-body">
-                <div class="title__general title__general2 fadeInUp wow animated title__general_flex">
-                    <p class="m-0">Perfil</p>
 
-
-                </div>
                 <div class="main-perfil">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -80,7 +76,7 @@
 
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="text-center mt-5">
                                     <button type=" button" class="btn btn-reds txt-w" @click="update()">
                                         Actualizar
                                     </button>
@@ -92,14 +88,14 @@
 
                             <div class="card-body">
                                 <!--begin: Datatable-->
-                                <table class="table table-bordered table-checkable">
+                                <table class="table-checkable table table-borderless mt-5">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Status</th>
-                                            <th>Total</th>
-                                            <th>Fecha</th>
-                                            <th>Ver</th>
+                                            <th><i class="far fa-question-circle  ml-3"></i> Status</th>
+                                            <th>$ Total</th>
+                                            <th><i class="far fa-calendar-alt ml-3"></i>Fecha</th>
+                                            <th><i class="far fa-eye ml-3"></i>Ver</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,19 +111,19 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="row w-100">
+                                <div class="row w-100 mt-9">
                                     <div class="col-sm-12 col-md-5">
                                         <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}</div>
                                     </div>
                                     <div class="col-sm-12 col-md-7">
                                         <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
                                             <ul class="pagination">
-                                                
+
                                                 <li class="paginate_button page-item active" v-for="(link, index) in links">
                                                     <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="fetch(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
                                                 </li>
-                                                
-                                                
+
+
                                             </ul>
                                         </div>
                                     </div>

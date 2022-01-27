@@ -66,10 +66,10 @@
             </a>
         </div>
         <div class="header-item flex-m">
-            <a href="#contacto" class="name-nav nav-xs">Trabaja con nosotros</a>
+            <a href="#contacto" class="name-nav nav-xs job-txt">Trabaja con nosotros</a>
             @if(\Auth::check())
             <div class="dropdown">
-                <a class="btn dropdown-toggle m-3 name-nav " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="btn dropdown-toggle m-3 name-nav p-0 m-0" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <!--  <span class="nav-xs">{{ \Auth::user()->name }}</span>--->
 <!----<img class="user2" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">-->
                     <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">

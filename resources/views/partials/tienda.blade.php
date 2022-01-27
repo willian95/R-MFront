@@ -53,7 +53,7 @@
             @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q){
                 $q->where("cat_category", 1);
             })->take(10)->get() as $catProduct)
-                <div class="col-xs-6 col-sm-3 cent isotope-item felinos">
+                <div class="col-xs-6 col-sm-4 cent isotope-item felinos">
                     <a href="{{ url('/producto/'.$catProduct->slug) }}">
                         <div class="img_iso" style="  background-image: url({{ $catProduct->image }})">
                             <div class="hover_iso" style="  background-image: url({{ $catProduct->image_hover }})"></div>
