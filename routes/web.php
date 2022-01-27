@@ -11,6 +11,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,7 +50,10 @@ Route::get('/acerca', function () {
 });
 Route::get('/perfil', function () {
     return view('perfil');
-});
+})->middleware('auth');
+
+Route::post("/perfil/update", [UserController::class, "update"]);
+
 Route::get('/checkout', function () {
     return view('checkout');
 });
@@ -81,4 +86,6 @@ Route::get("/cart", [CartController::class, "getCart"]);
 Route::post('/checkout/signing', [CheckoutController::class, "signing"]);
 Route::post('/checkout/webhook', [CheckoutController::class, "webhook"]);
 Route::post('/checkout/store', [CheckoutController::class, "store"]);
+
+Route::get("purchases", [PaymentController::class, "fetch"]);
 

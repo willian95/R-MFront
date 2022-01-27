@@ -11,4 +11,8 @@ class Payment extends Model
 
     protected $table = "payments";
 
+    public function productPurchases(){
+        return $this->hasMany(ProductPurchase::class);
+    }
+
 }

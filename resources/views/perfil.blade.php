@@ -77,11 +77,7 @@
                                         </div>
 
 
-                                        <div class="col-md-6 text-start mb-4">
-                                            <label for="exampleInputEmail1" class="form-label">Ciudad</label>
-                                            <input type="email" placeholder="alguna dirección" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                            <small></small>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="text-center">
@@ -94,41 +90,127 @@
 
                         <div class="tab-pane fade" id="comprass" role="tabpanel" aria-labelledby="compras-tab">
 
-                            <table class="table table-borderless mt-5">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">
-                                            <i class="far fa-calendar-alt ml-3"></i>Fecha
-                                        </th>
-                                        <th scope="col">
-                                            <i class="fas fa-shopping-bag ml-3"></i>Producto
-                                        </th>
-                                        <th scope="col">$ Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Orden 1</th>
-                                        <td>04/12/2021</td>
-                                        <td>Producto</td>
-                                        <td>$10.000</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Orden 2</th>
-                                        <td>04/12/2021</td>
-                                        <td>Producto</td>
-                                        <td>$10.000</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Orden 3</th>
-                                        <td>04/12/2021</td>
-                                        <td>Producto</td>
-                                        <td>$10.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="card-body">
+                                <!--begin: Datatable-->
+                                <table class="table table-bordered table-checkable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                            <th>Fecha</th>
+                                            <th>Ver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(shopping, index) in shoppings">
+                                            <th>@{{ shopping.wompi_reference }}</th>
+                                            <td>@{{ shopping.name }}</td>
+                                            <td style="text-transform: capitalize;">@{{ shopping.status }}</td>
+                                            <td>$ @{{ parseInt(shopping.total_products + shopping.shipping_price).toString().replace(/\B(?=(\d{3})+\b)/g, ".") }}</td>
+                                            <td>@{{ shopping.created_at.toString().substring(0, 10) }}</td>
+                                            <td>
+                                                <button class="btn btn-primary" data-toggle="modal" data-target="#shoppingModal" @click="show(shopping)"><i class="far fa-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row w-100">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
+                                            <ul class="pagination">
+                                                
+                                                <li class="paginate_button page-item active" v-for="(link, index) in links">
+                                                    <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="fetch(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
+                                                </li>
+                                                
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Datatable-->
+                            </div>
                         </div>
+
+
+                        <div class="modal fade" id="shoppingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <i aria-hidden="true" class="ki ki-close"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" v-if="shopping != ''">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><strong>Cliente</strong></label>
+                                                <p>@{{ shopping.name }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Email</strong></label>
+                                                <p>@{{ shopping.email }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Dirección</strong></label>
+                                                <p>@{{ shopping.address }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Teléfono</strong></label>
+                                                <p>@{{ shopping.phone }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Costo productos</strong></label>
+                                                <p>$ @{{ parseInt(shopping.total_products).toString().replace(/\B(?=(\d{3})+\b)/g, ".") }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Costo envío</strong></label>
+                                                <p>$ @{{ parseInt(shopping.shipping_price).toString().replace(/\B(?=(\d{3})+\b)/g, ".") }}</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><strong>Total</strong></label>
+                                                <p>$ @{{ parseInt(shopping.total_products + shopping.shipping_price).toString().replace(/\B(?=(\d{3})+\b)/g, ".") }}</p>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h3 class="text-center">Productos</h3>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <table class="table table-bordered table-checkable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Producto</th>
+                                                            <th>Precio</th>
+                                                            <th>Color</th>
+                                                            <th>Tamaño</th>
+                                                            <th>Cantidad</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr v-for="(shoppingPurchase, index) in shopping.product_purchases">
+                                                            <td>@{{ shoppingPurchase.product_format.product.name }}</td>
+                                                            <td>$ @{{ parseInt(shoppingPurchase.product_format.price).toString().replace(/\B(?=(\d{3})+\b)/g, ".") }}</td>
+                                                            <td>@{{ shoppingPurchase.product_format.color.color }}</td>
+                                                            <td>@{{ shoppingPurchase.product_format.size.size }}</td>
+                                                            <td>@{{ shoppingPurchase.amount }}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
     </section>
 
@@ -156,8 +238,18 @@
                 telephone: "{{ Auth::user()->phone }}",
                 identification: "{{ Auth::user()->identification }}",
 
-                shoppings: [],
-                shopping: "",
+                shopping:"",
+                shoppings:[],
+                links:[],
+                currentPage:"",
+                totalPages:"",
+                linkClass:"page-link",
+                activeLinkClass:"page-link active-link bg-main",
+
+
+                links:[],
+                currentPage:"",
+                totalPages:"",
 
             };
         },
@@ -166,23 +258,29 @@
                 axios
                     .post("{{ url('/perfil/update') }}", {
                         name: this.name,
+                        email: this.email,
                         address: this.address,
                         phone: this.telephone,
                         identification: this.identification,
                     })
                     .then((res) => {
                         if (res.data.success == true) {
-                            alertify.success(res.data.msg);
+                            swal({
+                                "text":res.data.message,
+                                "icon":"success"
+                            })
                         } else {
-                            alertify.error(res.data.msg);
+                            swal({
+                                "text":res.data.message,
+                                "icon":"error"
+                            })
                         }
                     })
                     .catch((err) => {
-                        $.each(err.response.data.errors, function(key, value) {
-                            alertify.error(value[0]);
-                            //alertify.error(value);
-                            //alertify.alert('Basic: true').set('basic', true);
-                        });
+                        swal({
+                                "text":"Hubo un problema",
+                                "icon":"error"
+                            })
                     });
             },
             isNumber: function(evt) {
@@ -194,11 +292,42 @@
                     return true;
                 }
             },
+            fetch(page = 1){
+
+
+                axios.get("{{ url('purchases') }}", {
+                    params:{
+                        "page":page
+                    }
+                })
+                .then(res => {
+
+                    this.shoppings = res.data.data
+                    this.links = res.data.links
+                    this.currentPage = res.data.current_page
+                    this.totalPages = res.data.last_page
+
+                })
+                .catch(err => {
+                    $.each(err.response.data.errors, function(key, value){
+                        alert(value)
+                    });
+                })
+
+            },
+            show(shopping){
+
+                this.shopping = shopping
+                console.log(this.shopping)
+
+            },
 
 
 
         },
-        mounted() {},
+        mounted() {
+            this.fetch()
+        },
     });
 </script>
 
