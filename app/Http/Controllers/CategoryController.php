@@ -12,9 +12,9 @@ class CategoryController extends Controller
 
         if($animal == "dog")
         {
-            $categories = Category::where("dog_category", 1)->get();
+            $categories = Category::where("dog_category", 1)->orderBy("name", "asc")->get();
         }else{
-            $categories = Category::where("cat_category", 1)->get();
+            $categories = Category::where("cat_category", 1)->orderBy("name", "asc")->get();
         }
 
         return $categories;
