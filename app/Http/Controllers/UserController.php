@@ -15,6 +15,7 @@ class UserController extends Controller
         $user->identification = $request->identification;
         $user->phone = $request->phone;
         $user->address = $request->address;
+        $user->city = $request->city;
         $user->update();
 
         return response()->json(["success" => true, "message" => "Perfil actualizado"]);

@@ -72,6 +72,15 @@
                                             </div>
                                         </div>
 
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="address">Dpto / Ciudad </label>
+
+                                                <input placeholder="Dirección" type="text" class="form-control" id="city" v-model="city" />
+                                                <i class="fa fa-globe icon_form"></i>
+                                            </div>
+                                        </div>
+
 
 
                                     </div>
@@ -233,6 +242,7 @@
                 address: "{{ Auth::user()->address }}",
                 telephone: "{{ Auth::user()->phone }}",
                 identification: "{{ Auth::user()->identification }}",
+                city:"{{ Auth::user()->city }}",
 
                 shopping:"",
                 shoppings:[],
@@ -258,6 +268,7 @@
                         address: this.address,
                         phone: this.telephone,
                         identification: this.identification,
+                        city:this.city
                     })
                     .then((res) => {
                         if (res.data.success == true) {

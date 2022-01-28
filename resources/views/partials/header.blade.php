@@ -78,7 +78,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="perfil">Perfil</a></li>
 
-                    <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+                    <li><a class="dropdown-item" href="{{ url('/logout') }}">Cerrar sesión</a></li>
 
                 </ul>
             </div>

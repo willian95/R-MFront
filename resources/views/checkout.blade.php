@@ -185,11 +185,11 @@
                     shippingPrice:5000,
                     integritySignature:"",
                     reference:"",
-                    name:"",
-                    address:"",
-                    email:"",
-                    phone:"",
-                    city:"",
+                    name:"{{ Auth::check() ? Auth::user()->name : '' }}",
+                    address:"{{ Auth::check() ? Auth::user()->address : '' }}",
+                    email:"{{ Auth::check() ? Auth::user()->email : '' }}",
+                    phone:"{{ Auth::check() ? Auth::user()->phone : '' }}",
+                    city:"{{ Auth::check() ? Auth::user()->city : '' }}",
                     errors:[]
                 }
             },
