@@ -88,7 +88,7 @@
                 <div class="">
 
                     <div class="flex-btns">
-                        <button class="btn-red"><a class="txt-w" href="#!" @click="addToCart()">Comprar ahora</a></button>
+                        <button class="btn-red"><a class="txt-w" href="#!" @click="addToCart('checkout')">Comprar ahora</a></button>
                         <button class="btn-red btn-red-2"><a class="" href="#!" @click="addToCart()">Agregar al carrito</a></button>
                     </div>
 
@@ -275,7 +275,7 @@
 
             },
 
-            async addToCart() {
+            async addToCart(checkout) {
                 this.errors = []
                 try {
 
@@ -287,12 +287,18 @@
                     })
 
                     if (response.data.success == true) {
-
+                        
                         window.localStorage.setItem("order", response.data.order)
-                        swal({
+                        await swal({
                             text: response.data.msg,
                             icon: "success"
                         })
+
+                        if(checkout == "checkout"){
+                                
+                            window.location.replace("{{ url('checkout') }}")
+
+                        }
 
                         this.amount = 1
 
