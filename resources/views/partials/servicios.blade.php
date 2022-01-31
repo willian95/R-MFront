@@ -47,7 +47,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds">﻿Generar cita/Llamar</button>
+                    <button class="btn-reds"><a href="https://api.whatsapp.com/send?phone=+573014739866&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">﻿Generar cita/Llamar </a></button>
                     <button class="btn-white see-more">Ver más</button>
                 </div>
             </div>
@@ -142,7 +142,9 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds">Reservar ya</button>
+                    <button class="btn-reds">
+                        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">Reservar ya</a>
+                    </button>
                     <!--- <button class="btn-white see-more-2">Ver más</button>--->
                 </div>
             </div>
@@ -255,7 +257,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds"> Reservar ya </button>
+                    <button class="btn-reds"> <a href="https://api.whatsapp.com/send?phone=+573134104553&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">Reservar ya </a> </button>
                     <button class="btn-white see-more-3">Ver más</button>
                 </div>
             </div>
