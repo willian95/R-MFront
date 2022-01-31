@@ -70,8 +70,8 @@
             @if(\Auth::check())
             <div class="dropdown">
                 <a class="btn dropdown-toggle m-3 name-nav p-0 m-0" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  <!--  <span class="nav-xs">{{ \Auth::user()->name }}</span>--->
-<!----<img class="user2" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">-->
+                    <!--  <span class="nav-xs">{{ \Auth::user()->name }}</span>--->
+                    <!----<img class="user2" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">-->
                     <img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario">
                 </a>
 
@@ -87,7 +87,11 @@
             @else
             <a data-bs-toggle="modal" data-bs-target=".login" class="m-3" data-aos="fade-up" data-aos-duration="1200"><img class="user1" src="{{ url('assets/img/icons/account.png') }}" alt="icono de usuario"></a>
             @endif
-            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag-menu.png') }}" alt="icono de carrito"></a>
+            <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag-menu.png') }}" alt="icono de carrito">
+                <div class="counter-style">
+                    <p>10</p>
+                </div>
+            </a>
         </div>
     </div>
 </header>
