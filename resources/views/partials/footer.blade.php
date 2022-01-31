@@ -40,7 +40,7 @@
 </div>
 
 
-<a href="" class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
+<a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
 
 
 
