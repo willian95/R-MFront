@@ -46,8 +46,7 @@
                     </div>
                 </div>
                 <div class="btns-conetnt">
-
-                    <button class="btn-reds"><a href="https://api.whatsapp.com/send?phone=+573014739866&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">﻿Generar cita/Llamar </a></button>
+                    <button class="btn-reds"><a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola!%20quiero%20informaci%C3%B3n%20acerca%20de%20la%20clinica%2024horas" target="_blank">﻿Generar cita/Llamar </a></button>
                     <button class="btn-white see-more">Ver más</button>
                 </div>
             </div>
@@ -143,7 +142,8 @@
                 <div class="btns-conetnt">
 
                     <button class="btn-reds">
-                        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">Reservar ya</a>
+
+                    <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola!%20quiero%20informaci%C3%B3n%20acerca%20de%20Peluqueria%20y%20Spa" target="_blank">Reservar ya</a>
                     </button>
                     <!--- <button class="btn-white see-more-2">Ver más</button>--->
                 </div>
@@ -257,7 +257,7 @@
                 </div>
                 <div class="btns-conetnt">
 
-                    <button class="btn-reds"> <a href="https://api.whatsapp.com/send?phone=+573134104553&text=Quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">Reservar ya </a> </button>
+                    <button class="btn-reds"> <a href="https://api.whatsapp.com/send?phone=+573134104553&text=Hola!%20quiero%20informaci%C3%B3n%20acerca%20de%20el%20hotel%20para%20mascotas" target="_blank">Reservar ya </a> </button>
                     <button class="btn-white see-more-3">Ver más</button>
                 </div>
             </div>

@@ -275,8 +275,7 @@ img {
     background-color: #fff;
 }
 .phone img {
-    filter: invert(1);
-    width: initial;
+    width: 30px;
 }
 .user {
     width: 35px;
@@ -297,6 +296,17 @@ img {
     height: 30px;*/
     filter: invert(1);
     width: initial;
+}
+.huella img{
+    width: 50px;
+}
+.huella{
+    position: absolute;
+    top: 47%;
+    right: 33%;
+    transform: rotate(
+45deg
+);
 }
 .user1 {
     cursor: pointer;
@@ -1732,6 +1742,10 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /**mediasquery */
 @media (min-width: 0px) and (max-width: 767px) {
+
+    .huella{
+        display: none;
+    }
     .slick-categories .slick-slide {
         padding: 1rem;
     }

@@ -49,7 +49,7 @@
                     <h2 class="title-product">{{ $product->name }}
                     </h2>
                     <div class="stock">
-                        <p>stock: @{{ stock }}</p>
+                        <p>Stock: @{{ stock }}</p>
                     </div>
 
                     <div class="price">
@@ -287,7 +287,7 @@
                     })
 
                     if (response.data.success == true) {
-                        
+
                         window.localStorage.setItem("order", response.data.order)
                         await swal({
                             text: response.data.msg,
@@ -295,7 +295,7 @@
                         })
 
                         if(checkout == "checkout"){
-                                
+
                             window.location.replace("{{ url('checkout') }}")
 
                         }
