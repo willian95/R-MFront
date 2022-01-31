@@ -883,6 +883,9 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer::before {
     display: block;
@@ -911,7 +914,7 @@ button {
 .contente-footer {
     position: relative;
     z-index: 1;
-    padding-top: 14rem;
+  /*  padding-top: 14rem;*/
     color: #fff;
     max-width: 500px;
     text-align: center;
@@ -1855,7 +1858,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .container_menu_iso .menu_iso li a {
         width: 100%;
-        height: 114px;
+        height: 130px!important;
     }
     .img_iso {
         height: 250px;
@@ -1960,6 +1963,17 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 1.2rem;
         padding-top: 2rem;
     }
+    .slider-adss .slick-slide {
+
+        padding-left: 0rem;
+        padding: 1.5rem;
+    }
+    .adrres-one div , .adrres-three div {
+        padding-bottom: 1rem;
+    }
+    .slider-servicio {
+    margin: 1rem 0;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2239,4 +2253,32 @@ input[type="number"]::-webkit-outer-spin-button {
     .categories-item{
         margin-top: 4rem;
     }
+}
+@media (width:1920px) and (height: 1080px) {
+html,body{
+    overflow-x: hidden;
+}
+.categories {
+    margin-top: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+}
+.slider-servicio-img img {
+    width: 100%;
+    height: 300px !important;
+
+}
+.footer {
+    height: 100vh;
+}
+.contente-footer {
+
+    padding-top: 20rem;
+}
+.h-60{
+    height: 50vh;
+}
+#veterinaria .servicios-imgs img, #colegio .servicios-imgs img {
+    height: 150px !important;
+
+}
 }

@@ -43,8 +43,9 @@
         <div class=" adrres-three ">
 
             <div>
+            <img class="icon-drees" src="assets/img/icons/google-maps.png" alt="">
+
                 <img class="icon-drees" src="assets/img/icons/waze.png" alt="">
-                <img class="icon-drees" src="assets/img/icons/google-maps.png" alt="">
             </div>
             <p>Calle 103 # 14A - 10</p>
         </div>
