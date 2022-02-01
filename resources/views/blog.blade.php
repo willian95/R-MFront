@@ -63,7 +63,7 @@
 
             @endif
 
-            @if(App\Models\Blog::orderBy("id", "desc")->skip(1)->first())
+            @if(App\Models\Blog::orderBy("id", "desc")->first())
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->skip(1)->first();
                 @endphp
