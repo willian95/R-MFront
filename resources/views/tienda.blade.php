@@ -118,10 +118,12 @@
                 return {
                     animalType:"dog",
                     products:[],
+                    brands:[],
                     categories:[],
                     choosenCategories:[],
                     loadingCategories:false,
                     loadingProducts:false,
+                    selectedBrand:"all",
 
                     links:[],
                     currentPage:"",
@@ -166,6 +168,7 @@
                     let response = await axios.get(link, {
                         params:{
                             categories: this.choosenCategories,
+                            brands: this.selectedBrand,
                             animal: this.animalType
                         }
                     })
@@ -195,6 +198,11 @@
                         .replace('.', ',') // replace decimal point character with ,
                         .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
                     ) // use . as a separator
+                },
+                async fetchGetBrands(){
+
+                    const response = await axios.get("{{ url('/brands/fetch') }}")
+                    this.brands = response.data
                 }
 
 

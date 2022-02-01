@@ -25,7 +25,19 @@ class ProductController extends Controller
                 }
             }
             
-        })->with(['productFormats' => function ($query) {
+        })
+        ->whereHas('brand', function($q) use($request){
+
+            if($request->brands == "all"){
+                $q->where("id", ">", 0);
+            }else{
+
+
+                $q->where("id", $request->brands);
+            }
+
+        })
+        ->with(['productFormats' => function ($query) {
             $query->orderBy("price", "asc");
         }])->paginate(20);
         

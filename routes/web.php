@@ -13,6 +13,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\BrandsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -88,4 +89,6 @@ Route::post('/checkout/webhook', [CheckoutController::class, "webhook"]);
 Route::post('/checkout/store', [CheckoutController::class, "store"]);
 
 Route::get("purchases", [PaymentController::class, "fetch"]);
+
+Route::get("/brands/fetch", [BrandsController::class, "fetch"]);
 
