@@ -63,9 +63,9 @@
 
             @endif
 
-            @if(App\Models\Blog::orderBy("id", "desc")->first())
+            @if(App\Models\Blog::orderBy("id", "desc")->skip(1)->first())
                 @php
-                    $blog = App\Models\Blog::orderBy("id", "desc")->first();
+                    $blog = App\Models\Blog::orderBy("id", "desc")->skip(1)->first();
                 @endphp
                 <div class="blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
                     <img src="{{ $blog->image }}" alt="">
