@@ -165,8 +165,8 @@
             @endphp
             @foreach(App\Models\Blog::orderBy('id', 'desc')->skip($skip)->take($limit)->get() as $blog)
                 <div class="col-md-4">
-                    <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
-                        <img src="{{ $blog->title }}" alt="">
+                    <div class=" blog-item" data-bs-toggle="modal" data-bs-target="#modal-blog{{ $blog->id }}">
+                        <img src="{{ $blog->image }}" alt="">
                         <div class="pt-3 pb-3">
                             <h2 class="titulos">{{ $blog->title }}
                             </h2>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade modal-blog" id="exampleModal{{ $blog->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
 
