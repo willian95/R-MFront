@@ -89,7 +89,7 @@
             @endif
             <a href="{{ url('/checkout') }}" class="m-3" data-aos="fade-up" data-aos-duration="1500"><img class="bag" src="{{ url('assets/img/icons/bag-menu.png') }}" alt="icono de carrito">
                 <div class="counter-style">
-                    <p>10</p>
+                    <p id="cart-counter">0</p>
                 </div>
             </a>
         </div>

@@ -3,19 +3,23 @@
 
         @foreach(App\Models\Banner::inRandomOrder()->get() as $banner)
 
-        @if($banner->type == 'image')
-        <div class="" data-aos="fade-up" data-aos-duration="1000">
-            <img src="{{ $banner->image }}" alt="Tienda virtual alimentos secos">
-        </div>
-        @else
-        <div class="" data-aos="fade-up" data-aos-duration="1000">
-            <video class="w-100" autoplay loop muted>
-                <source src="{{ $banner->image }}" type="video/mp4">
-                <source src="{{ $banner->image }}" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        @endif
+            @if($banner->type == 'image')
+            <a href="{{ $banner->link }}" target="_blank">
+                <div class="" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{ $banner->image }}" alt="Tienda virtual alimentos secos">
+                </div>
+            </a>
+            @else
+            <a href="{{ $banner->link }}" target="_blank">
+                <div class="" data-aos="fade-up" data-aos-duration="1000">
+                    <video class="w-100" autoplay loop muted>
+                        <source src="{{ $banner->image }}" type="video/mp4">
+                        <source src="{{ $banner->image }}" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </a>
+            @endif
 
         @endforeach
 

@@ -210,6 +210,21 @@
         },
         methods: {
 
+            async cartAmount(){
+
+                const order = window.localStorage.getItem("order")
+                const response = await axios.get("{{ url('/cart') }}", {
+                    params: {
+                        "order_id": order
+                    }
+                })
+                let sum = 0
+                response.data.map((data) => {
+                    sum += data.amount
+                })
+                $("#cart-counter").html(sum)
+            },
+
             async getCartProducts() {
 
                 const order = window.localStorage.getItem("order")
@@ -220,6 +235,8 @@
                 })
 
                 this.products = response.data
+
+                this.cartAmount()
 
             },
             addAmount(product) {
@@ -245,6 +262,8 @@
                 const response = await axios.put("{{ url('/cart') }}" + "/" + product.id, {
                     "amount": product.amount
                 })
+
+                this.cartAmount()
 
             },
             askForDelete(product) {
@@ -463,6 +482,7 @@
         created() {
 
             this.getCartProducts()
+            this.cartAmount()
 
         }
     });

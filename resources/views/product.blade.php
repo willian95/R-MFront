@@ -275,6 +275,21 @@
 
             },
 
+            async cartAmount(){
+
+                const order = window.localStorage.getItem("order")
+                const response = await axios.get("{{ url('/cart') }}", {
+                    params: {
+                        "order_id": order
+                    }
+                })
+                let sum = 0
+                response.data.map((data) => {
+                    sum += data.amount
+                })
+                $("#cart-counter").html(sum)
+            },
+
             async addToCart(checkout) {
                 this.errors = []
                 try {
@@ -301,6 +316,7 @@
                         }
 
                         this.amount = 1
+                        this.cartAmount()
 
                     } else {
 
@@ -349,6 +365,7 @@
         mounted() {
 
             this.getProductFormats()
+            this.cartAmount()
 
         }
     });
