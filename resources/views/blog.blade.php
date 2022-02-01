@@ -110,7 +110,7 @@
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->skip(2)->first();
                 @endphp
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target="exampleModal-third">
+                <div class=" blog-item" data-bs-toggle="modal" data-bs-target="#exampleModal-third">
                     <img src="{{ $blog->image }}" alt="">
                     <div class="pt-3 pb-3">
                         <h2>{{ $blog->title }}
