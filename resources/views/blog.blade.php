@@ -23,7 +23,7 @@
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->skip(1)->first();
                 @endphp
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                <div class=" blog-item" data-bs-toggle="modal" data-bs-target="#exampleModal-second">
                     <img src="{{ $blog->image }}" alt="">
                     <div class="mt-3">
                         <h2>{{ $blog->title }}
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade modal-blog" id="exampleModal-second" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
 
@@ -67,7 +67,7 @@
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->first();
                 @endphp
-                <div class="blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                <div class="blog-item" data-bs-toggle="modal" data-bs-target="#exampleModal-first">
                     <img src="{{ $blog->image }}" alt="">
                     <div class="mt-3">
                         <h2>{{ $blog->title }}
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade modal-blog" id="exampleModal-first" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
 
@@ -110,7 +110,7 @@
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->skip(2)->first();
                 @endphp
-                <div class=" blog-item" data-bs-toggle="modal" data-bs-target=".modal-blog">
+                <div class=" blog-item" data-bs-toggle="modal" data-bs-target="exampleModal-third">
                     <img src="{{ $blog->image }}" alt="">
                     <div class="pt-3 pb-3">
                         <h2>{{ $blog->title }}
@@ -122,7 +122,7 @@
 
                 </div>
 
-                <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade modal-blog" id="exampleModal-third" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
 
@@ -165,7 +165,7 @@
             @endphp
             @foreach(App\Models\Blog::orderBy('id', 'desc')->skip($skip)->take($limit)->get() as $blog)
                 <div class="col-md-4">
-                    <div class=" blog-item" data-bs-toggle="modal" data-bs-target="#modal-blog{{ $blog->id }}">
+                    <div class=" blog-item" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $blog->id }}">
                         <img src="{{ $blog->image }}" alt="">
                         <div class="pt-3 pb-3">
                             <h2 class="titulos">{{ $blog->title }}
