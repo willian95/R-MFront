@@ -19,7 +19,7 @@
 
         <div class="parent-blog">
 
-            @if(App\Models\Blog::orderBy("id", "desc")->skip(2)->first())
+            @if(App\Models\Blog::orderBy("id", "desc")->first())
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->skip(2)->first();
                 @endphp
@@ -106,7 +106,7 @@
                 </div>
             @endif
 
-            @if(App\Models\Blog::orderBy("id", "desc")->first())
+            @if(App\Models\Blog::orderBy("id", "desc")->skip(2)->first())
                 @php
                     $blog = App\Models\Blog::orderBy("id", "desc")->first();
                 @endphp
