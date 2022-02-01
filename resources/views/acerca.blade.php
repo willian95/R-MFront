@@ -24,22 +24,12 @@
                     tecnología</p>
 
                 <div class="row team" data-aos="fade-up" data-aos-duration="1000">
+                    @foreach(\App\Models\Staff::all() as $staff)
                     <div class="col-md-3">
-                        <img class="img-about" src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
+                        <img class="img-about" src="{{ $staff->image }}" alt="{{ $staff->name }}">
 
                     </div>
-                    <div class="col-md-3">
-                        <img class="img-about" src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
-
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-about" src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
-
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-about" src="{{ url('assets/img/stock/Pelquería _ Spa limpieza oídos.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
-
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
