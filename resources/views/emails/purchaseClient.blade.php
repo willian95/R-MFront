@@ -158,8 +158,23 @@ td .es-button-border-2:hover {
                         <td style="border: 1px solid black; border-collapse:collapse; text-align:center"><img src="{{ $product['productFormat']['product']['image'] }}" style="width: 60px;"></td>
                         <td style="border: 1px solid black; border-collapse:collapse; text-align:center"> {{ $product['productFormat']['product']['name'] }} {{ $product['productFormat']['color']['color'] }} {{ $product['productFormat']['size']['size'] }}</td>
                         <td style="border: 1px solid black; border-collapse:collapse; text-align:center">{{ $product["amount"] }}</td>
-                        <td style="border: 1px solid black; border-collapse:collapse; text-align:center">$ {{ number_format($product['productFormat']["price"], 0, ",", ".") }}</td>
-                        <td style="border: 1px solid black; border-collapse:collapse; text-align:center">$ {{ number_format(($product['productFormat']["price"] * $product["amount"]), 0, ",", ".")   }}</td>
+                        <td style="border: 1px solid black; border-collapse:collapse; text-align:center">$ 
+                        @if($product['productFormat']["price"] <= 0)
+                          {{ number_format($product['productFormat']["price"], 0, ",", ".") }}
+                        @else
+                          {{ number_format($product['productFormat']["discount_price"], 0, ",", ".") }}
+                        @endif
+                      </td>
+                        <td style="border: 1px solid black; border-collapse:collapse; text-align:center">$ 
+                        
+                        @if($product['productFormat']["price"] <= 0)
+                          {{ number_format($product['productFormat']["price"]* $product["amount"], 0, ",", ".") }}
+                        @else
+                          {{ number_format($product['productFormat']["discount_price"]* $product["amount"], 0, ",", ".") }}
+                        @endif
+                      
+                      
+                      </td>
                     </tr>
                   @endforeach
                   

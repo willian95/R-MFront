@@ -51,10 +51,12 @@
                     <div class="stock">
                         <p>Stock: @{{ stock }}</p>
                     </div>
-
+                    
                     <div class="price">
-                        <p> $ @{{ number_format(price * amount, 0, ",", ".")  }}
-                        </p>
+                        <p v-if="discountPrice <= 0"> $ @{{ number_format(price * amount, 0, ",", ".")  }}</p>
+
+                        <p v-if="discountPrice > 0"> $ @{{ number_format(discountPrice * amount, 0, ",", ".")  }}</p>
+                        <p v-if="discountPrice > 0"> <strike>$ @{{ number_format(price * amount, 0, ",", ".")  }}</strike></p>
                         <!---  <p>$ @{{ price }}</p>--->
                     </div>
                 </div>
@@ -226,6 +228,7 @@
                 amount: 0,
                 productFormats: [],
                 selectedProductFormat: "",
+                discountPrice:0,
                 price: "",
                 stock: 0,
                 errors: []
@@ -252,6 +255,7 @@
                 });
 
                 this.price = filtered[0].price
+                this.discountPrice = filtered[0].discount_price
                 this.stock = filtered[0].stock
                 this.amount = this.stock > 0 ? 1 : 0
 

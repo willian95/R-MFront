@@ -31,7 +31,11 @@
                             <div>
                                 <p class="txt-product-check">@{{ product.product_format.product.name }}</p>
                                 <p><small>@{{ product.product_format.color.color }} - @{{ product.product_format.size.size }}</small></p>
-                                <p>$ @{{ currencyFormatDE(product.product_format.price) }}</p>
+
+                                <p v-if="product.product_format.discount_price <= 0">$ @{{ currencyFormatDE(product.product_format.price) }}</p>
+
+                                <p v-if="product.product_format.discount_price > 0">$ @{{ currencyFormatDE(product.product_format.discount_price) }}</p>
+                                <p v-if="product.product_format.discount_price > 0"><strike>$ @{{ currencyFormatDE(product.product_format.price) }}</strike></p>
                             </div>
                             <!---3---->
                             <div>
@@ -201,7 +205,14 @@
 
                 let innerTotal = 0;
                 this.products.forEach(item => {
-                    innerTotal = innerTotal + (item.amount * item.product_format.price)
+                    if(item.product_format.discount_price <= 0){
+                        innerTotal = innerTotal + (item.amount * item.product_format.price)
+                    }else{
+
+                        innerTotal = innerTotal + (item.amount * item.product_format.discount_price)
+
+                    }
+                    
                 })
 
                 return innerTotal + this.shippingPrice

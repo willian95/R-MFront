@@ -68,7 +68,13 @@
                                 </div>
                                 <div class="titulo-product">
                                     <h3>@{{ product.name }}</h3>
-                                    <p>Desde: $ @{{ currencyFormatDE(product.product_formats[0].price) }}</p>
+                                    <p>Desde: $ 
+                                        <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span> 
+                                        <span v-if="product.product_formats[0].discount_price > 0"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
+
+                                        <span v-if="product.product_formats[0].discount_price <= 0">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span> 
+
+                                        </p>
                                 </div>
                             </a>
                         </div>
