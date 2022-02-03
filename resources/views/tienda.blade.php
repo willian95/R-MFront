@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-3">
                 <!-- Isotope menu -->
-                <div class=" container_menu_iso mb-4" data-aos="fade-up" data-aos-duration="1000" >
+                <div class=" container_menu_iso mb-4" data-aos="fade-up" data-aos-duration="1000">
                     <div class="row">
                         <!------------------------filtro-------------------------->
                         <div class="col-sm-12">
@@ -38,7 +38,7 @@
                         <div class="col-sm-12">
                             <div class="options">
                                 <p>Categorías
-</p>
+                                </p>
                                 <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
                                     <label class="form-check-label" :for="'category'+category.id">
@@ -52,6 +52,29 @@
                 </div>
             </div>
             <div class="col-md-9">
+
+                <!------slider marcas------->
+                <div class="slick-marcas">
+                    <div>
+                        <img src="https://logodownload.org/wp-content/uploads/2019/09/pedigree-logo-5.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/Logo-Dog-Chow_3.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://1000marcas.net/wp-content/uploads/2021/06/Whiskas-Logo-2003.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/BP-Cat%20Chow_0.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://www.carrau.com.uy/repo/img/gatilogo_0.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/purina-dogui-logo.png" alt="">
+                    </div>
+                </div>
+
                 <!-- Isotope Gallery -->
                 <div class="container container_gallery_iso" data-aos="fade-up" data-aos-duration="1100">
                     <div class="row iso-container">
@@ -62,19 +85,19 @@
 
                         <!-- ----1---- -->
                         <div class="col-xs-6 col-sm-4 cent isotope-item" v-for="product in products">
-                           <a :href="'{{ url('/producto') }}'+'/'+product.slug">
+                            <a :href="'{{ url('/producto') }}'+'/'+product.slug">
                                 <div class="img_iso" :style='{ backgroundImage: `url(${product.image})` }'>
                                     <div class="hover_iso" :style='{ backgroundImage: `url(${product.image_hover})` }'></div>
                                 </div>
                                 <div class="titulo-product">
                                     <h3>@{{ product.name }}</h3>
-                                    <p>Desde: $ 
-                                        <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span> 
+                                    <p>Desde: $
+                                        <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span>
                                         <span v-if="product.product_formats[0].discount_price > 0"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
 
-                                        <span v-if="product.product_formats[0].discount_price <= 0">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span> 
+                                        <span v-if="product.product_formats[0].discount_price <= 0">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
 
-                                        </p>
+                                    </p>
                                 </div>
                             </a>
                         </div>
@@ -84,26 +107,27 @@
                     </div>
                     {{--<div class="row w-100">
                         <div class="col-sm-12 col-md-5">
-                            <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}</div>
-                        </div>
-                        <div class="col-sm-12 col-md-7">
-                            <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
-                                <ul class="pagination">
-
-                                    <li class="paginate_button page-item active" v-for="(link, index) in links">
-                                        <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>--}}
-
-
-
+                            <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
                 </div>
             </div>
+            <div class="col-sm-12 col-md-7">
+                <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
+                    <ul class="pagination">
+
+                        <li class="paginate_button page-item active" v-for="(link, index) in links">
+                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>--}}
+
+
+
+        </div>
+        </div>
         </div>
 
 
@@ -115,110 +139,109 @@
 @endsection
 
 @push("scripts")
-    <script src="{{ asset('/js/app.js') }}"></script>
-    <script>
+<script src="{{ asset('/js/app.js') }}"></script>
+<script>
+    const app = new Vue({
+        el: '#dev-tienda',
+        data() {
+            return {
+                animalType: "dog",
+                products: [],
+                brands: [],
+                categories: [],
+                choosenCategories: [],
+                loadingCategories: false,
+                loadingProducts: false,
+                selectedBrand: "all",
 
-        const app = new Vue({
-            el: '#dev-tienda',
-            data() {
-                return {
-                    animalType:"dog",
-                    products:[],
-                    brands:[],
-                    categories:[],
-                    choosenCategories:[],
-                    loadingCategories:false,
-                    loadingProducts:false,
-                    selectedBrand:"all",
+                links: [],
+                currentPage: "",
+                totalPages: "",
+                linkClass: "page-link",
+                activeLinkClass: "page-link active-link bg-main",
+            }
+        },
+        methods: {
 
-                    links:[],
-                    currentPage:"",
-                    totalPages:"",
-                    linkClass:"page-link",
-                    activeLinkClass:"page-link active-link bg-main",
-                }
-            },
-            methods: {
+            toggleAnimalType(animal) {
 
-                toggleAnimalType(animal){
-
-                    this.animalType = animal
-                    this.clearChoosenCategories()
-                    this.getCategories()
-
-                },
-                async getCategories(){
-                    this.loadingCategories = true
-                    let response = await axios.get("{{ url('categories/fetch-all') }}"+"/"+this.animalType)
-                    this.categories = response.data
-                    this.loadingCategories = false
-
-                    this.getProducts()
-
-                },
-                toggleCategory(category){
-
-                    if(this.choosenCategories.indexOf(category) < 0){
-                        this.choosenCategories.push(category)
-                    }else{
-
-                        this.choosenCategories.splice(this.choosenCategories.indexOf(category), 1)
-
-                    }
-
-                    this.getProducts()
-
-                },
-                async getProducts(link = "{{ url('/products') }}"){
-                    this.loadingProducts = true
-                    let response = await axios.get(link, {
-                        params:{
-                            categories: this.choosenCategories,
-                            brands: this.selectedBrand,
-                            animal: this.animalType
-                        }
-                    })
-                    this.loadingProducts = false
-
-                    this.products = response.data.data
-                    this.links = response.data.links
-                    this.currentPage = response.data.current_page
-                    this.totalPages = response.data.last_page
-
-
-                },
-                clearChoosenCategories(){
-                    this.choosenCategories = []
-
-                    var inputs = document.querySelectorAll('.category-checkbox');
-                    for (var i = 0; i < inputs.length; i++) {
-                        inputs[i].checked = false;
-                    }
-
-
-                },
-                currencyFormatDE(num) {
-                    return (
-                        num
-                        .toFixed(0) // always two decimal digits
-                        .replace('.', ',') // replace decimal point character with ,
-                        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-                    ) // use . as a separator
-                },
-                async fetchGetBrands(){
-
-                    const response = await axios.get("{{ url('/brands/fetch') }}")
-                    this.brands = response.data
-                }
-
-
-            },
-            created() {
-
+                this.animalType = animal
+                this.clearChoosenCategories()
                 this.getCategories()
 
+            },
+            async getCategories() {
+                this.loadingCategories = true
+                let response = await axios.get("{{ url('categories/fetch-all') }}" + "/" + this.animalType)
+                this.categories = response.data
+                this.loadingCategories = false
+
+                this.getProducts()
+
+            },
+            toggleCategory(category) {
+
+                if (this.choosenCategories.indexOf(category) < 0) {
+                    this.choosenCategories.push(category)
+                } else {
+
+                    this.choosenCategories.splice(this.choosenCategories.indexOf(category), 1)
+
+                }
+
+                this.getProducts()
+
+            },
+            async getProducts(link = "{{ url('/products') }}") {
+                this.loadingProducts = true
+                let response = await axios.get(link, {
+                    params: {
+                        categories: this.choosenCategories,
+                        brands: this.selectedBrand,
+                        animal: this.animalType
+                    }
+                })
+                this.loadingProducts = false
+
+                this.products = response.data.data
+                this.links = response.data.links
+                this.currentPage = response.data.current_page
+                this.totalPages = response.data.last_page
+
+
+            },
+            clearChoosenCategories() {
+                this.choosenCategories = []
+
+                var inputs = document.querySelectorAll('.category-checkbox');
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].checked = false;
+                }
+
+
+            },
+            currencyFormatDE(num) {
+                return (
+                    num
+                    .toFixed(0) // always two decimal digits
+                    .replace('.', ',') // replace decimal point character with ,
+                    .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                ) // use . as a separator
+            },
+            async fetchGetBrands() {
+
+                const response = await axios.get("{{ url('/brands/fetch') }}")
+                this.brands = response.data
             }
-        });
-    </script>
+
+
+        },
+        created() {
+
+            this.getCategories()
+
+        }
+    });
+</script>
 
 @endpush

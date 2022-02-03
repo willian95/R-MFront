@@ -1008,6 +1008,9 @@ textarea {
         padding: 15px;
         font-size: 0.8rem;
     }
+    .container_gallery_iso {
+min-height: 100vh;
+    }
 }
 .fw-300 {
     font-weight: 300;
@@ -1019,7 +1022,7 @@ textarea {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 195px;
     width: 100%;
     margin: 10px;
     transition: all 0.5s ease-in-out;
@@ -1737,6 +1740,17 @@ input[type="number"]::-webkit-outer-spin-button {
 .btn-reds a {
     color: #fff;
     text-decoration: none;
+}
+.slick-marcas .slick-slide img {
+    display: block;
+    height: 70px;
+    object-fit: contain;
+
+
+}
+.slick-marcas{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 /**mediasquery */
 @media (min-width: 0px) and (max-width: 767px) {
