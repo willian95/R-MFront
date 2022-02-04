@@ -55,24 +55,18 @@
 
                 <!------slider marcas------->
                 <div class="slick-marcas">
-                    <div>
-                        <img src="https://logodownload.org/wp-content/uploads/2019/09/pedigree-logo-5.png" alt="">
+                    @foreach(App\Models\Brand::all() as $brand)
+                        <div @click="setSelectedBrand({{ $brand->id }})">
+                            <img src="{{ $brand->image }}" alt="">
+                        </div>
+
+                    @endforeach
+
+                    <div @click="setSelectedBrand('all')">
+                        Todas
                     </div>
-                    <div>
-                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/Logo-Dog-Chow_3.png" alt="">
-                    </div>
-                    <div>
-                        <img src="https://1000marcas.net/wp-content/uploads/2021/06/Whiskas-Logo-2003.png" alt="">
-                    </div>
-                    <div>
-                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/BP-Cat%20Chow_0.png" alt="">
-                    </div>
-                    <div>
-                        <img src="https://www.carrau.com.uy/repo/img/gatilogo_0.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/purina-dogui-logo.png" alt="">
-                    </div>
+
+
                 </div>
 
                 <!-- Isotope Gallery -->
@@ -162,6 +156,11 @@
             }
         },
         methods: {
+
+            setSelectedBrand(id){
+                this.selectedBrand = id
+                this.getProducts()
+            },
 
             toggleAnimalType(animal) {
 
