@@ -520,7 +520,7 @@ a{
 }
 .categories-item:hover .icon-bg {
     background: #ee282af7;
-    transform: translateY(-108px);
+    transform: translateY(-90px);
 }
 
 .categories-item .name {
@@ -539,13 +539,14 @@ a{
     background: white;
     border-radius: 10px;
     box-shadow: 0px 1px 27px 1px rgb(0 0 0 / 11%);
+    padding-top: 2rem;
 }
 .categories-item:hover .subtitl p {
     color: #000;
 }
 .subtitl p {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 3px;
     color: transparent;
 }
@@ -558,6 +559,13 @@ a{
 .categories-item:nth-child(4):hover .icon-bg {
     background: #7e7e7ebf;
 }
+.categories-item:nth-child(4):hover .icon-bg {
+    transform: translateY(-65px);
+}
+.categories-item:nth-child(5):hover .icon-bg {
+    transform: translateY(-74px);
+}
+
 .icon-bg {
     background: #ff8586;
     border-radius: 50%;
@@ -565,6 +573,7 @@ a{
     transform: translateY(-50px);
     position: absolute;
     top: 0;
+    z-index: 1;
 }
 .text {
     position: absolute;
