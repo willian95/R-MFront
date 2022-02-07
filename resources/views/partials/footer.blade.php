@@ -52,7 +52,7 @@
     <hr>
     <div class="col-md-12 pt-2">
         <a href="tel:+573014739866" class="icon-info_contact"><img src="{{ url('assets/img/icons/phone.svg') }}" alt="">
-            Llámanos Ya 24/ <br> ¡Urgencias!
+            Llámanos Ya 24/7 <br> ¡Urgencias!
         </a>
     </div>
 </div>
