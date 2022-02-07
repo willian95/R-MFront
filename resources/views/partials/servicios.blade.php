@@ -79,7 +79,7 @@
 
                             propio laboratorio liderado por un
                             especialista en el área en donde procesamos
-                            nuestras muestras y la de nuestros aliados!</button>
+                            nuestras muestras y la de nuestros aliados</button>
                     </li>
 
                 </ul>
@@ -291,7 +291,7 @@
                     </li>
                     <li class="nav-item mb-3" role="presentation">
                    • Además, tendremos sesiones de reiki,
-                            aromaterapia, musicoterapia y pilates!
+                            aromaterapia, musicoterapia y pilates
                     </li>
 
 
@@ -314,7 +314,7 @@
                     <li class="nav-item mb-3" role="presentation">
                       • Utilización de aromaterapia y uso de
                             feromonas para que tus gatos estén lo más
-                            tranquilos posibles!
+                            tranquilos posibles
 
 
                     </li>
