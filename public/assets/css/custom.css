@@ -111,6 +111,50 @@ img {
 a{
     text-decoration: none;
 }
+.fix-contect{
+
+}
+.info-contact{
+    transform: translateY(-4rem);
+    background: white;
+    width: 230px;
+    height: 150px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    opacity: 0;
+    transition: .5s;
+    height: 0;
+    overflow: hidden;
+
+}
+
+.info-contact-act{
+    opacity: 1;
+    height: 160px;
+}
+.icon-info_contact{
+    color: #1b1a1a;
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+}
+.icon-info_contact:hover {
+    color: #e43232!important;
+
+}
+.line-c{
+    border-bottom: 1px solid #0000000d;
+}
+.icon-info_contact img{
+    width: 30px!important;
+    height: -webkit-fill-available;
+}
+
 .menu a:hover {
     color: #ee2c32;
 }
@@ -791,6 +835,7 @@ button {
     bottom: 26px;
     right: 16px;
     z-index: 9;
+    cursor: pointer;
     filter: drop-shadow(2px 4px 6px #cccc);
 }
 .ws img {
