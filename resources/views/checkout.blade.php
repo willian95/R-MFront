@@ -144,9 +144,9 @@
 
                     <div class="d-flexinfor mt-5">
                         <img class="entrega" src="{{ url('assets/img/icons/entrega-rapida.png') }}" alt="">
-                        <p> Envío rápido! 1 día o antes! Si es Bogota (aplica rango de cobertura).
+                        <p>¡Envío rápido! 1 día o antes! Si es Bogotá (aplica rango de cobertura).
                             <br>
-                            Fuera de Bogota, tendrá un recargo de envío*
+                            Fuera de Bogotá, tendrá un recargo de envío*
                             <br>
                             <!---Cobertura:-->
                         </p>
@@ -212,7 +212,7 @@
                         innerTotal = innerTotal + (item.amount * item.product_format.discount_price)
 
                     }
-                    
+
                 })
 
                 return innerTotal + this.shippingPrice
