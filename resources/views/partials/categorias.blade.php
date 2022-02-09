@@ -9,7 +9,7 @@
             <p>Veterinaria</p>
         </div>
         <div class="subtitl">
-            <p>Conoce nuestro grupo de médicos que trabajará con amor y profesionalismo por la salud de tu mascota. Consultas, servicio 24 horas, Rx, laboratorio, ecografía y ¡mucho más!</p>
+            <p>A través de la vocación de servicio, amor por las mascotas y profesionalismo trabajaremos en pro de la salud de tu mascota. Consultas, servicio 24 horas, hospitalización, Rx, laboratorio, quirófano, ecografía y ¡Mucho más!</p>
         </div>
     </a>
 

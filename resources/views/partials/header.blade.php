@@ -10,7 +10,7 @@
                     <ul>
                         <li>
                             <a href="acerca">
-                                <p>Acerca</p>
+                                <p>C﻿onoce nuestro equipo</p>
                             </a>
                         </li>
                         <li>

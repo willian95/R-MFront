@@ -248,7 +248,7 @@ a{
     font-size: 2rem;
     cursor: pointer;
     padding: 5px 0;
-    width: 160px;
+    width: 190px;
     overflow: hidden;
 }
 .menu > ul > li:first-of-type {
@@ -1631,14 +1631,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .img-about {
     border-radius: 10px;
-    height: 70vh;
+    height: auto;
     object-fit: cover;
 }
 .about p {
     font-size: 1.3rem;
     padding: 3rem 2rem;
     font-weight: 400;
-    text-align: center;
+
+}
+.about-flex{
+    align-items: center;
+    display: flex;
+    text-align: start;
+    justify-content: start;
 }
 .team img {
     height: 50vh !important;
