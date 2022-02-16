@@ -10,18 +10,21 @@
     </div>
     <div class="container">
         <div class="breadcrumbs">
-            <p><span><a href="/">Inicio </a>></span> Acerca</p>
+            <p><span><a href="/">Inicio </a>></span> C﻿onoce nuestro equipo</p>
         </div>
 
 
-        <section>
+        <section class="mt-3">
             <div class="about">
-                <img class="img-about" src="{{ url('assets/img/stock/hojainicio.jpg') }}" alt="Imagen de laboratorio de hospitallizacion">
-                <p data-aos="fade-up" data-aos-duration="1000">Somos una empresa familiar enamorados de los animales y
-                    trabajamos a diario para garantizar la salud y bienestar
-                    de las mascotas a través de un equipo humano altamente
-                    capacitado y con vocación de servicio y equipos de última
-                    tecnología</p>
+              <div class="row">
+                  <div class="col-md-6 about-flex">
+                  <p data-aos="fade-up" data-aos-duration="1000">Somos una empresa familiar enamorada de los animales que trabajamos a diario para garantizar la salud y bienestar de las mascotas a través de un grupo humano altamente calificado, con vocación de servicio y equipos de última tecnología. Conoce nuestra familia de trabajo.</p>
+                  </div>
+                  <div class="col-md-6">
+                  <img class="img-about" src="{{ url('http://imgfz.com/i/6CuhFKz.png') }}" alt="Imagen de laboratorio de hospitallizacion">
+                  </div>
+              </div>
+
 
                 <div class="row team" data-aos="fade-up" data-aos-duration="1000">
                     @foreach(\App\Models\Staff::all() as $staff)

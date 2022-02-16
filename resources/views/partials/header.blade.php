@@ -10,21 +10,21 @@
                     <ul>
                         <li>
                             <a href="acerca">
-                                <p>Acerca</p>
+                                <p>C﻿onoce nuestro equipo</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#veterinaria">
+                            <a href="/#veterinaria">
                                 <p>Veterinaria</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#peluqueria">
-                                <p>Peluqueria & Spa</p>
+                            <a href="/#peluqueria">
+                                <p>Peluquería  & Spa</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#colegio">
+                            <a href="/#colegio">
                                 <p>Colegio</p>
                             </a>
                         </li>
@@ -42,10 +42,10 @@
                         <li class="mt-3 mb-4 redes-nav">
                             <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </li>
                         <li>
-                            <p class="copy-nav">Copyright © 2022 . All rights reserved
+                            <p class="copy-nav">R&M Clínica Veterinaria - Copyright © 2022
 
                             </p>
                         </li>
@@ -57,6 +57,7 @@
                 <div class="redes-nav-logo">
                     <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
                 </div>
             </div>

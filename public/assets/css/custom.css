@@ -32,7 +32,7 @@ img {
     justify-content: space-evenly; */
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr .5fr 1fr;
 }
 /*
 .main-header::before{
@@ -102,12 +102,59 @@ img {
     left: 5%;
 }
 .copy-nav {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     text-align: center;
     position: absolute;
-    bottom: 20px;
-    left: 2rem;
+    bottom: 10px;
+    left: 3rem;
 }
+a{
+    text-decoration: none;
+}
+.fix-contect{
+
+}
+.info-contact{
+    transform: translateY(-4rem);
+    background: white;
+    width: 230px;
+    height: 150px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    opacity: 0;
+    transition: .5s;
+    height: 0;
+    overflow: hidden;
+
+}
+
+.info-contact-act{
+    opacity: 1;
+    height: 160px;
+}
+.icon-info_contact{
+    color: #1b1a1a;
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+}
+.icon-info_contact:hover {
+    color: #e43232!important;
+
+}
+.line-c{
+    border-bottom: 1px solid #0000000d;
+}
+.icon-info_contact img{
+    width: 30px!important;
+    height: -webkit-fill-available;
+}
+
 .menu a:hover {
     color: #ee2c32;
 }
@@ -201,7 +248,7 @@ img {
     font-size: 2rem;
     cursor: pointer;
     padding: 5px 0;
-    width: 160px;
+    width: 190px;
     overflow: hidden;
 }
 .menu > ul > li:first-of-type {
@@ -473,7 +520,7 @@ img {
 }
 .categories-item:hover .icon-bg {
     background: #ee282af7;
-    transform: translateY(-108px);
+    transform: translateY(-90px);
 }
 
 .categories-item .name {
@@ -492,13 +539,14 @@ img {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 1px 27px 1px rgb(0 0 0 / 11%);
+    padding-top: 2rem;
 }
 .categories-item:hover .subtitl p {
     color: #000;
 }
 .subtitl p {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 3px;
     color: transparent;
 }
@@ -511,6 +559,13 @@ img {
 .categories-item:nth-child(4):hover .icon-bg {
     background: #7e7e7ebf;
 }
+.categories-item:nth-child(4):hover .icon-bg {
+    transform: translateY(-65px);
+}
+.categories-item:nth-child(5):hover .icon-bg {
+    transform: translateY(-74px);
+}
+
 .icon-bg {
     background: #ff8586;
     border-radius: 50%;
@@ -518,6 +573,7 @@ img {
     transform: translateY(-50px);
     position: absolute;
     top: 0;
+    z-index: 1;
 }
 .text {
     position: absolute;
@@ -526,6 +582,7 @@ img {
     transform: translateY(-5rem);
     font-weight: 100;
     top: 0;
+        text-transform: uppercase;
 }
 .parpadea {
     animation-name: parpadeo;
@@ -568,7 +625,7 @@ img {
         opacity: 1;
     }
     50% {
-        opacity: 0;
+        opacity: 0.3;
     }
     100% {
         opacity: 1;
@@ -715,6 +772,9 @@ button {
     background: #ed1d24;
     padding: 0.5rem 1.9rem;
 }
+.txt-red{
+    color:#ed1d24;
+}
 .btn-white {
     background: #8b8b8b;
 }
@@ -784,6 +844,7 @@ button {
     bottom: 26px;
     right: 16px;
     z-index: 9;
+    cursor: pointer;
     filter: drop-shadow(2px 4px 6px #cccc);
 }
 .ws img {
@@ -1159,8 +1220,10 @@ min-height: 100vh;
 .demo-gallery img {
     max-width: auto;
     max-width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 6px;
+    object-fit: cover;
+    object-position: center;;
 }
 .demo-gallery figure {
     display: none;
@@ -1568,14 +1631,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .img-about {
     border-radius: 10px;
-    height: 70vh;
+    height: auto;
     object-fit: cover;
 }
 .about p {
     font-size: 1.3rem;
     padding: 3rem 2rem;
     font-weight: 400;
-    text-align: center;
+
+}
+.about-flex{
+    align-items: center;
+    display: flex;
+    text-align: start;
+    justify-content: start;
 }
 .team img {
     height: 50vh !important;
@@ -1795,7 +1864,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .main-header {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr .5fr 1fr;
         text-align: center;
     }
 
@@ -2040,7 +2109,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .main-header {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr .5fr 1fr;
         text-align: center;
     }
 

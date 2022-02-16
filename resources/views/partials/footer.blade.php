@@ -39,9 +39,27 @@
     <p> R&M Clínica Veterinaria - Copyright © 2022 . Todos los derechos reservados</p>
 </div>
 
+<div class="fix-contect">
+    <div class="ws"><img src="{{ url('assets/img/icons/contact.svg') }}" alt="">
+    <div class="info-contact">
 
-<a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="ws"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt=""></a>
+<div class="row">
+    <div class="col-md-12 pb-2 line-c">
+        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
+            ¡Escribenos ya al whatsapp!
+        </a>
+    </div>
+    <hr>
+    <div class="col-md-12 pt-2">
+        <a href="tel:+576016141331" class="icon-info_contact"><img src="{{ url('assets/img/icons/phone.svg') }}" alt="">
+            Llámanos Ya 24/7 <br> ¡Urgencias!
+        </a>
+    </div>
+</div>
+</div>
+</div>
 
+</div>
 
 
 <!-- Modal -->
@@ -50,18 +68,18 @@
         <div class="modal-content">
 
             <div class="modal-body">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <h3 class="text-center mb-4">Hola! Sabes que es R&M Vet PWA?</h3>
                 <p class="text-center mb-4">Sabias que puedes añadir un atajo de nuestra tienda a tu celular? Es fácil! Ingresa en tu navegador Safari en iPhone y Chrome en Android, haz tap en el icono de compartir y selecciona la opción de añadir a mi escritorio! Y listo</p>
 
-                 <div class="text-center">
-                 <img class="img-pwa" src="http://imgfz.com/i/kgFbf9V.png" alt="">
-                 </div>
+                <div class="text-center">
+                    <img class="img-pwa" src="http://imgfz.com/i/kgFbf9V.png" alt="">
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido
-</button>
+                </button>
 
             </div>
         </div>

@@ -9,7 +9,7 @@
             <p>Veterinaria</p>
         </div>
         <div class="subtitl">
-            <p>Conoce nuestro grupo de médicos que trabajará con amor y profesionalismo por la salud de tu mascota. Consultas, servicio 24 horas, Rx, laboratorio, ecografía y ¡mucho más!</p>
+            <p>A través de la vocación de servicio, amor por las mascotas y profesionalismo trabajaremos en pro de la salud de tu mascota. Consultas, servicio 24 horas, hospitalización, Rx, laboratorio, quirófano, ecografía y ¡Mucho más!</p>
         </div>
     </a>
 
@@ -39,20 +39,10 @@
         </div>
     </a>
 
-    <a href="tienda" class="categories-item">
-        <div class="icon-bg">
-            <img class="icon" src="{{ url('assets/img/icons/petshop.png') }}" alt="">
-        </div>
-        <div class="name">
-            <p>Tienda Virtual</p>
-        </div>
-        <div class="subtitl">
-            <p>Ya puedes comprar en línea todos los productos y servicios que tu mascota necesita. Aquí encontrarás comida, snacks, juguetes, premios, camas y mucho más.</p>
-        </div>
-    </a>
+
 
     <a href="blog" class="categories-item">
-        <span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>
+        <!---<span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>-->
         <div class="icon-bg">
             <img class="icon p-1" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
         </div>
@@ -63,6 +53,20 @@
             <p>Aprende más sobre tu mascota, tips,
                 noticias y actualizaciones de de
                 R&M Veterinaria y mucho más..</p>
+        </div>
+    </a>
+
+    <a href="tienda" class="categories-item">
+    <span class="parpadea text txt-red"><strong>Nuevo producto</strong></span>
+
+        <div class="icon-bg">
+            <img class="icon" src="{{ url('assets/img/icons/petshop.png') }}" alt="">
+        </div>
+        <div class="name">
+            <p>Tienda Virtual</p>
+        </div>
+        <div class="subtitl">
+            <p>Ya puedes comprar en línea todos los productos y servicios que tu mascota necesita. Aquí encontrarás comida, snacks, juguetes, premios, camas y mucho más.</p>
         </div>
     </a>
 </div>

@@ -177,6 +177,13 @@ $(document).ready(function () {
         }
     });
 
+    $(".ws").on("click", function () {
+        if (!$(".info-contact").hasClass("info-contact-act")) {
+            $(".info-contact").addClass("info-contact-act");
+        } else {
+            $(".info-contact").removeClass("info-contact-act");
+        }
+    });
 
 
 });
