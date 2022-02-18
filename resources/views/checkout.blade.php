@@ -341,7 +341,11 @@
 
                             if (_this.couponInfo.discount_type == "neto") {
 
-                                item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                if(item.product_format.price - _this.couponInfo.discount_amount <= 0){
+                                    item.product_format.price = 1
+                                }else{
+                                    item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                }
 
                                 if(item.product_format.discount_price > 0){
                                     if(item.product_format.discount_price - _this.couponInfo.discount_amount <= 0){
@@ -357,7 +361,11 @@
                             } else {
 
                                 const discount = item.product_format.price * (this.couponInfo.discount_amount / 100)
-                                item.product_format.price = item.product_format.price - discount
+                                if(item.product_format.price - _discount <= 0){
+                                    item.product_format.price = 1
+                                }else{
+                                    item.product_format.price = item.product_format.price - discount
+                                }
 
                                 if(item.product_format.discount_price > 0){
                                     if(item.product_format.discount_price - discount <= 0){
@@ -385,7 +393,12 @@
 
                                     if (_this.couponInfo.discount_type == "neto") {
 
-                                        item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                        if(item.product_format.price - _this.couponInfo.discount_amount <= 0){
+                                            item.product_format.price = 1
+                                        }else{
+                                            item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
+                                        }
+                                        
                                         
                                         if(item.product_format.discount_price > 0){
                                             if(item.product_format.discount_price - discount <= 0){
