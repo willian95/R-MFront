@@ -30,7 +30,7 @@
                     @foreach(\App\Models\Staff::all() as $staff)
                     <div class="col-md-3">
                         <img class="img-about" src="{{ $staff->image }}" alt="{{ $staff->name }}">
-                        <p style="margin-top: 5px; margin-bottom: 5px;" class="text-center">{{ $staff->job }}</p>
+                        <p style="margin-top: 5px; margin-bottom: -40px; padding: inherit;" class="text-center">{{ $staff->job }}</p>
                         <p class="text-center">{{ $staff->name }}</p>
 
                     </div>
