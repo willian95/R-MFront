@@ -30,6 +30,7 @@
                     @foreach(\App\Models\Staff::all() as $staff)
                     <div class="col-md-3">
                         <img class="img-about" src="{{ $staff->image }}" alt="{{ $staff->name }}">
+                        <p class="text-center">{{ $staff->job }}</p>
                         <p class="text-center">{{ $staff->name }}</p>
 
                     </div>
