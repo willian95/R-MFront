@@ -342,14 +342,25 @@
                             if (_this.couponInfo.discount_type == "neto") {
 
                                 item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
-                                item.product_format.discount_price = item.product_format.discount_price - _this.couponInfo.discount_amount
+                                if(item.product_format.discount_price - _this.couponInfo.discount_amount <= 0){
+                                    item.product_format.discount_price = 1
+                                }else{
+                                    item.product_format.discount_price = item.product_format.discount_price - _this.couponInfo.discount_amount
+                                }
+                                
                                 this.usedCoupons.push(_this.couponInfo.coupon_code)
 
                             } else {
 
                                 const discount = item.product_format.price * (this.couponInfo.discount_amount / 100)
                                 item.product_format.price = item.product_format.price - discount
-                                item.product_format.discount_price = item.product_format.discount_price - discount
+
+                                if(item.product_format.discount_price - discount <= 0){
+                                    item.product_format.discount_price = 1
+                                }else{
+                                    item.product_format.discount_price = item.product_format.discount_price - discount
+                                }
+
                                 this.usedCoupons.push(_this.couponInfo.coupon_code)
 
                             }
@@ -369,14 +380,26 @@
                                     if (_this.couponInfo.discount_type == "neto") {
 
                                         item.product_format.price = item.product_format.price - _this.couponInfo.discount_amount
-                                        item.product_format.discount_price = item.product_format.discount_price - _this.couponInfo.discount_amount
+                                        
+                                        if(item.product_format.discount_price - discount <= 0){
+                                            item.product_format.discount_price = 1
+                                        }else{
+                                            item.product_format.discount_price = item.product_format.discount_price - _this.couponInfo.discount_amount
+                                        }
+                                        
+                                        
+                                        
                                         this.usedCoupons.push(_this.couponInfo.coupon_code)
 
                                     } else {
 
                                         const discount = item.product_format.price * (this.couponInfo.discount_amount / 100)
                                         item.product_format.price = item.product_format.price - discount
-                                        item.product_format.discount_price = item.product_format.discount_price - discount
+                                        if(item.product_format.discount_price - discount <= 0){
+                                            item.product_format.discount_price = 1
+                                        }else{
+                                            item.product_format.discount_price = item.product_format.discount_price - discount
+                                        }
                                         this.usedCoupons.push(_this.couponInfo.coupon_code)
 
                                     }
