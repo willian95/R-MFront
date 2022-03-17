@@ -9,7 +9,7 @@
             <p>Veterinaria</p>
         </div>
         <div class="subtitl">
-            <p>A través de la vocación de servicio, amor por las mascotas y profesionalismo trabajaremos en pro de la salud de tu mascota. Consultas, servicio 24 horas, hospitalización, Rx, laboratorio, quirófano, ecografía y ¡Mucho más!</p>
+            <p>A través de la vocación de servicio, amor por los animales y profesionalismo, trabajamos en pro de la salud de las mascotas. Consultas, servicio 24 horas, hospitalización, Rx, laboratorio, quirófano, ecografía y ¡Mucho más!</p>
         </div>
     </a>
 
@@ -51,7 +51,7 @@
         </div>
         <div class="subtitl">
             <p>Aprende más sobre tu mascota, tips,
-                noticias y actualizaciones de de
+                noticias y actualizaciones de
                 R&M Veterinaria y mucho más..</p>
         </div>
     </a>
