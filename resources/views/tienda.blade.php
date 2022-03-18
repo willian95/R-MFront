@@ -98,7 +98,7 @@
                                         <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span>
                                         <span v-if="product.product_formats[0].discount_price > 0 && product?.product_formats[0]"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
 
-                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
+                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]"> @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
 
                                     </p>
                                 </div>
