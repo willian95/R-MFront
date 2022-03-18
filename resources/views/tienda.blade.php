@@ -42,14 +42,15 @@
 
                             <div class="options">
                             <div class="form-group">
-                                <label for="">Buscar</label>
+                                <label for=""></label>
                                 <div class="d-flex">
-                                    <input type="text" class="form-control" v-model="searchQuery">
-                                    <button class="btn btn-danger" @click="getProducts()">buscar</button>
+                                    <input type="text" class="form-control" placeholder="Buscar" v-model="searchQuery">
+                                    <button class="btn btn-danger" @click="getProducts()"><i class="far fa-search"></i></button>
                                 </div>
                             </div>
 
-                                <p class="pt-5">Categorías
+                            <div>
+                            <p class="pt-5 fw700">Categorías
                                 </p>
                                 <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
@@ -57,6 +58,7 @@
                                         @{{ category.name }}
                                     </label>
                                 </div>
+                            </div>
 
                             </div>
                         </div>

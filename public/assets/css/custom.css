@@ -1145,6 +1145,9 @@ min-height: 100vh;
     background-size: cover;
     background-position: center center;
 }
+.fw700{
+    font-weight: 700;
+}
 
 .hover_iso {
     position: absolute;
@@ -2122,6 +2125,7 @@ input[type="number"]::-webkit-outer-spin-button {
         text-align: center;
         justify-content: center;
     }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
