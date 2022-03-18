@@ -1151,6 +1151,11 @@ min-height: 100vh;
 .icon-opt-none{
     display: none;
 }
+.icon-opt{
+    width: 100%;
+    height: 25px;
+
+}
 
 .hover_iso {
     position: absolute;
@@ -2067,6 +2072,19 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .options {
         height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .options-csroll{
+        position: absolute;
+        right: 0;
+        background: white;
+        box-shadow: 0px 0px 15px #00000042;
+        border-radius: 10px;
+        z-index: 1;
+        padding: 1rem;
+        height: 90vh;
+        overflow: scroll;
     }
     .gallery-product {
         padding: 0;
