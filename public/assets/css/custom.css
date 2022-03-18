@@ -1094,7 +1094,7 @@ min-height: 100vh;
     border-radius: 10px;
 }
 .iso-container{
-    height: auto!important;
+    /*height: auto!important;*/
 }
 @media screen and (max-width: 768px) {
     .img_iso {
