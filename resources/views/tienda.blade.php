@@ -108,9 +108,15 @@
 
 
                     </div>
-                    <div class="row w-100">
-                        <div class="col-sm-12 col-md-5">
-                            <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
+
+
+        </div>
+        </div>
+        </div>
+
+        <div class="row w-100">
+            <div class="col-sm-12 col-md-5">
+                <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
                 </div>
             </div>
             <div class="col-sm-12 col-md-7">
@@ -127,11 +133,6 @@
             </div>
         </div>
 
-
-
-        </div>
-        </div>
-        </div>
 
 
     </section>
