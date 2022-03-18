@@ -51,7 +51,7 @@
 
                             <div>
                             <p class="pt-5 fw700 txt-option "> <span>Categorías</span>
-                            <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/tXsr2Wl.png" alt="">
+                            <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
                                 </p>
                                <div class="options-csroll">
                                <div class="form-check" v-for="category in categories">
