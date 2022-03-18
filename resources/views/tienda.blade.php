@@ -49,7 +49,7 @@
                                 </div>
                             </div>
 
-                            <div>
+                            <div class="option-hover">
                             <p class="pt-5 fw700 txt-option "> <span>Categorías</span>
                             <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
                                 </p>

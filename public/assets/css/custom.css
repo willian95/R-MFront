@@ -2102,6 +2102,12 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 14%;
     transform: translateX(116%);
     }
+    .icon-opt-none {
+        display: block;
+    }
+    .titulo-product p {
+        line-height: 1;
+    }
     .gallery-product {
         padding: 0;
     }
@@ -2165,7 +2171,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .options .pt-5 {
         padding-top: 1.5rem!important;
     }
-    .txt-option:hover .options-csroll{
+    .option-hover .txt-option:hover .options-csroll{
         transform: translateX(-4%);
     }
 
