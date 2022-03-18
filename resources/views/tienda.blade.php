@@ -65,9 +65,9 @@
                 <!------slider marcas------->
                 <div class="slick-marcas">
                     @foreach(App\Models\Brand::all() as $brand)
-                        <div @click="setSelectedBrand({{ $brand->id }})">
-                            <img src="{{ $brand->image }}" alt="">
-                        </div>
+                    <div @click="setSelectedBrand({{ $brand->id }})">
+                        <img src="{{ $brand->image }}" alt="">
+                    </div>
 
                     @endforeach
 
@@ -110,11 +110,11 @@
                     </div>
 
 
-        </div>
-        </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row w-100">
+        <div class="row w-100 mt-5">
             <div class="col-sm-12 col-md-5">
                 <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
                 </div>
@@ -163,12 +163,12 @@
                 totalPages: "",
                 linkClass: "page-link",
                 activeLinkClass: "page-link active-link bg-main",
-                searchQuery:""
+                searchQuery: ""
             }
         },
         methods: {
 
-            setSelectedBrand(id){
+            setSelectedBrand(id) {
                 this.selectedBrand = id
                 this.getProducts()
             },

@@ -156,7 +156,7 @@ a{
 }
 
 .menu a:hover {
-    color: #ee2c32;
+    color: #000000;
 }
 .menu ul {
     padding-top: 2rem;
@@ -1095,6 +1095,12 @@ min-height: 100vh;
 }
 .iso-container{
     height: auto!important;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #1b1a1a!important;
+    border-color: #ffffff!important;
 }
 @media screen and (max-width: 768px) {
     .img_iso {
