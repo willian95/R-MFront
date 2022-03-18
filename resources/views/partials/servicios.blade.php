@@ -1,4 +1,4 @@
-<section class="servicios">
+<section class="servicios" id="veterinarias">
     <h2 class="mt-0 titles mt-5 mb-5">Nuestros Servicios</h2>
     <!-------------------------servicio 1---------------------------------->
     <div id="veterinaria" class="row">
@@ -13,7 +13,7 @@
             </video>
             @endif
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="peluquerias">
             <div class="servicios-content pt-0 p-3 ">
                 <h3 data-aos="fade-up" data-aos-duration="1200">﻿Clínica 24 Horas</h3>
                 <p class="sub" data-aos="fade-up" data-aos-duration="1300">¡Urgencia 24 horas! ¡Llámanos ya! </p>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/servicio/uci.jpg') }}" alt="imagen laboratorio de UCI">
-                        <p>UCI</p>
+                        <p>Laboratorio</p>
                     </div>
                     <div class="servicios-imgs">
                         <img src="{{ url('assets/img/servicio/RayosXI.jpg') }}" alt="Imagen de Laboratorio de rayos x">
@@ -74,7 +74,7 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service6" type="button" role="tab" aria-controls="contact" aria-selected="false">• Cirugías</button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li class="nav-item" role="presentation" >
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service7" type="button" role="tab" aria-controls="contact" aria-selected="false">• Laboratorio clínico: Contamos con nuestro
 
                             propio laboratorio liderado por un
@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 p-0 center-ser flex-column">
+        <div class="col-md-6 p-0 center-ser flex-column" id="colegios">
             @if(App\Models\ImageService::first()->type2 == "image")
             <img class="obj-cover h-63" src="{{ App\Models\ImageService::first()->image2 }}" alt="">
             @else
@@ -171,7 +171,7 @@
                         <li>Shampoo especialmente elaborado para mascotas</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" id="colegios">
                     <ul>
                         <li>Corte característico por raza</li>
                         <li>Aromaterapia</li>

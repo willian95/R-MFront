@@ -1080,7 +1080,7 @@ min-height: 100vh;
 .img_iso {
     position: relative;
     cursor: pointer;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     height: 195px;
@@ -1093,7 +1093,9 @@ min-height: 100vh;
     -o-transition: all 0.5s ease-in-out;
     border-radius: 10px;
 }
-
+.iso-container{
+    height: auto!important;
+}
 @media screen and (max-width: 768px) {
     .img_iso {
         height: 230px;

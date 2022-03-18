@@ -14,17 +14,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/#veterinaria">
+                            <a href="/#veterinarias">
                                 <p>Veterinaria</p>
                             </a>
                         </li>
                         <li>
-                            <a href="/#peluqueria">
+                            <a href="/#peluquerias">
                                 <p>Peluquería  & Spa</p>
                             </a>
                         </li>
                         <li>
-                            <a href="/#colegio">
+                            <a href="/#colegios">
                                 <p>Colegio</p>
                             </a>
                         </li>

@@ -45,7 +45,7 @@
 
 <div class="row">
     <div class="col-md-12 pb-2 line-c">
-        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
+        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola,quiero%20informaci%C3%B3n%20acerca%20de" target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
             ¡Escribenos ya al whatsapp!
         </a>
     </div>
