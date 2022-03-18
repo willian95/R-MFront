@@ -94,11 +94,11 @@
                                 </div>
                                 <div class="titulo-product">
                                     <h3>@{{ product.name }}</h3>
-                                    <p>Desde: $
+                                    <p>Desde:
                                         <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span>
                                         <span v-if="product.product_formats[0].discount_price > 0 && product?.product_formats[0]"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
 
-                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]"> @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
+                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
 
                                     </p>
                                 </div>
@@ -124,7 +124,7 @@
                     <ul class="pagination">
 
                         <li class="paginate_button page-item active" v-for="(link, index) in links">
-                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', ' ').replace('Next', ' ')"></a>
+                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Anterior', ' ').replace('Siguiente', ' ')"></a>
                         </li>
 
 
