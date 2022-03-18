@@ -2077,7 +2077,7 @@ input[type="number"]::-webkit-outer-spin-button {
         gap: 1rem;
         padding: 0;
         padding-left: 1rem;
-        transform: translateX(100%);
+
     }
     .txt-option {
         text-align: center;
