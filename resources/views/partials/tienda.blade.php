@@ -35,7 +35,7 @@
             <!-- ----1---- -->
             @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q){
                 $q->where("dog_category", 1);
-            })->take(10)->get() as $dogProduct)
+            })->whereHas('productFormats')->take(10)->get() as $dogProduct)
                 <div class="col-xs-6 col-sm-3 cent isotope-item caninos">
                     <a href="{{ url('/producto/'.$dogProduct->slug) }}">
                         <div class="img_iso" style="  background-image: url({{ $dogProduct->image }})">
@@ -43,11 +43,7 @@
                         </div>
                         <div class="titulo-product">
                             <h3>{{ $dogProduct->name }}</h3>
-                                @php
-                                    $productModel = App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first();
-                                @endphp
-                                <p>Desde: $ {{ number_format($productModel ? $productModel->price : '' , 0, ",", ".") }}</p>
-                          
+                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
                         </div>
                     </a>
                 </div>
@@ -56,7 +52,7 @@
 
             @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q){
                 $q->where("cat_category", 1);
-            })->take(10)->get() as $catProduct)
+            })->whereHas('productFormats')->take(10)->get() as $catProduct)
                 <div class="col-xs-6 col-sm-4 cent isotope-item felinos">
                     <a href="{{ url('/producto/'.$catProduct->slug) }}">
                         <div class="img_iso" style="  background-image: url({{ $catProduct->image }})">
@@ -64,11 +60,7 @@
                         </div>
                         <div class="titulo-product">
                             <h3>{{ $catProduct->name }}</h3>
-                            @php
-                                $catModel = App\Models\ProductFormat::where("product_id", $catProduct->id)->orderBy("price", "desc")->first();
-                            @endphp
-                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catModel ? $catModel->id : '')->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
-                          
+                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
                         </div>
                     </a>
                 </div>
