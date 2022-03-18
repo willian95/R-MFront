@@ -45,12 +45,13 @@
                                 <label for=""></label>
                                 <div class="d-flex">
                                     <input type="text" class="form-control" placeholder="Buscar" v-model="searchQuery">
-                                    <button class="btn btn-danger" @click="getProducts()"><i class="far fa-search"></i></button>
+                                    <button class="btn btn-danger" @click="getProducts()"><img class="icon-opt" src="http://imgfz.com/i/tXsr2Wl.png" alt=""></button>
                                 </div>
                             </div>
 
                             <div>
                             <p class="pt-5 fw700">Categorías
+                            <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/tXsr2Wl.png" alt="">
                                 </p>
                                 <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">

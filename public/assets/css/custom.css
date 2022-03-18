@@ -1148,6 +1148,9 @@ min-height: 100vh;
 .fw700{
     font-weight: 700;
 }
+.icon-opt-none{
+    display: none;
+}
 
 .hover_iso {
     position: absolute;
