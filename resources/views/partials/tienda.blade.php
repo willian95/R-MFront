@@ -67,7 +67,7 @@
                             @php
                                 $catModel = App\Models\ProductFormat::where("product_id", $catProduct->id)->orderBy("price", "desc")->first();
                             @endphp
-                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catModel ? catModel->id : '')->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
+                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catModel ? $catModel->id : '')->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
                           
                         </div>
                     </a>
