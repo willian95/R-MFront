@@ -43,8 +43,10 @@
                         </div>
                         <div class="titulo-product">
                             <h3>{{ $dogProduct->name }}</h3>
-                            
-                                <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
+                                @php
+                                    $productModel = App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first();
+                                @endphp
+                                <p>Desde: $ {{ number_format($productModel ? $productModel->price : '' , 0, ",", ".") }}</p>
                           
                         </div>
                     </a>
@@ -62,8 +64,10 @@
                         </div>
                         <div class="titulo-product">
                             <h3>{{ $catProduct->name }}</h3>
-                           
-                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
+                            @php
+                                $catModel = App\Models\ProductFormat::where("product_id", $catProduct->id)->orderBy("price", "desc")->first();
+                            @endphp
+                            <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $catModel ? catModel->id : '')->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
                           
                         </div>
                     </a>

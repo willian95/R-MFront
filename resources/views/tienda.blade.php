@@ -41,7 +41,7 @@
                                 <label for="">Buscar</label>
                                 <div class="d-flex">
                                     <input type="text" class="form-control" v-model="searchQuery">
-                                    <button class="btn btn-success" @click="getProducts()">buscar</button>
+                                    <button class="btn btn-danger" @click="getProducts()">buscar</button>
                                 </div>
                             </div>
 
