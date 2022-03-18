@@ -36,6 +36,15 @@
 
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
+
+                            <div class="form-group">
+                                <label for="">Buscar</label>
+                                <div class="d-flex">
+                                    <input type="text" class="form-control" v-model="searchQuery">
+                                    <button class="btn btn-danger" @click="getProducts()">buscar</button>
+                                </div>
+                            </div>
+
                             <div class="options">
                                 <p>Categorías
                                 </p>
@@ -85,11 +94,11 @@
                                 </div>
                                 <div class="titulo-product">
                                     <h3>@{{ product.name }}</h3>
-                                    <p>Desde: $
+                                    <p>Desde:
                                         <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span>
-                                        <span v-if="product.product_formats[0].discount_price > 0"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
+                                        <span v-if="product.product_formats[0].discount_price > 0 && product?.product_formats[0]"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
 
-                                        <span v-if="product.product_formats[0].discount_price <= 0">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
+                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
 
                                     </p>
                                 </div>
@@ -99,9 +108,15 @@
 
 
                     </div>
-                    {{--<div class="row w-100">
-                        <div class="col-sm-12 col-md-5">
-                            <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
+
+
+        </div>
+        </div>
+        </div>
+
+        <div class="row w-100">
+            <div class="col-sm-12 col-md-5">
+                <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
                 </div>
             </div>
             <div class="col-sm-12 col-md-7">
@@ -109,20 +124,15 @@
                     <ul class="pagination">
 
                         <li class="paginate_button page-item active" v-for="(link, index) in links">
-                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
+                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Anterior', ' ').replace('Siguiente', ' ')"></a>
                         </li>
 
 
                     </ul>
                 </div>
             </div>
-        </div>--}}
-
-
-
         </div>
-        </div>
-        </div>
+
 
 
     </section>
@@ -153,6 +163,7 @@
                 totalPages: "",
                 linkClass: "page-link",
                 activeLinkClass: "page-link active-link bg-main",
+                searchQuery:""
             }
         },
         methods: {
@@ -197,7 +208,8 @@
                     params: {
                         categories: this.choosenCategories,
                         brands: this.selectedBrand,
-                        animal: this.animalType
+                        animal: this.animalType,
+                        search: this.searchQuery
                     }
                 })
                 this.loadingProducts = false
@@ -231,7 +243,7 @@
 
                 const response = await axios.get("{{ url('/brands/fetch') }}")
                 this.brands = response.data
-            }
+            },
 
 
         },

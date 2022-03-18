@@ -35,7 +35,7 @@
             <!-- ----1---- -->
             @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q){
                 $q->where("dog_category", 1);
-            })->take(10)->get() as $dogProduct)
+            })->whereHas('productFormats')->take(10)->get() as $dogProduct)
                 <div class="col-xs-6 col-sm-3 cent isotope-item caninos">
                     <a href="{{ url('/producto/'.$dogProduct->slug) }}">
                         <div class="img_iso" style="  background-image: url({{ $dogProduct->image }})">
@@ -52,7 +52,7 @@
 
             @foreach(App\Models\Product::inRandomOrder()->whereHas('category', function($q){
                 $q->where("cat_category", 1);
-            })->take(10)->get() as $catProduct)
+            })->whereHas('productFormats')->take(10)->get() as $catProduct)
                 <div class="col-xs-6 col-sm-4 cent isotope-item felinos">
                     <a href="{{ url('/producto/'.$catProduct->slug) }}">
                         <div class="img_iso" style="  background-image: url({{ $catProduct->image }})">

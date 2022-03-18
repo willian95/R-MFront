@@ -129,7 +129,9 @@
                     </div>
                     <div class="titulo-product">
                         <h3>{{ $dogProduct->name }}</h3>
+                        @if(App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first())
                         <p>Desde: $ {{ number_format(App\Models\ProductFormat::where("product_id", $dogProduct->id)->orderBy("price", "desc")->first()->price, 0, ",", ".") }}</p>
+                        @endif
                     </div>
                 </a>
             </div>
