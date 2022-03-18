@@ -34,14 +34,11 @@ class ProductController extends Controller
             $query->orderBy('price', 'asc');
         }]);
 
-        if(isset($request->search)){
+        if (isset($request->search)) {
             $query = $query->where('name', 'like', '%'.$request->search.'%');
         }
-        
+
         $products = $query->paginate(20);
-        
-        
-        ->paginate(20);
 
         return response()->json($products);
     }
