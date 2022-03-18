@@ -50,10 +50,10 @@
                             </div>
 
                             <div>
-                            <p class="pt-5 fw700">Categorías
+                            <p class="pt-5 fw700 txt-option "> <span>Categorías</span>
                             <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/tXsr2Wl.png" alt="">
                                 </p>
-                               <div>
+                               <div class="options-csroll">
                                <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
                                     <label class="form-check-label" :for="'category'+category.id">
