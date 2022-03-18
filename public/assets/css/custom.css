@@ -2081,6 +2081,8 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .txt-option {
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
     .txt-option  span{
         display: none;

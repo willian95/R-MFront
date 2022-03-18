@@ -42,7 +42,7 @@
                         <li class="mt-3 mb-4 redes-nav">
                             <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </li>
                         <li>
                             <p class="copy-nav">R&M Clínica Veterinaria - Copyright © 2022
@@ -57,7 +57,7 @@
                 <div class="redes-nav-logo">
                     <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
-                      <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
                 </div>
             </div>
