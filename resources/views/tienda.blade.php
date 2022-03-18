@@ -124,7 +124,7 @@
                     <ul class="pagination">
 
                         <li class="paginate_button page-item active" v-for="(link, index) in links">
-                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', '').replace('Next', '')"></a>
+                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass" :key="index" @click="getProducts(link.url)" v-html="link.label.replace('Previous', ' ').replace('Next', ' ')"></a>
                         </li>
 
 
