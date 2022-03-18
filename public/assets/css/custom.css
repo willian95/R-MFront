@@ -1040,6 +1040,9 @@ textarea {
 @media screen and (max-width: 600px) {
     .container_menu_iso .menu_iso li {
     }
+    .dataTables_paginate{
+        overflow: hidden;
+    }
 }
 .bg-grays {
     background: #f1f1f1;
@@ -1071,6 +1074,11 @@ textarea {
     }
     .container_gallery_iso {
 min-height: 100vh;
+    }
+    .iso-container {
+        height: auto!important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 .fw-300 {
@@ -2108,6 +2116,11 @@ input[type="number"]::-webkit-outer-spin-button {
         position: absolute;
         right: 20px;
         top: 1rem;
+    }
+    .main-tienda .menu_iso {
+
+        text-align: center;
+        justify-content: center;
     }
 }
 

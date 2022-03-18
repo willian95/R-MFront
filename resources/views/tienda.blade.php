@@ -37,6 +37,10 @@
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
 
+
+
+
+                            <div class="options">
                             <div class="form-group">
                                 <label for="">Buscar</label>
                                 <div class="d-flex">
@@ -45,8 +49,7 @@
                                 </div>
                             </div>
 
-                            <div class="options">
-                                <p>Categorías
+                                <p class="pt-5">Categorías
                                 </p>
                                 <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
@@ -79,7 +82,7 @@
                 </div>
 
                 <!-- Isotope Gallery -->
-                <div class="container container_gallery_iso" data-aos="fade-up" data-aos-duration="1100">
+                <div class="container container_gallery_iso" >
                     <div class="row iso-container">
 
 
