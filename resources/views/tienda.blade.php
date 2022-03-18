@@ -36,6 +36,15 @@
 
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
+
+                            <div class="form-group">
+                                <label for="">Buscar</label>
+                                <div class="d-flex">
+                                    <input type="text" class="form-control" v-model="searchQuery">
+                                    <button class="btn btn-success" @click="getProducts()">buscar</button>
+                                </div>
+                            </div>
+
                             <div class="options">
                                 <p>Categorías
                                 </p>
@@ -87,9 +96,9 @@
                                     <h3>@{{ product.name }}</h3>
                                     <p>Desde: $
                                         <span v-if="product.product_formats[0].discount_price > 0">@{{ currencyFormatDE(product.product_formats[0].discount_price) }}</span>
-                                        <span v-if="product.product_formats[0].discount_price > 0"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
+                                        <span v-if="product.product_formats[0].discount_price > 0 && product?.product_formats[0]"> <strike> $ @{{ currencyFormatDE(product.product_formats[0].price) }}</strike> </span>
 
-                                        <span v-if="product.product_formats[0].discount_price <= 0">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
+                                        <span v-if="product.product_formats[0].discount_price <= 0 && product?.product_formats[0]">$ @{{ currencyFormatDE(product.product_formats[0].price) }}</span>
 
                                     </p>
                                 </div>
@@ -153,6 +162,7 @@
                 totalPages: "",
                 linkClass: "page-link",
                 activeLinkClass: "page-link active-link bg-main",
+                searchQuery:""
             }
         },
         methods: {
@@ -197,7 +207,8 @@
                     params: {
                         categories: this.choosenCategories,
                         brands: this.selectedBrand,
-                        animal: this.animalType
+                        animal: this.animalType,
+                        search: this.searchQuery
                     }
                 })
                 this.loadingProducts = false
@@ -231,7 +242,7 @@
 
                 const response = await axios.get("{{ url('/brands/fetch') }}")
                 this.brands = response.data
-            }
+            },
 
 
         },
