@@ -2,7 +2,9 @@
 <header>
     <div class="main-header">
         <div class="header-item justify-content-between">
-            <div class="menuz">Menu</div>
+
+
+            <div class="menuz">    <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone modal-phone " data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smar.png') }}" alt="Icono de telefono"></a></div>
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
