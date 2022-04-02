@@ -37,23 +37,31 @@
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
 
+
+
+
+                            <div class="options">
                             <div class="form-group">
-                                <label for="">Buscar</label>
+                                <label for=""></label>
                                 <div class="d-flex">
-                                    <input type="text" class="form-control" v-model="searchQuery">
-                                    <button class="btn btn-danger" @click="getProducts()">buscar</button>
+                                    <input type="text" class="form-control" placeholder="Buscar" v-model="searchQuery">
+                                    <button class="btn btn-danger" @click="getProducts()"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
 
-                            <div class="options">
-                                <p>Categorías
+                            <div class="option-hover">
+                            <p class="pt-5 fw700 txt-option "> <span>Categorías</span>
+                            <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
                                 </p>
-                                <div class="form-check" v-for="category in categories">
+                               <div class="options-csroll">
+                               <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
                                     <label class="form-check-label" :for="'category'+category.id">
                                         @{{ category.name }}  (@{{ category.dog_category ? 'caninos' : '' }} @{{ category.cat_category ? 'felinos' : '' }})
                                     </label>
                                 </div>
+                               </div>
+                            </div>
 
                             </div>
                         </div>
@@ -65,9 +73,9 @@
                 <!------slider marcas------->
                 <div class="slick-marcas">
                     @foreach(App\Models\Brand::all() as $brand)
-                        <div @click="setSelectedBrand({{ $brand->id }})">
-                            <img src="{{ $brand->image }}" alt="">
-                        </div>
+                    <div @click="setSelectedBrand({{ $brand->id }})">
+                        <img src="{{ $brand->image }}" alt="">
+                    </div>
 
                     @endforeach
 
@@ -79,7 +87,7 @@
                 </div>
 
                 <!-- Isotope Gallery -->
-                <div class="container container_gallery_iso" data-aos="fade-up" data-aos-duration="1100">
+                <div class="container container_gallery_iso" >
                     <div class="row iso-container">
 
 
@@ -110,11 +118,11 @@
                     </div>
 
 
-        </div>
-        </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row w-100">
+        <div class="row w-100 mt-5">
             <div class="col-sm-12 col-md-5">
                 <div class="dataTables_info" id="kt_datatable_info" role="status" aria-live="polite">Mostrando página @{{ currentPage }} de @{{ totalPages }}
                 </div>
@@ -163,12 +171,12 @@
                 totalPages: "",
                 linkClass: "page-link",
                 activeLinkClass: "page-link active-link bg-main",
-                searchQuery:""
+                searchQuery: ""
             }
         },
         methods: {
 
-            setSelectedBrand(id){
+            setSelectedBrand(id) {
                 this.selectedBrand = id
                 this.getProducts()
             },

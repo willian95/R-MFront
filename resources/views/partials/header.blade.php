@@ -2,7 +2,9 @@
 <header>
     <div class="main-header">
         <div class="header-item justify-content-between">
-            <div class="menuz">Menu</div>
+
+
+            <div class="menuz">    <a href="" data-bs-toggle="modal" data-bs-target=".pwa-modal" class="phone modal-phone " data-aos="fade-up" data-aos-duration="1500"> <img class="parpadea" src="{{ url('assets/img/icons/smar.png') }}" alt="Icono de telefono"></a></div>
             <div class="menu-trigger">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <p>MENU</p>
@@ -42,7 +44,7 @@
                         <li class="mt-3 mb-4 redes-nav">
                             <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </li>
                         <li>
                             <p class="copy-nav">R&M Clínica Veterinaria - Copyright © 2022
@@ -57,7 +59,7 @@
                 <div class="redes-nav-logo">
                     <a href="https://www.facebook.com/RyMveterinaria/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/rymveterinaria/" target="_blank"><i class="fab fa-instagram"></i></a>
-                      <a href="https://api.whatsapp.com/send?phone=+573014739866&text=Hola,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                      <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
                 </div>
             </div>

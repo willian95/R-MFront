@@ -41,23 +41,23 @@
 
 <div class="fix-contect">
     <div class="ws"><img src="{{ url('assets/img/icons/contact.svg') }}" alt="">
-    <div class="info-contact">
+        <div class="info-contact">
 
-<div class="row">
-    <div class="col-md-12 pb-2 line-c">
-        <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola,quiero%20informaci%C3%B3n%20acerca%20de" target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
-            ¡Escribenos ya al whatsapp!
-        </a>
+            <div class="row">
+                <div class="col-md-12 pb-2 line-c">
+                    <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,%20quiero%20informaci%C3%B3n%20acerca%20de..." target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
+                        ¡Escribenos ya al whatsapp!
+                    </a>
+                </div>
+                <hr>
+                <div class="col-md-12 pt-2">
+                    <a href="tel:+576016141331" class="icon-info_contact"><img src="{{ url('assets/img/icons/phone.svg') }}" alt="">
+                        Llámanos Ya 24/7 <br> ¡Urgencias!
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <hr>
-    <div class="col-md-12 pt-2">
-        <a href="tel:+576016141331" class="icon-info_contact"><img src="{{ url('assets/img/icons/phone.svg') }}" alt="">
-            Llámanos Ya 24/7 <br> ¡Urgencias!
-        </a>
-    </div>
-</div>
-</div>
-</div>
 
 </div>
 
@@ -74,7 +74,13 @@
                 <p class="text-center mb-4">Sabias que puedes añadir un atajo de nuestra tienda a tu celular? Es fácil! Ingresa en tu navegador Safari en iPhone y Chrome en Android, haz tap en el icono de compartir y selecciona la opción de añadir a mi escritorio! Y listo</p>
 
                 <div class="text-center">
-                    <img class="img-pwa" src="http://imgfz.com/i/kgFbf9V.png" alt="">
+
+                    <video width="100%"  controls>
+                        <source src="{{ url('assets/img/pwa.mp4') }} " type="video/mp4">
+                        <source src="{{ url('assets/img/pwa.mp4') }}" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+
                 </div>
             </div>
             <div class="modal-footer">
