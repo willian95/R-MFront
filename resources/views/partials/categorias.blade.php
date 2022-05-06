@@ -1,6 +1,6 @@
 <!-------------------------------->
 <div class="categories container-fluid">
-    <a href="#veterinaria" class="categories-item">
+    <a href="/#veterinaria" class="categories-item">
         <span class="parpadea text"><strong>Servicio 24/7</strong></span>
         <div class="icon-bg">
             <img class="icon" src="{{ url('assets/img/icons/veterinarian.png') }}" alt="">
@@ -13,7 +13,7 @@
         </div>
     </a>
 
-    <a href="#peluqueria" class="categories-item">
+    <a href="/#peluqueria" class="categories-item">
         <div class="icon-bg">
             <img class="icon" src="{{ url('assets/img/icons/hairdryer.png') }}" alt="">
         </div>
@@ -26,7 +26,7 @@
         </div>
     </a>
 
-    <a href="#colegio" class="categories-item">
+    <a href="/#colegio" class="categories-item">
         <div class="icon-bg">
             <img class="icon" src="{{ url('assets/img/icons/animal-shelter.png') }}" alt="">
         </div>

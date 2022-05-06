@@ -57,7 +57,7 @@
                                <div class="form-check" v-for="category in categories">
                                     <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
                                     <label class="form-check-label" :for="'category'+category.id">
-                                        @{{ category.name }}  (@{{ category.dog_category ? 'caninos' : '' }} @{{ category.cat_category ? 'felinos' : '' }})
+                                        @{{ category.name }}
                                     </label>
                                 </div>
                                </div>
@@ -113,10 +113,7 @@
                             </a>
                         </div>
 
-
-
                     </div>
-
 
                 </div>
             </div>
