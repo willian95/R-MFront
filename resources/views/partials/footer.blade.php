@@ -1,4 +1,4 @@
-<footer id="contacto" class="footer" style="background-image: url(assets/img/servicio/Colegio2.jpg);">
+<footer id="contacto" class="footer" style="background-image: url(/assets/img/servicio/Colegio2.jpg);">
 
     <div class="container contente-footer">
         <h2 class="mt-0 titles m-0 pb-3" data-aos="fade-up" data-aos-duration="1300">Contáctanos</h2>
@@ -40,18 +40,18 @@
 </div>
 
 <div class="fix-contect">
-    <div class="ws"><img src="{{ url('assets/img/icons/contact.svg') }}" alt="">
+    <div class="ws"><img src="{{ url('/assets/img/icons/contact.svg') }}" alt="">
         <div class="info-contact">
 
             <div class="row">
                 <div class="col-md-12 pb-2 line-c">
-                    <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,%20quiero%20informaci%C3%B3n%20acerca%20de..." target="_blank" class="icon-info_contact"><img src="{{ url('assets/img/icons/whatsapp.png') }}" alt="">
+                    <a href="https://api.whatsapp.com/send?phone=+573014739866&text=¡Hola!,%20quiero%20informaci%C3%B3n%20acerca%20de..." target="_blank" class="icon-info_contact"><img src="{{ url('/assets/img/icons/whatsapp.png') }}" alt="">
                         ¡Escribenos ya al whatsapp!
                     </a>
                 </div>
                 <hr>
                 <div class="col-md-12 pt-2">
-                    <a href="tel:+576016141331" class="icon-info_contact"><img src="{{ url('assets/img/icons/phone.svg') }}" alt="">
+                    <a href="tel:+576016141331" class="icon-info_contact"><img src="{{ url('/assets/img/icons/phone.svg') }}" alt="">
                         Llámanos Ya 24/7 <br> ¡Urgencias!
                     </a>
                 </div>
@@ -76,8 +76,8 @@
                 <div class="text-center">
 
                     <video width="100%"  controls>
-                        <source src="{{ url('assets/img/pwa.mp4') }} " type="video/mp4">
-                        <source src="{{ url('assets/img/pwa.mp4') }}" type="video/ogg">
+                        <source src="{{ url('/assets/img/pwa.mp4') }} " type="video/mp4">
+                        <source src="{{ url('/assets/img/pwa.mp4') }}" type="video/ogg">
                         Your browser does not support the video tag.
                     </video>
 

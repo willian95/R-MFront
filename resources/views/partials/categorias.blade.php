@@ -41,7 +41,7 @@
 
 
 
-    <a href="blog" class="categories-item">
+    <a href="/blog" class="categories-item">
         <!---<span class="parpadea text"><strong>Nuevo ﻿Artículo</strong></span>-->
         <div class="icon-bg">
             <img class="icon p-1" src="{{ url('assets/img/icons/blogger.png') }}" alt="">
@@ -56,7 +56,7 @@
         </div>
     </a>
 
-    <a href="tienda" class="categories-item">
+    <a href="/tienda" class="categories-item">
     <span class="parpadea text txt-red"><strong>Nuevo producto</strong></span>
 
         <div class="icon-bg">

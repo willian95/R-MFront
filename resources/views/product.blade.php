@@ -6,7 +6,7 @@
 
 <main>
     <div class="breadcrumbs">
-        <p><span><a href="{{ url('/') }}">Inicio </a>><a href="tienda"> Tienda</a> ></span> Producto</p>
+        <p><span><a href="{{ url('/') }}">Inicio </a>><a href="/tienda"> Tienda</a> ></span> Producto</p>
     </div>
 
     <div class="row container-fluid">
