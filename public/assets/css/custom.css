@@ -2473,10 +2473,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 1400px) {
-    html,
-    body {
-        overflow-x: hidden;
-    }
     .categories {
         margin-top: 4rem;
         grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
@@ -2486,7 +2482,8 @@ input[type="number"]::-webkit-outer-spin-button {
         height: 300px !important;
     }
     .footer {
-        height: 100vh;
+        height: 100%;
+        padding-bottom: 25px;
     }
     .contente-footer {
         padding-top: 20rem;

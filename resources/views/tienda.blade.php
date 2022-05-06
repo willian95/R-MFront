@@ -37,38 +37,48 @@
                         <!------------------------check-------------------------->
                         <div class="col-sm-12">
 
-
-
-
                             <div class="options">
-                            <div class="form-group">
-                                <label for=""></label>
-                                <div class="d-flex">
-                                    <input type="text" class="form-control" placeholder="Buscar" v-model="searchQuery">
-                                    <button class="btn btn-danger" @click="getProducts()"><i class="fa fa-search"></i></button>
+                                <div class="form-group">
+                                    <label for=""></label>
+                                    <div class="d-flex">
+                                        <input type="text" class="form-control" placeholder="Buscar" v-model="searchQuery">
+                                        <button class="btn btn-danger" @click="getProducts()"><i class="fa fa-search"></i></button>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="option-hover">
-                            <p class="pt-5 fw700 txt-option "> <span>Categorías</span>
-                            <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
-                                </p>
-                               <div class="options-csroll">
-                               <div class="form-check" v-for="category in categories">
-                                    <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
-                                    <label class="form-check-label" :for="'category'+category.id">
-                                        @{{ category.name }}
-                                    </label>
+                                <div class="option-hover">
+                                    <div class="options-csroll">
+                                        <div class="form-check" v-for="category in categories.categories">
+                                            <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+category.id" @change="toggleCategory(category.id)">
+                                            <label class="form-check-label" :for="'category'+category.id">
+                                                @{{ category.name }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="pt-5 fw700 txt-option ">
+                                        <span>
+                                            En comun
+                                            <img src="{{ url('assets/img/icons/canino-icon.png') }}" alt="" style="width:20px; height:20px; object-fit: contain;">
+                                            <img src="{{ url('assets/img/icons/felino-icon.png') }}" alt="" style="width:20px; height:20px; object-fit: contain;">
+                                    </span>
+                                        <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
+                                    </p>
+                                    <div class="options-csroll">
+                                        <div class="form-check" v-for="commonCategory in categories.common">
+                                            <input class="form-check-input category-checkbox" type="checkbox" value="" :id="'category'+commonCategory.id" @change="toggleCategory(commonCategory.id)">
+                                            <label class="form-check-label" :for="'category'+commonCategory.id">
+                                                @{{ commonCategory.name }}
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                               </div>
-                            </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 overflow-auto">
 
                 <!------slider marcas------->
                 <div class="slick-marcas">
@@ -87,7 +97,7 @@
                 </div>
 
                 <!-- Isotope Gallery -->
-                <div class="container container_gallery_iso" >
+                <div class="container container_gallery_iso">
                     <div class="row iso-container">
 
 
