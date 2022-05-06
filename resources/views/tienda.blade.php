@@ -55,12 +55,12 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <p class="pt-5 fw700 txt-option ">
+                                    <p class="fw700 txt-option ">
                                         <span>
-                                            En comun
-                                            <img src="{{ url('assets/img/icons/canino-icon.png') }}" alt="" style="width:20px; height:20px; object-fit: contain;">
-                                            <img src="{{ url('assets/img/icons/felino-icon.png') }}" alt="" style="width:20px; height:20px; object-fit: contain;">
-                                    </span>
+                                            En común
+                                            <img src="{{ url('assets/img/icons/canino-icon.png') }}" alt="" style="width:40px; height:40px; object-fit: contain;">
+                                            <img src="{{ url('assets/img/icons/felino-icon.png') }}" alt="" style="width:40px; height:40px; object-fit: contain;">
+                                        </span>
                                         <img class="icon-opt icon-opt-none" src="http://imgfz.com/i/lFdLCiE.png" alt="">
                                     </p>
                                     <div class="options-csroll">
@@ -82,9 +82,9 @@
 
                 <!------slider marcas------->
                 <div class="slick-marcas">
-                    @foreach(App\Models\Brand::all() as $brand)
+                    @foreach(App\Models\Brand::get() as $brand)
                     <div @click="setSelectedBrand({{ $brand->id }})">
-                        <img src="{{ $brand->image }}" alt="">
+                        <img src="{{ $brand->image }}" alt="{{ $brand->name }}">
                     </div>
 
                     @endforeach
@@ -153,7 +153,11 @@
     </section>
 
 </main>
-
+<style>
+    .options {
+        padding-top: 0 !important;
+    }
+</style>
 @include("partials.footer")
 @endsection
 
